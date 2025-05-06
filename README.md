@@ -26,6 +26,7 @@
 - Definir as cores principais de uso
 - Construir o manual/guia da marca
 - Modularizar exemplo dos componentes a ser usados
+- Definir fontes (tipografia)
 
 ## Definido 🤝
 
@@ -37,5 +38,3 @@
 ### Design
 
 ### Funções/Tarefas
-
-### 
