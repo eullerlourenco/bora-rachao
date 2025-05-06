@@ -1,4 +1,4 @@
-# Bora Rachão ⚽ (Projeto Interdisciplinar)
+# Bora Rachão⚽ (Projeto Interdisciplinar)
 
 ## Páginas 🖥️
 
