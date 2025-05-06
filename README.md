@@ -32,9 +32,23 @@
 
 ### Tecnologias
 
+> Front-end
+- HTML
+- CSS
+- JavaScript
 - Tailwind CSS
 - Figma
 
+> Back-end
+
+- Sem definições
+
 ### Design
+
+> Cores
+
+- Primaria (azul) : #00A2BE
+- Secundária (laranja): #E65C00
+- Verde: #8DE400
 
 ### Funções/Tarefas
