@@ -5,17 +5,18 @@
 ### Paginas (To do)
 
 - Home (página inicial)
-- Contact (página com formulário de contato)
+- Contact (página com formulário de contato e sugestões)
 - About (sobre os desenvolvedores)
 - Privacy Policy (políticas de privacidade)
-- Terms of use (termos de uso)
+- Terms of Use (termos de uso)
 - Match (detalhes da partida)
 - User Profile (Perfil dos usuários)
 - All Matches (Lista todas as partidas disponíveis)
+- All Sports (Lista todos os esportes disponíveis)
 - Login
 - Register
 - Create Match (Formulário para criar uma partida)
-- User config (Atualizar e mudar as informações do usuário)
+- User Config (Atualizar e mudar as informações do usuário)
 
 ### Paginas (Done)
 
