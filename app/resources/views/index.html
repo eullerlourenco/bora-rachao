@@ -5,10 +5,298 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bora Rachão</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lucide@0.509.0/dist/cjs/lucide.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      class="css"
+    />
   </head>
-  <body>
-    homepage
-    
+  <body class="bg-gray-50">
+    <!-- logged header -->
+    <header class="shadow bg-white py-3">
+      <div
+        class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
+      >
+        <!-- nav mobile -->
+        <nav class="md:hidden">
+          <a class="hover:cursor-pointer">
+            <i
+              class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
+          </a>
+        </nav>
+        <div>
+          <a href="">
+            <img src="https://placehold.co/100" alt="" class="w-9 h-9" />
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Home</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Contato</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Partidas</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Esportes</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Amigos</a
+          >
+        </nav>
+        <div class="flex items-center space-x-3">
+          <a href="">
+            <img
+              src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
+              class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
+              alt=""
+            />
+          </a>
+          <div class="hidden md:block">
+            <a
+              href=""
+              class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+            >
+              Bora jogar!
+            </a>
+          </div>
+          <a href="">
+            <i
+              class="fa-solid fa-moon text-lg text-orange-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- imagem dos esportes section -->
+    <section class="container mx-auto px-4 my-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <!-- card -->
+        <a
+          class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-60 w-full"
+        >
+          <img
+            class="absolute top-0 left-0 h-full w-full object-cover"
+            src="https://clubepaineiras.org.br/wp-content/uploads/2022/05/jogadores.jpg"
+            alt="futebol"
+          />
+          <div
+            class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10"
+          ></div>
+          <p
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-6 text-center text-center text-2xl font-semibold italic drop-shadow-lg"
+          >
+            Futebol
+          </p>
+        </a>
+
+        <!-- double card -->
+        <div class="grid grid-cols-1 gap-3">
+          <!-- card -->
+          <a
+            class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+          >
+            <img
+              class="absolute top-0 left-0 h-full w-full object-cover"
+              src="https://cdn.pixabay.com/photo/2020/11/27/18/59/tennis-5782695_1280.jpg"
+              alt="tênis"
+            />
+            <div
+              class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10"
+            ></div>
+            <p
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-6 text-center text-center text-2xl font-semibold italic drop-shadow-lg"
+            >
+              Tênis
+            </p>
+          </a>
+
+          <!-- card -->
+          <a
+            class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+          >
+            <img
+              class="absolute top-0 left-0 h-full w-full object-cover"
+              src="https://webrun.com.br/wp-content/uploads/2021/04/AdobeStock_176854577.jpeg"
+              alt="corrida"
+            />
+            <div
+              class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10"
+            ></div>
+            <p
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-6 text-center text-center text-2xl font-semibold italic drop-shadow-lg"
+            >
+              Corrida
+            </p>
+          </a>
+        </div>
+
+        <!-- card -->
+        <a
+          class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-60 w-full"
+        >
+          <img
+            class="absolute top-0 left-0 h-full w-full object-cover"
+            src="https://images.pexels.com/photos/2834917/pexels-photo-2834917.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="basquete"
+          />
+          <div
+            class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10"
+          ></div>
+          <p
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-6 text-center text-center text-2xl font-semibold italic drop-shadow-lg"
+          >
+            Basquete
+          </p>
+        </a>
+
+        <!-- card -->
+        <a
+          class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-60 w-full"
+        >
+          <img
+            class="absolute top-0 left-0 h-full w-full object-cover"
+            src="https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="volêi"
+          />
+          <div
+            class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10"
+          ></div>
+          <p
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-6 text-center text-center text-2xl font-semibold italic drop-shadow-lg"
+          >
+            Volêi
+          </p>
+        </a>
+
+        <!-- double card -->
+        <div class="grid grid-cols-1 gap-3">
+          <!-- card -->
+          <a
+            class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+          >
+            <img
+              class="absolute top-0 left-0 h-full w-full object-cover"
+              src="https://images.pexels.com/photos/22763693/pexels-photo-22763693/free-photo-of-woman-playing-tennis-on-beach.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="beach tennis"
+            />
+            <div
+              class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10"
+            ></div>
+            <p
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-6 text-center text-center text-2xl font-semibold italic drop-shadow-lg"
+            >
+              Beach Tennis
+            </p>
+          </a>
+
+          <!-- card -->
+          <a
+            class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+          >
+            <img
+              class="absolute top-0 left-0 h-full w-full object-cover"
+              src="https://cdn.pixabay.com/photo/2016/06/10/03/06/sport-1447323_1280.jpg"
+              alt="futevôlei"
+            />
+            <div
+              class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10"
+            ></div>
+            <p
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-6 text-center text-center text-2xl font-semibold italic drop-shadow-lg"
+            >
+              Futevôlei
+            </p>
+          </a>
+        </div>
+
+        <!-- double card -->
+        <div class="grid grid-cols-1 gap-3">
+          <!-- card -->
+          <a
+            class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+          >
+            <img
+              class="absolute top-0 left-0 h-full w-full object-cover"
+              src="https://images.pexels.com/photos/163407/cyclists-trail-bike-clouds-163407.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="ciclismo"
+            />
+            <div
+              class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10"
+            ></div>
+            <p
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-6 text-center text-center text-2xl font-semibold italic drop-shadow-lg"
+            >
+              Ciclismo
+            </p>
+          </a>
+
+          <!-- card -->
+          <a
+            class="relative rounded-2xl bg-cyan-500 border-b-4 border-l-4 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+          >
+            <img
+              class="absolute top-0 left-0 h-full w-full object-cover"
+              src="https://images.pexels.com/photos/1996969/pexels-photo-1996969.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="skate"
+            />
+            <div
+              class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10"
+            ></div>
+            <p
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-6 text-center text-center text-2xl font-semibold italic drop-shadow-lg"
+            >
+              Ver mais...
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- motivação e texto section -->
+     <section class="container mx-auto px-4 my-14">
+      <div class="grid lg:grid-cols-2 divide-y-4 lg:divide-y-0 lg:divide-x-4 divide-orange-500 text-center lg:text-start">
+        <div class="lg:p-5 leading-[1.1]">
+          <h2 class="text-4xl lg:text-[3.5em] text-gray-800 font-semibold">
+            <i class="fa-solid fa-forward lg:me-[-22px]"></i>
+            MOVIMENTAR
+          </h2>
+          <h2 class="text-4xl lg:text-[3.5em] text-cyan-500 italic font-[700]">
+            <i class="fa-solid fa-handshake-angle lg:me-[-12px]"></i>
+            CONECTAR
+          </h2>
+          <h2 class="text-4xl lg:text-[3.5em] text-orange-500 font-[800]">
+            VIVER
+            <i class="fa-brands fa-pagelines"></i>
+          </h2>
+        </div>
+        <div class="lg:p-5">
+          <h2 class="text-xl lg:text-4xl text-lime-500 italic font-[650] mb-3">
+            Nós te ajudamos a fazer amigos...
+          </h2>
+          <h2 class="text-4xl lg:text-[3.5em] text-gray-800 font-[750] mb-3">
+            #BoraRachão
+          </h2>
+          <p class="text-gray-700 text-xl leading-6">
+            Ajudamos você, que é apaixonado por esportes, a encontrar e se
+            conectar com pessoas que querem se divertir jogando.
+          </p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

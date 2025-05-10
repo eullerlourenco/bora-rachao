@@ -1,18 +1,32 @@
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lucide@0.509.0/dist/cjs/lucide.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      class="css"
+    />
   </head>
   <body>
     <!-- logged header -->
-    <header class="shadow py-3">
-      <div class="container mx-auto flex flex-row items-center justify-between">
+    <header class="shadow bg-white py-3">
+      <div
+        class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
+      >
+        <!-- nav mobile -->
+        <nav class="md:hidden">
+          <a class="hover:cursor-pointer">
+            <i
+              class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
+          </a>
+        </nav>
         <div>
           <a href="">
             <img src="https://placehold.co/100" alt="" class="w-9 h-9" />
           </a>
         </div>
-        <nav class="flex space-x-6">
+        <nav class="hidden md:flex space-x-6">
           <a
             href=""
             class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
@@ -28,34 +42,107 @@
             class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
             >Partidas</a
           >
-        </nav>
-        <div class="flex items-center space-x-4">
           <a
             href=""
-            class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/50 hover:cursor-pointer text-white px-5 py-2 rounded-xl flex items-center duration-300 ease-in-out space-x-2"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Esportes</a
           >
-            Bora jogar!
-          </a>
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Amigos</a
+          >
+        </nav>
+        <div class="flex items-center space-x-3">
           <a href="">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-moon-icon lucide-moon h-6 w-6 text-orange-500"
+            <img
+              src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
+              class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
+              alt=""
+            />
+          </a>
+          <div class="hidden md:block">
+            <a
+              href=""
+              class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
             >
-              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-            </svg>
+              Bora jogar!
+            </a>
+          </div>
+          <a href="">
+            <i
+              class="fa-solid fa-moon text-lg text-orange-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
           </a>
         </div>
       </div>
     </header>
 
+    <!-- separador -->
+    <div class="my-8"></div>
+
     <!-- guest header -->
+    <header class="shadow bg-white py-3">
+      <div
+        class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
+      >
+        <!-- nav mobile -->
+        <nav class="md:hidden">
+          <a class="hover:cursor-pointer">
+            <i
+              class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
+          </a>
+        </nav>
+        <div>
+          <a href="">
+            <img src="https://placehold.co/100" alt="" class="w-9 h-9" />
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Home</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Contato</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Partidas</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Esportes</a
+          >
+        </nav>
+        <div class="flex items-center space-x-3">
+          <div class="hidden md:block">
+            <a
+              href=""
+              class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+            >
+              Criar Conta
+            </a>
+          </div>
+          <a
+            href=""
+            class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+          >
+            Acessar
+          </a>
+          <a href="">
+            <i
+              class="fa-solid fa-moon text-lg text-orange-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </header>
   </body>
 </html>

@@ -48,8 +48,11 @@
 
 > Cores
 
-- Primaria (azul) : #00A2BE
-- Secundária (laranja): #E65C00
-- Verde: #8DE400
+- Primaria (azul) : #00A2BE - cyan-500
+- Secundária (laranja): #E65C00 - orange-500
+- Verde: #8DE400 - lime-500
+- Vermelho: red-600
+- Cinza: gray-500
+- Amarelo: amber-500
 
 ### Funções/Tarefas
