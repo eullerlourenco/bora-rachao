@@ -9,17 +9,101 @@
   </head>
   <body>
     <div class="container mx-auto my-16 flex flex-wrap">
+      <!-- input de texto -->
       <div class="basis-full my-6">
-        <p class="text-2xl text-gray-700">Input de texto padrão</p>
+        <p class="text-2xl text-gray-700">Input de texto</p>
+      </div>
+      <div class="flex gap-4">
+        <input
+          placeholder="Input de texto..."
+          type="text"
+          class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+        />
       </div>
 
+      <!-- input com label -->
+      <div class="basis-full my-6">
+        <p class="text-2xl text-gray-700">Descrição</p>
+      </div>
       <div class="flex gap-4">
-        <!-- input -->
-        <input
+        <div class="flex flex-col gap-1.5">
+          <label class="text-gray-700 text-lg" for="text">
+            <i
+              class="fa-solid fa-pencil text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+            ></i>
+            Nome Completo
+          </label>
+          <input
+            id="text"
+            placeholder="Texto qualquer..."
+            type="text"
+            class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+          />
+        </div>
+      </div>
+
+      <!-- input de texto -->
+      <div class="basis-full my-6">
+        <p class="text-2xl text-gray-700">Input select</p>
+      </div>
+      <div class="flex gap-4">
+        <select
+          placeholder="Input de texto..."
           type="text"
-          class="shadow-md py-2 px-3.5 border-2 border-gray-100 rounded-xl hover:border-gray-300 text-gray-700
-          focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-        />
+          class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+        >
+          <option value="" disabled>Selecione um valor</option>
+          <option value="value1">Minha opção 1</option>
+          <option value="value2">Minha opção 2</option>
+          <option value="value3">Minha opção 3</option>
+        </select>
+      </div>
+
+      <!-- fieldset -->
+      <div class="basis-full my-6">
+        <p class="text-2xl text-gray-700">Fieldset</p>
+      </div>
+      <div class="flex gap-4">
+        <fieldset class="border-1 border-gray-300 p-5 rounded-2xl">
+          <legend class="text-gray-700 text-lg">Endereço</legend>
+          <div class="grid grid-cols-3 gap-3">
+            <div>
+              <input
+                placeholder="Número"
+                type="text"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+              />
+            </div>
+            <div class="col-span-2">
+              <input
+                placeholder="Rua da casa"
+                type="text"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+              />
+            </div>
+            <div>
+              <input
+                placeholder="CEP"
+                type="text"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+              />
+            </div>
+            <div>
+              <input
+                placeholder="Bairro"
+                type="text"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+              />
+            </div>
+            <div>
+              <input
+                placeholder="Cidade"
+                type="text"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+              />
+            </div>
+          </div>
+        </fieldset>
       </div>
     </div>
   </body>
