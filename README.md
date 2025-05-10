@@ -39,6 +39,7 @@
 - JavaScript
 - Tailwind CSS
 - Figma
+- FontAwesome (icones)
 
 > Back-end
 
