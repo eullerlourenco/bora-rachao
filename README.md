@@ -17,6 +17,11 @@
 - Register
 - Create Match (Formulário para criar uma partida)
 - User Config (Atualizar e mudar as informações do usuário)
+- Friends (Ver todos amigos)
+- Confirm Email (Páginas para inserir código de confirmação do email)
+- Confirm Telephone (Página para inserir código de confirmação do telefone)
+- Forgot Password (Pagina para solicitar redefinição de senha)
+- Recover Password (Página para inserir nova senha da redefinição)
 
 ### Paginas (Done)
 
@@ -57,3 +62,28 @@
 - Amarelo: amber-500
 
 ### Funções/Tarefas
+
+> Euller
+- Home
+- User Profile
+- All Matches
+
+> Lucas
+- Match
+- Create Match
+- Friends
+
+> João
+- Login
+- Register
+- Contact
+
+> Gabriel
+- About
+- Recover Password
+- All Sports
+
+> Beatriz
+- Privacy Policy
+- Terms of Use
+- User Cofig
