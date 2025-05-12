@@ -86,4 +86,4 @@
 > Beatriz
 - Privacy Policy
 - Terms of Use
-- User Cofig
+- User Config
