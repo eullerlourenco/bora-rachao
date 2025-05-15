@@ -69,7 +69,7 @@
 - All Matches
 
 > Lucas
-- Match
+- Match Details
 - Create Match
 - Friends
 
