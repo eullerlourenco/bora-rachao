@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      class="css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+
+    <section
+      class="relative font-md flex justify-center items-center min-h-screen"
+    >
+      <div
+        class="grid md:grid-cols-2 shadow-lg border border-gray-300 max-w-[clamp(60rem,60rem,75rem)] min-h-[70vh] mx-2 rounded-3xl overflow-hidden"
+      >
+        <div
+          class="flex flex-col justify-center bg-gradient-to-br from-cyan-400 to-cyan-700 p-12 text-white text-center"
+        >
+          <h3 class="text-lg mb-3 uppercase font-light">
+            Que bom ter você de volta aqui
+          </h3>
+          <h2 class="font-bold text-3xl md:text-4xl mb-5">
+            <i class="fa-solid fa-door-open me-3"></i>
+            Faça seu login
+          </h2>
+          <p>
+            Sua plataforma de rachões e encontros esportivos. Junte-se a nós e
+            participe de competições incríveis. BoraRachão!
+          </p>
+        </div>
+        <div class="flex flex-col justify-center p-12">
+          <form action="">
+            <div class="flex flex-col gap-y-6">
+              <div class="flex flex-col gap-2">
+                <label class="text-gray-700 text-lg" for="email">
+                  <i
+                    class="fa-solid fa-envelope text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                  ></i>
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Digite seu endereço de email"
+                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-gray-700 text-lg" for="password">
+                  <i
+                    class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
+                  ></i>
+                  Senha
+                </label>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Digite sua senha"
+                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+              </div>
+            </div>
+            <div>
+              <button
+                type="submit"
+                href="#"
+                class="mt-4 w-full bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+              >
+                Entrar
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+          <div class="flex justify-between pt-6 text-sm text-gray-600">
+            <a href="" class="hover:text-cyan-500 duration-300 ease-in-out">
+              Esqueci a minha senha
+            </a>
+            <a
+              href="/app/resources/views/auth/register.html"
+              class="hover:text-cyan-500 duration-300 ease-in-out"
+            >
+              Criar conta
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-18 bg-white shadow border-t border-gray-200">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col justify-center items-center gap-y-5">
+          <a href="">
+            <img src="https://placehold.co/100" alt="" class="w-12 h-12" />
+          </a>
+          <a
+            href=""
+            class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
+          >
+            BoraRachão &copy;
+          </a>
+        </div>
+        <nav
+          class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
+        >
+          <a
+            href=""
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Home
+          </a>
+          <a
+            href=""
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Contato
+          </a>
+          <a
+            href=""
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Sobre
+          </a>
+          <a
+            href=""
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Política de Privacidade
+          </a>
+          <a
+            href=""
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Termos de Uso
+          </a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>
