@@ -54,12 +54,15 @@
 
 > Cores
 
-- Primaria (azul) : #00A2BE - cyan-500
-- Secundária (laranja): #E65C00 - orange-500
-- Verde: #8DE400 - lime-500
-- Vermelho: red-600
-- Cinza: gray-500
-- Amarelo: amber-500
+- Primaria (azul): #00A2BE (hexadecimal); cyan-500 (Tailwind CSS); 
+- Secundária (laranja): #E65C00 (hexadecimal); orange-500 (Tailwind CSS);
+- Verde: #8DE400 (hexadecimal); lime-500 (Tailwind CSS);
+- Vermelho: #E7000B (hexadecimal); red-600 (Tailwind CSS);
+- Cinza: #6A7282 (hexadecimal); gray-500 (Tailwind CSS);
+- Amarelo: #FD9A00 (hexadecimal); amber-500 (Tailwind CSS);
+
+> Fonte
+- [Inter - Google Fonts](https://fonts.google.com/specimen/Inter?query=inter)
 
 ### Funções/Tarefas
 
