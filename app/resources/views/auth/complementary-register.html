@@ -26,49 +26,82 @@
         <div
           class="flex flex-col justify-center p-12 bg-white order-last md:order-first"
         >
-          <form action="" id="form-register">
+          <a
+            href="/app/resources/views/auth/register.html"
+            class="mb-5 text-gray-600 hover:text-cyan-500 duration-300 ease-in-out flex items-center gap-x-2"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+            <p class="text-md">Voltar</p>
+          </a>
+          <form action="">
             <div class="flex flex-col gap-y-6">
               <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-lg" for="name">
+                <label class="text-gray-700 text-lg" for="cpf">
                   <i
-                    class="fa-solid fa-pencil text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                    class="fa-solid fa-id-card text-sm bg-orange-200 p-2 px-1.75 rounded-xl text-orange-500"
                   ></i>
-                  Nome completo
+                  CPF
                 </label>
                 <input
-                  id="name"
+                  id="cpf"
                   type="text"
-                  placeholder="Digite seu nome completo"
+                  placeholder="Digite seu CPF"
                   class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                 />
               </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-lg" for="email">
-                  <i
-                    class="fa-solid fa-envelope text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-                  ></i>
-                  Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Digite seu melhor email"
-                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
+              <div class="flex gap-x-2 gap-y-6 flex-col md:flex-row">
+                <div class="flex flex-col gap-2 w-full md:w-[69%]">
+                  <label class="text-gray-700 text-lg" for="birthdate">
+                    <i
+                      class="fa-solid fa-cake-candles text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
+                    ></i>
+                    Aniversário
+                  </label>
+                  <input
+                    id="birthdate"
+                    type="date"
+                    class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                  />
+                </div>
+                <div class="flex flex-col gap-2 w-full md:w-[39%]">
+                  <label class="text-gray-700 text-lg" for="city">
+                    <i
+                      class="fa-solid fa-location-dot text-sm bg-orange-200 p-2 px-2.5 rounded-xl text-orange-500"
+                    ></i>
+                    Cidade
+                  </label>
+                  <select
+                    id="city"
+                    type="text"
+                    class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                  >
+                    <option selected disabled>Selecione uma cidade</option>
+                    <option value="value1">Jaú</option>
+                    <option value="value2">Bariri</option>
+                    <option value="value3">Mineiros do Tietê</option>
+                    <option value="value3">Barra Bonita</option>
+                    <option value="value3">Bauru</option>
+                  </select>
+                </div>
               </div>
+
               <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-lg" for="password">
+                <label class="text-gray-700 text-lg" for="gender">
                   <i
-                    class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
+                    class="fa-solid fa-venus-mars text-sm bg-orange-200 p-2 px-1.5 rounded-xl text-orange-500"
                   ></i>
-                  Senha
+                  Gênero
                 </label>
-                <input
-                  id="password"
-                  type="password"
-                  placeholder="Crie uma senha segura"
-                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
+                <select
+                  id="gender"
+                  type="text"
+                  class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                >
+                  <option selected disabled>Selecione um gênero</option>
+                  <option value="value1">Masculino</option>
+                  <option value="value2">Feminino</option>
+                  <option value="value3">Outro</option>
+                </select>
               </div>
             </div>
             <div>
@@ -76,18 +109,26 @@
                 type="submit"
                 class="mt-4 w-full justify-center bg-orange-500 hover:bg-orange-400 hover:shadow-md hover:shadow-orange-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
               >
-                Próximo
+                Cadastrar
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
           </form>
-          <div class="flex justify-between pt-6 text-sm text-gray-600">
-            <a
-              href="/app/resources/views/auth/login.html"
-              class="hover:text-cyan-500 duration-300 ease-in-out"
-            >
-              Já tenho uma conta
-            </a>
+          <div>
+            <p class="text-xs text-gray-600 leading-5 mt-3 text-center">
+              Ao criar uma conta, você concorda com os
+              <a
+                href="/app/resources/views/general/terms-of-use.html"
+                class="text-orange-500"
+                >Termos e Condições</a
+              >
+              e a
+              <a
+                href="/app/resources/views/general/privacy-policy.html"
+                class="text-orange-500"
+                >Política de Privacidade</a
+              >.
+            </p>
           </div>
         </div>
         <div
@@ -160,12 +201,5 @@
         </nav>
       </div>
     </footer>
-
-    <script>
-      document.getElementById("form-register").addEventListener("submit", (e) => {
-        e.preventDefault();
-        window.location.href = "/app/resources/views/auth/complementary-register.html";
-      });
-    </script>
   </body>
 </html>

@@ -4,7 +4,7 @@
 
 ### Paginas (To do)
 
-- Home (página inicial)
+- Home (página inicial para logados)
 - Contact (página com formulário de contato e sugestões)
 - About (sobre os desenvolvedores)
 - Privacy Policy (políticas de privacidade)
@@ -13,8 +13,6 @@
 - User Profile (Perfil dos usuários)
 - All Matches (Lista todas as partidas disponíveis)
 - All Sports (Lista todos os esportes disponíveis)
-- Login
-- Register
 - Create Match (Formulário para criar uma partida)
 - User Config (Atualizar e mudar as informações do usuário)
 - Friends (Ver todos amigos)
@@ -24,6 +22,10 @@
 - Recover Password (Página para inserir nova senha da redefinição)
 
 ### Paginas (Done)
+- Home (página inicial para deslogados)
+- Login
+- Register
+- Complementary Register (dados adicionais)
 
 ## Precisamos 📌
 
@@ -67,7 +69,8 @@
 ### Funções/Tarefas
 
 > Euller
-- Home
+- Home (Para deslogados) ✅
+- Home (Para logados)
 - User Profile
 - All Matches
 
@@ -77,8 +80,9 @@
 - Friends
 
 > João
-- Login
-- Register
+- Login ✅
+- Register ✅
+- Complementary Register ✅
 - Contact
 
 > Gabriel

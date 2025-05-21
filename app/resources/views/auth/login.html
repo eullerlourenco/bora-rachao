@@ -14,23 +14,21 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        font-family: "Inter", sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="/app/resources/assets/css/style.css" />
   </head>
-  <body>
-
+  <body class="bg-gray-50">
     <section
-      class="relative font-md flex justify-center items-center min-h-screen"
+      class="my-6relative font-md flex justify-center items-center min-h-screen"
     >
       <div
         class="grid md:grid-cols-2 shadow-lg border border-gray-300 max-w-[clamp(60rem,60rem,75rem)] min-h-[70vh] mx-2 rounded-3xl overflow-hidden"
       >
         <div
-          class="flex flex-col justify-center bg-gradient-to-br from-cyan-400 to-cyan-700 p-12 text-white text-center"
+          class="relative flex flex-col justify-center p-12 text-white text-center"
         >
+          <div
+            class="absolute top-0 left-0 h-full w-full animate-auth-bg z-[-1] bg-gradient-to-br from-cyan-300 via-cyan-500 to-cyan-900"
+          ></div>
           <h3 class="text-lg mb-3 uppercase font-light">
             Que bom ter você de volta aqui
           </h3>
@@ -43,7 +41,7 @@
             participe de competições incríveis. BoraRachão!
           </p>
         </div>
-        <div class="flex flex-col justify-center p-12">
+        <div class="flex flex-col justify-center p-12 bg-white">
           <form action="">
             <div class="flex flex-col gap-y-6">
               <div class="flex flex-col gap-2">
@@ -78,7 +76,6 @@
             <div>
               <button
                 type="submit"
-                href="#"
                 class="mt-4 w-full bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
               >
                 Entrar
@@ -101,10 +98,10 @@
       </div>
     </section>
 
-    <footer class="py-18 bg-white shadow border-t border-gray-200">
+    <footer class="mt-16 py-18 bg-white shadow border-t border-gray-200">
       <div class="container mx-auto px-4">
         <div class="flex flex-col justify-center items-center gap-y-5">
-          <a href="">
+          <a href="/app/resources/views/index.html">
             <img src="https://placehold.co/100" alt="" class="w-12 h-12" />
           </a>
           <a
@@ -118,7 +115,7 @@
           class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
         >
           <a
-            href=""
+            href="/app/resources/views/index.html"
             class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
           >
             Home
@@ -150,6 +147,5 @@
         </nav>
       </div>
     </footer>
-
   </body>
 </html>
