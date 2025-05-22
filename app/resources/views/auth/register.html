@@ -70,6 +70,20 @@
                   class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                 />
               </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-gray-700 text-lg" for="password">
+                  <i
+                    class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
+                  ></i>
+                  Confirme a Senha
+                </label>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Repita a sua senha"
+                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+              </div>
             </div>
             <div>
               <button
@@ -162,7 +176,8 @@
     </footer>
 
     <script>
-      document.getElementById("form-register").addEventListener("submit", (e) => {
+      const form = document.getElementById('form-register');
+      form.addEventListener("submit", (e) => {
         e.preventDefault();
         window.location.href = "/app/resources/views/auth/complementary-register.html";
       });

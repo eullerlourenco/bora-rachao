@@ -1,0 +1,589 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      class="css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/app/resources/assets/css/style.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- logged header -->
+    <header class="shadow bg-white py-3">
+      <div
+        class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
+      >
+        <!-- nav mobile -->
+        <nav class="md:hidden">
+          <a class="hover:cursor-pointer">
+            <i
+              class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
+          </a>
+        </nav>
+        <div>
+          <a href="/app/resources/views/index.html">
+            <img src="https://placehold.co/100" alt="logo" class="w-9 h-9" />
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a
+            href="/app/resources/views/index.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Home</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Contato</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Partidas</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Esportes</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Amigos</a
+          >
+        </nav>
+        <div class="flex items-center space-x-3">
+          <a href="/app/resources/views/user/profile.html">
+            <img
+              src="/app/resources/assets/images/IMG_20250123_105642_002.webp"
+              class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
+              alt=""
+            />
+          </a>
+          <div class="hidden md:block">
+            <a
+              href=""
+              class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+            >
+              Bora jogar!
+            </a>
+          </div>
+          <a href="">
+            <i
+              class="fa-solid fa-moon text-lg text-orange-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!--Title section-->
+    <section class="container mx-auto px-4 my-14 rounded-lg">
+      <div class="lg:p-2 leading-[1.1] border-l-8 border-l-cyan-500">
+        <h2
+          class="ps-2 text-4xl lg:text-[3rem] leading-10 text-gray-700 font-semibold"
+        >
+          Todos os Esportes
+        </h2>
+      </div>
+    </section>
+
+    <!--Card section-->
+    <section class="container mx-auto grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 my-10 px-4">
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://clubepaineiras.org.br/wp-content/uploads/2022/05/jogadores.jpg"
+          alt="Futebol"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Futebol
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/2834917/pexels-photo-2834917.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="Basquete"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Basquete
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            O basquete é jogado entre duas equipes de cinco jogadores. O
+            objetivo é marcar pontos lançando a bola em um cesto elevado,
+            enquanto se defende a cesta própria. O jogo exige habilidade no
+            manejo da bola, passe, arremesso e coordenação em equipe.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="Volêi"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Volêi
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            O voleibol é um esporte coletivo jogado por duas equipes de seis
+            jogadores, em uma quadra dividida por uma rede. O objetivo é fazer a
+            bola tocar o chão do lado adversário, usando no máximo três toques
+            por time. Vence quem fizer mais pontos.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/22763693/pexels-photo-22763693/free-photo-of-woman-playing-tennis-on-beach.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="Beach Tennis"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Beach Tennis
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            O voleibol é um esporte coletivo jogado por duas equipes de seis
+            jogadores, em uma quadra dividida por uma rede. O objetivo é fazer a
+            bola tocar o chão do lado adversário, usando no máximo três toques
+            por time. Vence quem fizer mais pontos.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://cdn.pixabay.com/photo/2016/06/10/03/06/sport-1447323_1280.jpg"
+          alt="Futevôlei"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Futevôlei
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://cdn.pixabay.com/photo/2020/11/27/18/59/tennis-5782695_1280.jpg"
+          alt="Tênis"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Tênis
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/163407/cyclists-trail-bike-clouds-163407.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="Ciclismo"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Ciclismo
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://webrun.com.br/wp-content/uploads/2021/04/AdobeStock_176854577.jpeg"
+          alt="Corrida"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Corrida
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/1996969/pexels-photo-1996969.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="Skate"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Skate
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/10341870/pexels-photo-10341870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Boxe"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Boxe
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/8611381/pexels-photo-8611381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Jiu-Jitsu"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Jiu-Jitsu
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/6008949/pexels-photo-6008949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Parkour"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Parkour
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/3824749/pexels-photo-3824749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Sinuca"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Sinuca
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/187329/pexels-photo-187329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Tênis de Mesa"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Tênis de Mesa
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/25048028/pexels-photo-25048028/free-photo-of-mulheres-esporte-bola-esfera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Handeball"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Handeball
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+      <!-- card do esporte -->
+      <a
+        class="relative group min-h-70 rounded-2xl bg-cyan-500 border-b-7 border-l-7 border-b-orange-500 border-l-cyan-500 hover:cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-cyan-500 overflow-hidden duration-300 ease-in-out min-h-30 w-full"
+      >
+        <img
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          src="https://images.pexels.com/photos/15516700/pexels-photo-15516700/free-photo-of-natureza-ensolarado-homem-relaxamento.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Calistenia"
+        />
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-cyan-600/60 to-black/50 z-10 group-hover:backdrop-blur-sm group-hover:bg-black/65"
+        ></div>
+        <p
+          class="absolute group-hover:top-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-white leading-8 text-center text-4xl w-full font-semibold italic drop-shadow-lg duration-300 ease-in-out"
+        >
+          Calistenia
+        </p>
+        <div
+          class="absolute top-full group-hover:top-15 w-full group-hover:block z-10 content-center overflow-hidden text-ellipsis duration-300 ease-in-out"
+        >
+          <p class="text-white text-sm p-2 rounded-lg my-2 mx-3">
+            No futebol, duas equipes de 11 jogadores tentam marcar gols, usando
+            os pés, cabeça ou outras partes do corpo, exceto as mãos. O jogo
+            ocorre em um campo retangular com um gol em cada extremidade.
+          </p>
+        </div>
+      </a>
+    </section>
+    <footer class="mt-16 py-18 bg-white shadow border-t border-gray-200">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col justify-center items-center gap-y-5">
+      <a href="">
+        <img src="https://placehold.co/100" alt="" class="w-12 h-12" />
+      </a>
+      <a
+        href="/app/resources/views/index.html"
+        class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
+      >
+        BoraRachão &copy;
+      </a>
+    </div>
+    <nav
+      class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
+    >
+      <a
+        href="/app/resources/views/index.html"
+        class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+      >
+        Home
+      </a>
+      <a
+        href=""
+        class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+      >
+        Contato
+      </a>
+      <a
+        href=""
+        class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+      >
+        Sobre
+      </a>
+      <a
+        href=""
+        class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+      >
+        Política de Privacidade
+      </a>
+      <a
+        href=""
+        class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+      >
+        Termos de Uso
+      </a>
+    </nav>
+  </div>
+</footer>
+  </body>
+</html>
