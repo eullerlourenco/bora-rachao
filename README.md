@@ -10,7 +10,6 @@
 - Privacy Policy (políticas de privacidade)
 - Terms of Use (termos de uso)
 - Match (detalhes da partida)
-- User Profile (Perfil dos usuários)
 - All Matches (Lista todas as partidas disponíveis)
 - All Sports (Lista todos os esportes disponíveis)
 - Create Match (Formulário para criar uma partida)
@@ -26,6 +25,7 @@
 - Login
 - Register
 - Complementary Register (dados adicionais)
+- User Profile (Perfil dos usuários)
 
 ## Precisamos 📌
 
@@ -71,7 +71,7 @@
 > Euller
 - Home (Para deslogados) ✅
 - Home (Para logados)
-- User Profile
+- User Profile ✅
 - All Matches
 
 > Lucas
