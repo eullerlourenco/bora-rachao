@@ -4,7 +4,6 @@
 
 ### Paginas (To do)
 
-- Home (página inicial para logados)
 - Contact (página com formulário de contato e sugestões)
 - About (sobre os desenvolvedores)
 - Privacy Policy (políticas de privacidade)
@@ -70,7 +69,6 @@
 
 > Euller
 - Home (Para deslogados) ✅
-- Home (Para logados)
 - User Profile ✅
 - All Matches
 
