@@ -17,17 +17,13 @@
     <link rel="stylesheet" href="/app/resources/assets/css/style.css" />
   </head>
   <body class="bg-gray-50">
-    <section
-      class="my-6 relative font-md flex justify-center items-center min-h-screen"
-    >
-      <div
-        class="grid md:grid-cols-2 shadow-lg border border-gray-300 max-w-[clamp(60rem,60rem,75rem)] min-h-[70vh] mx-2 rounded-3xl overflow-hidden"
-      >
+    <section class="relative font-md min-h-screen">
+      <div class="grid md:grid-cols-2 h-full w-full">
         <div
           class="flex flex-col justify-center p-12 bg-white order-last md:order-first"
         >
           <form action="" id="form-register">
-            <div class="flex flex-col gap-y-6">
+            <div class="grid grid-cols-2 gap-y-6 gap-x-6">
               <div class="flex flex-col gap-2">
                 <label class="text-gray-700 text-lg" for="name">
                   <i
@@ -37,10 +33,17 @@
                 </label>
                 <input
                   id="name"
+                  name="name"
                   type="text"
                   placeholder="Digite seu nome completo"
                   class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                 />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="name"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
               </div>
               <div class="flex flex-col gap-2">
                 <label class="text-gray-700 text-lg" for="email">
@@ -51,10 +54,17 @@
                 </label>
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="Digite seu melhor email"
                   class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                 />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="email"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
               </div>
               <div class="flex flex-col gap-2">
                 <label class="text-gray-700 text-lg" for="password">
@@ -65,32 +75,143 @@
                 </label>
                 <input
                   id="password"
+                  name="password"
                   type="password"
                   placeholder="Crie uma senha segura"
                   class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                 />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="password"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
               </div>
               <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-lg" for="password">
+                <label
+                  class="text-gray-700 text-lg"
+                  for="password_confirmation"
+                >
                   <i
                     class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
                   ></i>
                   Confirme a Senha
                 </label>
                 <input
-                  id="password"
+                  id="password_confirmation"
+                  name="password_confirmation"
                   type="password"
                   placeholder="Repita a sua senha"
                   class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                 />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="password_confirmation"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-gray-700 text-lg" for="cpf">
+                  <i
+                    class="fa-solid fa-id-card text-sm bg-orange-200 p-2 px-1.75 rounded-xl text-orange-500"
+                  ></i>
+                  CPF
+                </label>
+                <input
+                  id="cpf"
+                  name="cpf"
+                  type="text"
+                  placeholder="Digite seu CPF"
+                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="cpf"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-gray-700 text-lg" for="birthdate">
+                  <i
+                    class="fa-solid fa-cake-candles text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
+                  ></i>
+                  Aniversário
+                </label>
+                <input
+                  id="birthdate"
+                  name="birthdate"
+                  type="date"
+                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="birthdate"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-gray-700 text-lg" for="city">
+                  <i
+                    class="fa-solid fa-location-dot text-sm bg-orange-200 p-2 px-2.5 rounded-xl text-orange-500"
+                  ></i>
+                  Cidade
+                </label>
+                <select
+                  id="city"
+                  name="city"
+                  type="text"
+                  class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                >
+                  <option selected disabled>Selecione uma cidade</option>
+                  <option value="value1">Jaú</option>
+                  <option value="value2">Bariri</option>
+                  <option value="value3">Mineiros do Tietê</option>
+                  <option value="value3">Barra Bonita</option>
+                  <option value="value3">Bauru</option>
+                </select>
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="city"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-2">
+                <label class="text-gray-700 text-lg" for="gender">
+                  <i
+                    class="fa-solid fa-venus-mars text-sm bg-orange-200 p-2 px-1.5 rounded-xl text-orange-500"
+                  ></i>
+                  Gênero
+                </label>
+                <select
+                  id="gender"
+                  name="gender"
+                  type="text"
+                  class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                >
+                  <option selected disabled>Selecione um gênero</option>
+                  <option value="value1">Masculino</option>
+                  <option value="value2">Feminino</option>
+                  <option value="value3">Outro</option>
+                </select>
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="gender"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
               </div>
             </div>
             <div>
               <button
                 type="submit"
-                class="mt-4 w-full justify-center bg-orange-500 hover:bg-orange-400 hover:shadow-md hover:shadow-orange-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+                class="mt-8 w-full justify-center bg-orange-500 hover:bg-orange-400 hover:shadow-md hover:shadow-orange-400/50 hover:cursor-pointer text-white px-4 py-2 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
               >
-                Próximo
+                Criar conta
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -175,12 +296,109 @@
       </div>
     </footer>
 
+    <script src="/app/resources/assets/js/script.js"></script>
+
     <script>
-      const form = document.getElementById('form-register');
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        window.location.href = "/app/resources/views/auth/complementary-register.html";
+      addInputValidations(document.getElementById("name"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+            toggleErrorMsg(input, "O campo nome é obrigatório.");
+          } else if (e.target.value.length > 255) {
+            toggleErrorMsg(
+              input,
+              "O campo nome só pode ter 255 caracteres no máximo."
+            );
+          } else {
+            toggleErrorMsg(input);
+          }
+        });
       });
+
+      addInputValidations(document.getElementById("email"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+            toggleErrorMsg(input, "O campo email é obrigatório.");
+          } else if (e.target.value.length > 255) {
+            toggleErrorMsg(
+              input,
+              "O campo email só pode ter 255 caracteres no máximo."
+            );
+          } else if (
+            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value.trim())
+          ) {
+            toggleErrorMsg(input, "O campo precisa ter um email válido.");
+          } else {
+            toggleErrorMsg(input);
+          }
+        });
+      });
+
+      addInputValidations(document.getElementById("password"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+            toggleErrorMsg(input, "O campo senha é obrigatório.");
+          } else if (e.target.value.length > 255) {
+            toggleErrorMsg(
+              input,
+              "O campo senha só pode ter 255 caracteres no máximo."
+            );
+          } else if (e.target.value.length < 8) {
+            toggleErrorMsg(
+              input,
+              "O campo senha deve ter no mínimo 8 caracteres."
+            );
+          } else {
+            toggleErrorMsg(input);
+          }
+          document
+            .getElementById("password_confirmation")
+            .dispatchEvent(new Event("blur"));
+        });
+      });
+
+      addInputValidations(
+        document.getElementById("password_confirmation"),
+        (input, msg) => {
+          const passwordInput = document.getElementById("password");
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo de confirmação é obrigatório.");
+            } else if (e.target.value != passwordInput.value) {
+              toggleErrorMsg(
+                input,
+                "O campo de confirmação e senha devem ser iguais."
+              );
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        }
+      );
+
+      addInputValidations(document.getElementById("cpf"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+            toggleErrorMsg(input, "O campo de CPF é obrigatório.");
+          }  else if (!isValidCPF(e.target.value)) {
+            toggleErrorMsg(input, "O campo de CPF deve ser válido (11155522200).");
+          } else {
+            toggleErrorMsg(input);
+          }
+        });
+      });
+
+      addInputValidations(
+        document.getElementById("birthdate"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (!isValidBirthDate(e.target.value, 14)) {
+              toggleErrorMsg(input, "O campo aniversário deve ser válido.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        }
+      );
     </script>
   </body>
 </html>
