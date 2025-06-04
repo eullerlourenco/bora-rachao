@@ -55,9 +55,9 @@
 
 > Cores
 
-- Primaria (azul): #00A2BE (hexadecimal); cyan-500 (Tailwind CSS); 
-- Secundária (laranja): #E65C00 (hexadecimal); orange-500 (Tailwind CSS);
-- Verde: #8DE400 (hexadecimal); lime-500 (Tailwind CSS);
+- Primaria (azul): #06B6D4 (hexadecimal); cyan-500 (Tailwind CSS); 
+- Secundária (laranja): #F97316 (hexadecimal); orange-500 (Tailwind CSS);
+- Verde: #84CC16 (hexadecimal); lime-500 (Tailwind CSS);
 - Vermelho: #E7000B (hexadecimal); red-600 (Tailwind CSS);
 - Cinza: #6A7282 (hexadecimal); gray-500 (Tailwind CSS);
 - Amarelo: #FD9A00 (hexadecimal); amber-500 (Tailwind CSS);
