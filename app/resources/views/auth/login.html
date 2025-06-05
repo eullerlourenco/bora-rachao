@@ -17,12 +17,8 @@
     <link rel="stylesheet" href="/app/resources/assets/css/style.css" />
   </head>
   <body class="bg-gray-50">
-    <section
-      class="my-6 relative font-md flex justify-center items-center min-h-screen"
-    >
-      <div
-        class="grid md:grid-cols-2 shadow-lg border border-gray-300 max-w-[clamp(60rem,60rem,75rem)] min-h-[70vh] mx-2 rounded-3xl overflow-hidden"
-      >
+    <section class="font-md min-h-screen">
+      <div class="grid md:grid-cols-2 min-h-screen">
         <div
           class="relative flex flex-col justify-center p-12 text-white text-center"
         >
@@ -41,11 +37,11 @@
             participe de competições incríveis. BoraRachão!
           </p>
         </div>
-        <div class="flex flex-col justify-center p-12 bg-white">
-          <form action="">
+        <div class="flex flex-col justify-center p-4 md:p-12 lg:px-16 bg-white">
+          <form action="#" id="form_login">
             <div class="flex flex-col gap-y-6">
               <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-lg" for="email">
+                <label class="text-gray-700 text-md" for="email">
                   <i
                     class="fa-solid fa-envelope text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
                   ></i>
@@ -53,13 +49,20 @@
                 </label>
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="Digite seu endereço de email"
                   class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                 />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="email"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
               </div>
               <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-lg" for="password">
+                <label class="text-gray-700 text-md" for="password">
                   <i
                     class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
                   ></i>
@@ -67,10 +70,17 @@
                 </label>
                 <input
                   id="password"
+                  name="password"
                   type="password"
                   placeholder="Digite sua senha"
                   class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                 />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="password"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
               </div>
             </div>
             <div>
@@ -91,7 +101,7 @@
               href="/app/resources/views/auth/register.html"
               class="hover:text-cyan-500 duration-300 ease-in-out"
             >
-              Criar conta
+              Criar uma conta
             </a>
           </div>
         </div>
@@ -147,5 +157,59 @@
         </nav>
       </div>
     </footer>
+
+    <script src="/app/resources/assets/js/script.js"></script>
+
+    <script>
+      const arrayLoginForm = [];
+
+      addInputValidations(
+        document.getElementById("email"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo email é obrigatório.");
+            } else if (e.target.value.length > 255) {
+              toggleErrorMsg(
+                input,
+                "O campo email só pode ter 255 caracteres no máximo."
+              );
+            } else if (
+              !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value.trim())
+            ) {
+              toggleErrorMsg(input, "O campo precisa ter um email válido.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayLoginForm
+      );
+
+      addInputValidations(
+        document.getElementById("password"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo senha é obrigatório.");
+            } else if (e.target.value.length > 255) {
+              toggleErrorMsg(
+                input,
+                "O campo senha só pode ter 255 caracteres no máximo."
+              );
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayLoginForm
+      );
+
+      formPreventAndValidate(
+        document.getElementById("form_login"),
+        arrayLoginForm,
+        "/app/resources/views/"
+      );
+    </script>
   </body>
 </html>

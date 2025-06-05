@@ -1,6 +1,7 @@
-function addInputValidations(input, closure) {
+function addInputValidations(input, closure, arrayForm) {
   const msg = `Preencha o campo ${input.id} de forma correta.`;
   if (closure) {
+    arrayForm.push(input);
     closure(input, msg);
   }
 }
@@ -68,4 +69,23 @@ function isValidBirthDate(dateStr, ageLimit = null) {
   }
 
   return true;
+}
+
+function formPreventAndValidate(form, arrayForm, url) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let hasError = false;
+    arrayForm.forEach((element) => {
+      element.dispatchEvent(new Event("blur"));
+      let errorElement = element.nextElementSibling;
+      if (errorElement || errorElement.dataset.error === element.id) {
+        if (!errorElement.classList.contains("hidden")) {
+          hasError = true;
+        }
+      }
+    });
+    if (hasError) return;
+
+    window.location.replace(url);
+  });
 }
