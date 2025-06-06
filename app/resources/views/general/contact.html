@@ -126,7 +126,7 @@
             </div>
 
             <div class="w-full md:w-2/3 p-8">
-              <form>
+              <form action="#" id="form_contact">
                 <div class="flex flex-col gap-y-4">
                   <div class="flex flex-col gap-2">
                     <label
@@ -145,6 +145,12 @@
                       type="text"
                       class="w-full shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                     />
+                     <p
+                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                      data-error="name"
+                    >
+                      O campo precisa ser preenchido corretamente.
+                    </p>
                   </div>
                   <div class="flex flex-col gap-2">
                     <label class="block text-gray-700 text-md mb-1" for="email">
@@ -160,6 +166,12 @@
                       type="email"
                       class="w-full shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                     />
+                    <p
+                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                      data-error="email"
+                    >
+                      O campo precisa ser preenchido corretamente.
+                    </p>
                   </div>
                   <div class="flex flex-col gap-2">
                     <label
@@ -178,6 +190,12 @@
                       type="text"
                       class="w-full shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                     />
+                    <p
+                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                      data-error="subject"
+                    >
+                      O campo precisa ser preenchido corretamente.
+                    </p>
                   </div>
                   <div class="flex flex-col gap-2">
                     <label
@@ -197,6 +215,12 @@
                       type="text"
                       class="w-full shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                     ></textarea>
+                    <p
+                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                      data-error="message"
+                    >
+                      O campo precisa ser preenchido corretamente.
+                    </p>
                   </div>
                 </div>
                 <button
@@ -295,8 +319,96 @@
 </footer>
 
     <script src="/app/resources/assets/js/script.js"></script>
+
     <script>
-      
+
+ const arrayContactForm = [];
+
+      addInputValidations(
+        document.getElementById("name"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo nome é obrigatório.");
+            } else if (e.target.value.length > 255) {
+              toggleErrorMsg(
+                input,
+                "O campo nome só pode ter 255 caracteres no máximo."
+              );
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayContactForm
+      );
+
+      addInputValidations(
+        document.getElementById("email"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo email é obrigatório.");
+            } else if (e.target.value.length > 255) {
+              toggleErrorMsg(
+                input,
+                "O campo email só pode ter 255 caracteres no máximo."
+              );
+            } else if (
+              !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value.trim())
+            ) {
+              toggleErrorMsg(input, "O campo precisa ter um email válido.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayContactForm
+      );
+
+      addInputValidations(
+        document.getElementById("subject"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo assunto é obrigatório.");
+            } else if (e.target.value.length > 255) {
+              toggleErrorMsg(
+                input,
+                "O campo assunto só pode ter 255 caracteres no máximo."
+              );
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayContactForm
+      );
+
+       addInputValidations(
+        document.getElementById("message"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo mensagem é obrigatório.");
+            } else if (e.target.value.length > 500) {
+              toggleErrorMsg(
+                input,
+                "O campo mensagem só pode ter 500 caracteres no máximo."
+              );
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayContactForm
+      );
+
+       formPreventAndValidate(
+        document.getElementById("form_contact"),
+        arrayContactForm,
+        "/app/resources/views/"
+      );
     </script>
   </body>
 </html>
