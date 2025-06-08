@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes da partida</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" class="css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"/>
+  <link rel="stylesheet" href="/app/resources/assets/css/style.css">
+</head>
+<body>
+
+  <!-- logged header -->
+  <header class="shadow bg-white py-3">
+    <div
+      class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
+    >
+      <!-- nav mobile -->
+      <nav class="md:hidden">
+        <a class="hover:cursor-pointer">
+          <i
+            class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+          ></i>
+        </a>
+      </nav>
+      <div>
+        <a href="/app/resources/views/index.html">
+          <img src="https://placehold.co/100" alt="logo" class="w-9 h-9" />
+        </a>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a
+          href="/app/resources/views/index.html"
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+          >Home</a
+        >
+        <a
+          href="/app/resources/views/general/contact.html"
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+          >Contato</a
+        >
+        <a
+          href=""
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+          >Partidas</a
+        >
+        <a
+          href="/app/resources/views/sports/index.html"
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+          >Esportes</a
+        >
+        <a
+          href=""
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+          >Amigos</a
+        >
+      </nav>
+      <div class="flex items-center space-x-3">
+        <a href="/app/resources/views/user/profile.html">
+          <img
+            src="/app/resources/assets/images/IMG_20250123_105642_002.webp"
+            class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
+            alt=""
+          />
+        </a>
+        <div class="hidden md:block">
+          <a
+            href=""
+            class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+          >
+            Bora jogar!
+          </a>
+        </div>
+        <a href="">
+          <i
+            class="fa-solid fa-moon text-lg text-orange-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+          ></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!--Title section-->
+  <section class="container mx-auto px-4 my-8">
+    <div class="lg:p-2 leading-[1.1] border-l-8 border-l-cyan-500">
+      <h2
+        class="ps-2 text-4xl lg:text-[3rem] text-gray-700 font-semibold capitalize"
+      >
+        Detalhes da partida
+      </h2>
+    </div>
+  </section>
+
+  <!-- Criar partida -->
+  <section class="container mx-auto my-15">
+    <form class="mx-auto rounded-2xl shadow-lg border border-gray-300 border-l-8 border-l-cyan-500">
+
+      <!-- Título -->
+      <div class="basis-full my-6 mx-6">
+        <p class="text-2xl text-gray-700 border-b border-b-gray-300 pb-5 font-bold">
+          <i class="fa-solid fa-forward mx-2"></i>
+          Volêi de Areia
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3">
+        <!-- Inputs do Formulário -->
+        <div class="col-span-2">
+          <div class="grid grid-cols-6">
+
+            <!-- Esporte select -->
+            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-6">
+              <label class="text-gray-700 text-md" for="select">
+                <i class="fa-solid fa-trophy text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
+                Esporte
+              </label>
+              <select id="select" placeholder="Escolha a opção..." type="text"
+                class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+              >
+                <option value="" disabled>Selecione um esporte</option>
+                <option value="value1">Futebol</option>
+                <option value="value2">Vôlei</option>
+                <option value="value3">Basquete</option>
+              </select>
+            </div>
+
+            <!-- Hora -->
+            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-6">
+              <label class="text-gray-700 text-md" for="hour">
+                <i class="fa-solid fa-clock text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
+                Hora
+              </label>
+              <input id="hour" type="time"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                disabled/>
+            </div> 
+
+            <!-- Data -->
+            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-6">
+              <label class="text-gray-700 text-md" for="date">
+                <i
+                class="fa-solid fa-calendar-days text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.5"></i>
+                Data
+              </label>
+              <input id="date" type="date"
+                class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                disabled/>
+            </div>
+
+            <!-- Número de participantes -->
+            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-6">
+              <label class="text-gray-700 text-md" for="players">
+                <i class="fa-solid fa-user-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
+                Nº de Participantes
+              </label>
+              <input id="players" placeholder="12" type="number" min="2" max="30"
+                class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                disabled/>
+            </div>
+              
+            <!-- Idade -->
+            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-6">
+              <label class="text-gray-700 text-md" for="age">
+                <i class="fa-solid fa-triangle-exclamation text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
+                Idade
+              </label>
+              <input id="age" placeholder="18" type="text" min="14"
+                class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                disabled/>
+            </div>
+              
+            <!-- Descrição -->
+            <div class="flex flex-col col-span-6 gap-1.5 mb-6 mx-6">
+              <label class="text-gray-700 text-md" for="description">
+                <i class="fa-solid fa-pen-clip text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
+                Descrição
+              </label>
+              <input id="description" placeholder="Ex: É na areia galera, vão de chinelo, e passem protetor solar, está muito sol..." type="text"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                disabled/>
+            </div>
+            
+            <!-- Fieldset -->
+            <div class="flex flex-col col-span-6 mb-6 mx-6">
+              <fieldset class="shadow-lg border border-gray-300 p-5 rounded-2xl">
+                <legend class="text-gray-700 text-md">
+                  <i class="fa-solid fa-map-location-dot text-sm bg-orange-200 p-2.25 rounded-xl text-orange-500 mr-1"></i>
+                  Endereço
+                </legend>
+                
+                <div class="grid grid-cols-6 gap-3">
+                  <!-- CEP -->
+                  <div class="flex flex-col gap-1.5 col-span-2">
+                    <label class="text-gray-700 text-md" for="cep">
+                      <i class="fa-solid fa-map-pin text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-3"></i>
+                      CEP
+                    </label>
+                    <input id="cep" placeholder="Digite o cep..." type="text"
+                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                      disabled/>
+                  </div>
+
+                  <!-- Número -->
+                  <div class="flex flex-col gap-1.5 col-span-2">
+                    <label class="text-gray-700 text-md" for="number">
+                      <i class="fa-solid fa-hashtag text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.5"></i>
+                      Número
+                    </label>
+                    <input id="number" placeholder="Número" type="number" min="1"
+                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+                      disabled/>
+                  </div>
+
+                  <!-- Cidade -->
+                  <div class="flex flex-col gap-1.5 col-span-2">
+                    <label class="text-gray-700 text-md" for="city">
+                      <i class="fa-solid fa-city text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2"></i>
+                      Cidade
+                    </label>
+                    <input id="city" placeholder="Cidade" type="text"
+                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+                      disabled/>
+                  </div>
+
+                  <!-- Rua -->
+                  <div class="flex flex-col gap-1.5 col-span-3">
+                    <label class="text-gray-700 text-md" for="street">
+                      <i class="fa-solid fa-road text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
+                      Rua
+                    </label>
+                    <input id="street" placeholder="Rua do lugar" type="text"
+                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+                      disabled/>
+                  </div>
+
+                  <!-- Bairro -->
+                  <div class="flex flex-col gap-1.5 col-span-3">
+                    <label class="text-gray-700 text-md" for="neighborhood">
+                      <i class="fa-solid fa-street-view text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
+                      Bairro
+                    </label>
+                    <input id="neighborhood" placeholder="Bairro" type="text"
+                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+                      disabled/>
+                  </div>
+                  
+                </div>
+              </fieldset>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Amigos -->
+        <div class="flex flex-col">
+          <div class="mx-7 mb-6 p-5 rounded-2xl shadow-lg border border-gray-300 border-t-6 border-t-lime-500 h-auto">
+            <p class="text-2xl text-gray-700 pb-5 font-bold">Participantes:</p>
+            
+            <div class="flex gap-2 flex-wrap">
+              <div>
+                <input type="checkbox" id="checkboxPills" value="eullerls" class="hidden peer" autocomplete="off"/>
+                <label for="checkboxPills"
+                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                >
+                  <div class="block">
+                    <span class="tex font-medium">@eullerls</span>
+                  </div>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkboxPills2" value="lucasbardeli" class="hidden peer" autocomplete="off"/>
+                <label for="checkboxPills2"
+                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                >
+                  <div class="block">
+                    <span class="tex font-medium">@lucasbardeli</span>
+                  </div>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkboxPills3" value="joaofran" class="hidden peer" autocomplete="off"/>
+                <label for="checkboxPills3"
+                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                >
+                  <div class="block">
+                    <span class="tex font-medium">@joaofran</span>
+                  </div>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkboxPills5" value="beaamonteiro" class="hidden peer" autocomplete="off"/>
+                <label for="checkboxPills5"
+                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                >
+                  <div class="block">
+                    <span class="tex font-medium">@beaamonteiro</span>
+                  </div>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkboxPills6" value="n4rdelli" class="hidden peer" autocomplete="off"/>
+                <label for="checkboxPills6"
+                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                >
+                  <div class="block">
+                    <span class="tex font-medium">@n4rdelli</span>
+                  </div>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkboxPills7" value="juninh0bw" class="hidden peer" autocomplete="off"/>
+                <label for="checkboxPills7"
+                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                >
+                  <div class="block">
+                    <span class="tex font-medium">@juninh0bw</span>
+                  </div>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkboxPills9" value="pietrodub" class="hidden peer" autocomplete="off"/>
+                <label for="checkboxPills9"
+                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                >
+                  <div class="block">
+                    <span class="tex font-medium">@pietrodub</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão -->
+      <div class="flex basis-full mb-6 mr-7 justify-end">
+        <button type="submit"
+          href=""
+          class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white 
+            m-0 px-4 py-3 rounded-xl flex items-center duration-300 ease-in-out">
+          Se juntar à partida <i class="ml-2 fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+    </form>
+  </section>
+
+  <!-- footer -->
+  <footer class="py-18 bg-white shadow border-t border-gray-200">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col justify-center items-center gap-y-5">
+        <a href="">
+          <img src="https://placehold.co/100" alt="" class="w-12 h-12" />
+        </a>
+        <a
+          href="/app/resources/views/index.html"
+          class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
+        >
+          BoraRachão &copy;
+        </a>
+      </div>
+      <nav
+        class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
+      >
+        <a
+          href="/app/resources/views/index.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Home
+        </a>
+        <a
+          href="/app/resources/views/general/contact.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Contato
+        </a>
+        <a
+          href=""
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Sobre
+        </a>
+        <a
+          href=""
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Política de Privacidade
+        </a>
+        <a
+          href=""
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Termos de Uso
+        </a>
+      </nav>
+      <div class="flex justify-center gap-x-4 mt-9">
+        <a
+          href=""
+          class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-instagram text-2xl hover:text-white"></i>
+        </a>
+        <a
+          href=""
+          class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-tiktok text-2xl"></i>
+        </a>
+        <a
+          href=""
+          class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-square-facebook text-2xl"></i>
+        </a>
+        <a
+          href=""
+          class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-x-twitter text-2xl"></i>
+        </a>
+        <a
+          href=""
+          class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-linkedin text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
