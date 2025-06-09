@@ -1,0 +1,589 @@
+<html>
+  <head>
+    <title>Todas as Partidas - BoraRachão</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      class="css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/app/resources/assets/css/style.css" />
+  </head>
+  <body class="bg-gray-50">
+    <header class="shadow bg-white py-3">
+      <div
+        class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
+      >
+        <!-- nav mobile -->
+        <nav class="md:hidden">
+          <a class="hover:cursor-pointer">
+            <i
+              class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
+          </a>
+        </nav>
+        <div>
+          <a href="/app/resources/views/index.html">
+            <img src="https://placehold.co/100" alt="logo" class="w-9 h-9" />
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a
+            href="/app/resources/views/index.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Home</a
+          >
+          <a
+            href="/app/resources/views/general/contact.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Contato</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Partidas</a
+          >
+          <a
+            href="/app/resources/views/sports/index.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Esportes</a
+          >
+          <a
+            href=""
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Amigos</a
+          >
+        </nav>
+        <div class="flex items-center space-x-3">
+          <a href="/app/resources/views/user/profile.html">
+            <img
+              src="/app/resources/assets/images/IMG_20250123_105642_002.webp"
+              class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
+              alt=""
+            />
+          </a>
+          <div class="hidden md:block">
+            <a
+              href=""
+              class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+            >
+              Bora jogar!
+            </a>
+          </div>
+          <a href="">
+            <i
+              class="fa-solid fa-moon text-lg text-orange-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="my-8">
+      <div class="container mx-auto px-4">
+        <div>
+          <h2 class="text-2xl text-gray-500 font-semibold mb-6">
+            <i class="fa-solid fa-basketball"></i>
+            Encontre alguma partida!
+          </h2>
+        </div>
+        <div class="flex flex-wrap gap-y-2 gap-x-3">
+          <div>
+            <input
+              type="checkbox"
+              id="futebol"
+              value="futebol"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="futebol"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Futebol</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="basquete"
+              value="basquete"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="basquete"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Basquete</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="vôlei"
+              value="vôlei"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="vôlei"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Vôlei</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="futevôlei"
+              value="futevôlei"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="futevôlei"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Futevôlei</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="tenis"
+              value="tênis"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="tenis"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Tênis</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="beach_tennis"
+              value="beach tennis"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="beach_tennis"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Beach Tennis</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="ciclismo"
+              value="ciclismo"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="ciclismo"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Ciclismo</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="corrida"
+              value="corrida"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="corrida"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Corrida</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="skate"
+              value="skate"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="skate"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Skate</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="boxe"
+              value="boxe"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="boxe"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Boxe</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="jiu_jitsu"
+              value="jiu-jitsu"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="jiu_jitsu"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Jiu-Jitsu</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="parkour"
+              value="parkour"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="parkour"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Parkour</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="sinuca"
+              value="sinuca"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="sinuca"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Sinuca</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="tenis_de_mesa"
+              value="tênis de mesa"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="tenis_de_mesa"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Tênis de Mesa</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="handeball"
+              value="handeball"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="handeball"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Handeball</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="calistenia"
+              value="calistenia"
+              class="hidden peer"
+              autocomplete="off"
+            />
+            <label
+              for="calistenia"
+              class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+            >
+              <div class="block">
+                <span class="tex font-medium">Calistenia</span>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="my-8">
+      <div class="container mx-auto px-4">
+        <div
+          id="matches_container"
+          class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-3 gap-y-4"
+        ></div>
+      </div>
+    </section>
+
+    <footer class="py-18 bg-white shadow border-t border-gray-200">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col justify-center items-center gap-y-5">
+          <a href="">
+            <img src="https://placehold.co/100" alt="" class="w-12 h-12" />
+          </a>
+          <a
+            href="/app/resources/views/index.html"
+            class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
+          >
+            BoraRachão &copy;
+          </a>
+        </div>
+        <nav
+          class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
+        >
+          <a
+            href="/app/resources/views/index.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Home
+          </a>
+          <a
+            href="/app/resources/views/general/contact.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Contato
+          </a>
+          <a
+            href=""
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Sobre
+          </a>
+          <a
+            href=""
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Política de Privacidade
+          </a>
+          <a
+            href=""
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Termos de Uso
+          </a>
+        </nav>
+        <div class="flex justify-center gap-x-4 mt-9">
+          <a
+            href=""
+            class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-instagram text-2xl hover:text-white"></i>
+          </a>
+          <a
+            href=""
+            class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-tiktok text-2xl"></i>
+          </a>
+          <a
+            href=""
+            class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-square-facebook text-2xl"></i>
+          </a>
+          <a
+            href=""
+            class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-x-twitter text-2xl"></i>
+          </a>
+          <a
+            href=""
+            class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-linkedin text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="/app/resources/assets/js/script.js"></script>
+
+    <script>
+      const matchesContainer = document.getElementById("matches_container");
+      const filters = document.querySelectorAll('input[type="checkbox"]');
+      filters.forEach((element) => {
+        element.addEventListener("change", (event) => {
+          let array = filterMatches();
+        });
+      });
+
+      let filtersSelected = "";
+      const availableMatches = [
+        {
+          sport: "futebol",
+          creator: "beatrizk",
+          avatar: "/app/resources/assets/images/IMG_20250123_105642_002.webp",
+          hour: "15:50",
+          date: "15/06",
+          needPlayers: 9,
+          players: 4,
+          city: "Jaú",
+        },
+        {
+          sport: "basquete",
+          creator: "eullerls",
+          avatar: "/app/resources/assets/images/IMG_20250123_105642_002.webp",
+          hour: "19:00",
+          date: "19/06",
+          needPlayers: 10,
+          players: 5,
+          city: "Jaú",
+        },
+        {
+          sport: "futevôlei",
+          creator: "joaofran",
+          avatar: "/app/resources/assets/images/IMG_20250123_105642_002.webp",
+          hour: "09:00",
+          date: "15/06",
+          needPlayers: 8,
+          players: 1,
+          city: "Jaú",
+        },
+        {
+          sport: "beach tennis",
+          creator: "joaofran",
+          avatar: "/app/resources/assets/images/IMG_20250123_105642_002.webp",
+          hour: "09:00",
+          date: "15/06",
+          needPlayers: 8,
+          players: 1,
+          city: "Jaú",
+        },
+      ];
+
+      function createMatchesBlock(array) {
+        matchesContainer.innerHTML = "";
+        if (array.length === 0) {
+          matchesContainer.innerHTML = `
+                <div class="col-span-5 text-center">
+                    <p class="text-gray-500 font-semibold">Nenhuma partida encontrada.</p>
+                </div>
+                `;
+          return;
+        }
+        let newContent = "";
+        array.forEach((element) => {
+          newContent += `
+                <a href="">
+                    <div class="bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out">
+                        <span
+                            class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2"
+                            >bora ${element.sport}
+                            </span>
+                        <div class="flex items-center justify-start space-x-1 mt-1">
+                            <img
+                            src="${element.avatar}"
+                            class="w-8 h-8 rounded-full border-2 border-gray-300"
+                            alt="${element.creator}"
+                            />
+                            <p class="font-bold text-cyan-500">${element.creator}</p>
+                        </div>
+                        <hr class="text-gray-300 my-1" />
+                        <div>
+                            <div class="flex items-center justify-between mb-0.5">
+                            <p class="text-gray-500 text-sm font-semibold">
+                                <i class="fa-solid fa-calendar me-1"></i>${element.date} - ${element.hour}h
+                            </p>
+                            <p class="text-orange-500 font-bold">
+                                <i class="fa-solid fa-users me-1"></i>${element.players}/${element.needPlayers}
+                            </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-end">
+                            <p class="text-gray-500 font-semibold">
+                                <i class="fa-solid fa-location-dot me-0.75"></i>${element.city}
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            `;
+        });
+        matchesContainer.innerHTML = newContent;
+      }
+
+      function filterMatches() {
+        let newFilters = [];
+        filters.forEach((element) => {
+          if (element.checked) {
+            newFilters.push(element.value.toLowerCase());
+          }
+        });
+        let matches = availableMatches.filter(
+          (match) => newFilters.length === 0 || newFilters.includes(match.sport)
+        );
+        console.log(newFilters);
+        createMatchesBlock(matches);
+      }
+
+      createMatchesBlock(availableMatches);
+    </script>
+  </body>
+</html>
