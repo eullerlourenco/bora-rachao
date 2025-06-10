@@ -89,3 +89,15 @@ function formPreventAndValidate(form, arrayForm, url) {
     window.location.replace(url);
   });
 }
+
+const btnOpenMenuMobile = document.getElementById("btn_open_menu_mobile");
+const btnCloseMenuMobile = document.getElementById("btn_close_menu_mobile");
+const menuMobile = document.getElementById("menu_mobile");
+
+btnOpenMenuMobile.addEventListener("click", (event) => {
+  menuMobile.classList.remove("hidden");
+});
+
+btnCloseMenuMobile.addEventListener("click", (event) => {
+  menuMobile.classList.add("hidden");
+});

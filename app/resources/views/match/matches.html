@@ -24,11 +24,85 @@
       >
         <!-- nav mobile -->
         <nav class="md:hidden">
-          <a class="hover:cursor-pointer">
+          <a id="btn_open_menu_mobile" class="hover:cursor-pointer">
             <i
-              class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+              class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-xl hover:bg-gray-100 duration-300 ease-in-out"
             ></i>
           </a>
+          <div
+            id="menu_mobile"
+            class="absolute p-6 w-screen h-screen bg-white z-50 top-0 left-0 hidden"
+          >
+            <div class="text-end">
+              <a id="btn_close_menu_mobile" class="hover:cursor-pointer">
+                <i
+                  class="fa-solid fa-xmark text-lg text-gray-500 py-3 px-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 duration-300 ease-in-out"
+                ></i>
+              </a>
+            </div>
+            <div class="text-gray-700 flex flex-col gap-y-3">
+              <h3 class="text-2xl">Menu</h3>
+              <hr class="text-gray-300" />
+              <a
+                href="/app/resources/views/index.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-house text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Home
+              </a>
+              <a
+                href="/app/resources/views/general/contact.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Contato
+              </a>
+              <a
+                href="/app/resources/views/match/matches.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Partidas
+              </a>
+              <a
+                href="/app/resources/views/match/matches.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Esportes
+              </a>
+              <a
+                href="/app/resources/views/match/matches.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Amigos
+              </a>
+              <a
+                href="/app/resources/views/match/matches.html"
+                class="mt-3 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-2.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+              >
+                Bora Jogar!
+              </a>
+              <a
+                href="/app/resources/views/auth/login.html"
+                class="mt-2 bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+              >
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Sair
+              </a>
+            </div>
+          </div>
         </nav>
         <div>
           <a href="/app/resources/views/index.html">
@@ -72,30 +146,31 @@
           </a>
           <div class="hidden md:block">
             <a
-              href=""
+              href="/app/resources/views/match/matches.html"
               class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
             >
               Bora jogar!
             </a>
           </div>
-          <a href="">
-            <i
-              class="fa-solid fa-moon text-lg text-orange-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
-            ></i>
-          </a>
         </div>
       </div>
     </header>
 
     <section class="my-8">
       <div class="container mx-auto px-4">
-        <div>
-          <h2 class="text-2xl text-gray-500 font-semibold mb-6">
+        <div class="flex flex-wrap flex-row items-center mb-6 gap-3">
+          <h2 class="text-2xl text-gray-500 font-semibold">
             <i class="fa-solid fa-basketball"></i>
             Encontre alguma partida!
           </h2>
+          <a
+            href="/app/resources/views/match/create-match.html"
+            class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+          >
+            Criar meu bora!
+          </a>
         </div>
-        <div class="flex flex-wrap gap-y-2 gap-x-3">
+        <div class="flex flex-wrap gap-y-2.5 gap-x-3">
           <div>
             <input
               type="checkbox"
@@ -109,7 +184,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Futebol</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-futbol"></i>
+                  Futebol
+                </span>
               </div>
             </label>
           </div>
@@ -126,7 +204,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Basquete</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-basketball"></i>
+                  Basquete
+                </span>
               </div>
             </label>
           </div>
@@ -143,7 +224,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Vôlei</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-volleyball"></i>
+                  Vôlei
+                </span>
               </div>
             </label>
           </div>
@@ -160,7 +244,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Futevôlei</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-futbol"></i>
+                  Futevôlei
+                </span>
               </div>
             </label>
           </div>
@@ -177,7 +264,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Tênis</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-baseball"></i>
+                  Tênis
+                </span>
               </div>
             </label>
           </div>
@@ -194,7 +284,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Beach Tennis</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                  Beach Tennis
+                </span>
               </div>
             </label>
           </div>
@@ -211,7 +304,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Ciclismo</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-person-biking"></i>
+                  Ciclismo
+                </span>
               </div>
             </label>
           </div>
@@ -228,7 +324,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Corrida</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-person-running"></i>
+                  Corrida
+                </span>
               </div>
             </label>
           </div>
@@ -245,7 +344,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Skate</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-person-snowboarding"></i>
+                  Skate
+                </span>
               </div>
             </label>
           </div>
@@ -262,7 +364,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Boxe</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-people-robbery"></i>
+                  Boxe
+                </span>
               </div>
             </label>
           </div>
@@ -279,7 +384,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Jiu-Jitsu</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-people-pulling"></i>
+                  Jiu-Jitsu
+                </span>
               </div>
             </label>
           </div>
@@ -296,7 +404,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Parkour</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-person-running"></i>
+                  Parkour
+                </span>
               </div>
             </label>
           </div>
@@ -313,7 +424,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Sinuca</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-bowling-ball"></i>
+                  Sinuca
+                </span>
               </div>
             </label>
           </div>
@@ -330,7 +444,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Tênis de Mesa</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                  Tênis de Mesa
+                </span>
               </div>
             </label>
           </div>
@@ -347,7 +464,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Handeball</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-futbol"></i>
+                  Handeball
+                </span>
               </div>
             </label>
           </div>
@@ -364,7 +484,10 @@
               class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
             >
               <div class="block">
-                <span class="tex font-medium">Calistenia</span>
+                <span class="tex font-medium">
+                  <i class="fa-solid fa-dumbbell"></i>
+                  Calistenia
+                </span>
               </div>
             </label>
           </div>
