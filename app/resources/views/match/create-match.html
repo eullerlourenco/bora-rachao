@@ -20,9 +20,7 @@
 
   <!-- logged header -->
   <header class="shadow bg-white py-3">
-    <div
-      class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
-    >
+    <div class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between">
       <!-- nav mobile -->
       <nav class="md:hidden">
         <a class="hover:cursor-pointer">
@@ -37,52 +35,39 @@
         </a>
       </div>
       <nav class="hidden md:flex space-x-6">
-        <a
-          href="/app/resources/views/index.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Home</a
-        >
-        <a
-          href="/app/resources/views/general/contact.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Contato</a
-        >
-        <a
-          href=""
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Partidas</a
-        >
-        <a
-          href="/app/resources/views/sports/index.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Esportes</a
-        >
-        <a
-          href=""
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Amigos</a
-        >
+        <a href="/app/resources/views/index.html" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+          Home
+        </a>
+        <a href="/app/resources/views/general/contact.html" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+          Contato
+        </a>
+        <a href="matches.html" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+          Partidas
+        </a>
+        <a href="/app/resources/views/sports/index.html" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+          Esportes
+        </a>
+        <a href="" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">
+          Amigos
+        </a>
       </nav>
       <div class="flex items-center space-x-3">
         <a href="/app/resources/views/user/profile.html">
           <img
             src="/app/resources/assets/images/IMG_20250123_105642_002.webp"
             class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
-            alt=""
+            alt="profile image"
           />
         </a>
         <div class="hidden md:block">
-          <a
-            href=""
+          <a href="matches.html"
             class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
           >
             Bora jogar!
           </a>
         </div>
         <a href="">
-          <i
-            class="fa-solid fa-moon text-lg text-orange-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
-          ></i>
+          <i class="fa-solid fa-moon text-lg text-orange-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"></i>
         </a>
       </div>
     </div>
@@ -90,10 +75,10 @@
 
   <!-- Criar partida -->
   <section class="container mx-auto my-15">
-    <form class="mx-auto rounded-2xl shadow-lg border border-gray-300 border-l-8 border-l-cyan-500">
+    <form id="form-create-match" class="mx-auto rounded-2xl shadow-lg border border-gray-300 border-l-8 border-l-cyan-500">
       
       <!-- Título -->
-      <div class="basis-full my-6 mx-6">
+      <div class="basis-full my-6 mx-7">
         <p class="text-2xl text-gray-700 border-b border-b-gray-300 pb-5 font-bold">
           <i class="fa-solid fa-forward mx-2"></i>
           Criar um novo <span class="text-cyan-500 italic font-[800]">BORA !</span>
@@ -106,90 +91,139 @@
           <div class="grid grid-cols-6">
 
             <!-- Esporte select -->
-            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-6">
+            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-7">
               <label class="text-gray-700 text-md" for="select">
                 <i class="fa-solid fa-trophy text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
                 Esporte
               </label>
-              <select id="select" placeholder="Escolha a opção..." type="text"
-                class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+              <select id="sport" placeholder="Escolha a opção..." type="text"
+                class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
               >
                 <option value="" disabled>Selecione um esporte</option>
                 <option value="value1">Futebol</option>
                 <option value="value2">Vôlei</option>
                 <option value="value3">Basquete</option>
+                <option value="value4">Beach Tennis</option>
+                <option value="value5">Futevôlei</option>
+                <option value="value6">Ciclismo</option>
+                <option value="value7">Corrida</option>
+                <option value="value8">Skate</option>
+                <option value="value9">Boxe</option>
+                <option value="value10">Jiu-Jitsu</option>
+                <option value="value11">Parkour</option>
+                <option value="value12">Sinuca</option>
+                <option value="value13">Tênis de Mesa</option>
+                <option value="value14">Handeball</option>
+                <option value="value15">Calistenia</option>
               </select>
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="name">
+                O campo precisa ser preenchido.
+              </p>
             </div>
 
             <!-- Nome do Bora -->
-            <div class="flex flex-col col-span-4 gap-1.5 mb-6 mx-6">
+            <div class="flex flex-col col-span-4 gap-1.5 mb-6 mx-7">
               <label class="text-gray-700 text-md" for="name">
                 <i class="fa-solid fa-pen-clip text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
                 Nome do Bora
               </label>
-              <input id="name" placeholder="Ex: Vôlei de Praia" type="text"
-                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                required/>
+              <input id="name" placeholder="Ex: Volêi no Kartódromo" type="text"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="name">
+                O campo precisa ser preenchido corretamente.
+              </p>
             </div>
 
             <!-- Hora -->
-            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-6">
+            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-7">
               <label class="text-gray-700 text-md" for="hour">
                 <i class="fa-solid fa-clock text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
                 Hora
               </label>
               <input id="hour" type="time"
-                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                required/>
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="hour">
+                O campo precisa ser preenchido corretamente.
+              </p>
             </div> 
 
             <!-- Data -->
-            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-6">
+            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-7">
               <label class="text-gray-700 text-md" for="date">
                 <i
                 class="fa-solid fa-calendar-days text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.5"></i>
                 Data
               </label>
               <input id="date" type="date"
-                class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                required/>
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="date">
+                O campo precisa ser preenchido corretamente.
+              </p>
             </div>
-
+            
             <!-- Número de participantes -->
-            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-6">
+            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-7">
               <label class="text-gray-700 text-md" for="players">
                 <i class="fa-solid fa-user-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
                 Nº de Participantes
               </label>
               <input id="players" placeholder="12" type="number" min="2" max="30"
-                class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                required/>
+                class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="players">
+                O campo precisa ser preenchido corretamente.
+              </p>
             </div>
-              
-            <!-- Idade -->
-            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-6">
+            
+            <!-- Idade mínima -->
+            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-7">
               <label class="text-gray-700 text-md" for="age">
                 <i class="fa-solid fa-triangle-exclamation text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
-                Idade
+                Idade mínima
               </label>
-              <input id="age" placeholder="18" type="text" min="14"
-                class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                required/>
+              <input id="age" placeholder="18" type="number" min="14"
+                class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="age">
+                O campo precisa ser preenchido corretamente.
+              </p>
             </div>
               
             <!-- Descrição -->
-            <div class="flex flex-col col-span-4 gap-1.5 mb-6 mx-6">
+            <div class="flex flex-col col-span-4 gap-1.5 mb-6 mx-7">
               <label class="text-gray-700 text-md" for="description">
                 <i class="fa-solid fa-pen-clip text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
                 Descrição
               </label>
-              <input id="description" placeholder="Ex: É na areia galera, vão de chinelo, e passem protetor solar, está muito sol..." type="text"
-                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-              />
+              <textarea id="description" 
+                placeholder="Ex: É na areia galera, vão de chinelo, e passem protetor solar, está muito sol..." 
+                type="text" name="description" rows="2" maxlength="255"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+              ></textarea>
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="description">
+                O campo precisa ser preenchido corretamente.
+              </p>
             </div>
             
             <!-- Fieldset -->
-            <div class="flex flex-col col-span-6 mb-6 mx-6">
+            <div class="flex flex-col col-span-6 mb-6 mx-7">
               <fieldset class="shadow-lg border border-gray-300 p-5 rounded-2xl">
                 <legend class="text-gray-700 text-md">
                   <i class="fa-solid fa-map-location-dot text-sm bg-orange-200 p-2.25 rounded-xl text-orange-500 mr-1"></i>
@@ -204,8 +238,13 @@
                       CEP
                     </label>
                     <input id="cep" placeholder="Digite o cep..." type="text"
-                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                      required/>
+                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                      />
+                    <p
+                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                      data-error="cep">
+                      O campo precisa ser preenchido corretamente.
+                    </p>
                   </div>
 
                   <!-- Número -->
@@ -214,9 +253,14 @@
                       <i class="fa-solid fa-hashtag text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.5"></i>
                       Número
                     </label>
-                    <input id="number" placeholder="Número" type="number" min="1"
-                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
-                      required/>
+                    <input id="number" placeholder="Número" type="number" min="0"
+                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+                      />
+                    <p
+                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                      data-error="number">
+                      O campo precisa ser preenchido corretamente.
+                    </p>
                   </div>
 
                   <!-- Cidade -->
@@ -225,9 +269,21 @@
                       <i class="fa-solid fa-city text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2"></i>
                       Cidade
                     </label>
-                    <input id="city" placeholder="Cidade" type="text"
-                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
-                      required/>
+                    <select id="city" type="text"
+                      class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                    >
+                      <option value="" disabled>Selecione uma cidade</option>
+                      <option value="jau">Jaú</option>
+                      <option value="bariri">Bariri</option>
+                      <option value="mineiros-do-tiete">Mineiros do Tietê</option>
+                      <option value="barra-bonita">Barra Bonita</option>
+                      <option value="bauru">Bauru</option>
+                    </select>
+                    <p
+                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                      data-error="city">
+                      O campo precisa ser preenchido corretamente.
+                    </p>
                   </div>
 
                   <!-- Rua -->
@@ -236,9 +292,14 @@
                       <i class="fa-solid fa-road text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
                       Rua
                     </label>
-                    <input id="street" placeholder="Rua do lugar" type="text"
-                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
-                      required/>
+                    <input id="street" placeholder="Rua do lugar" type="text" maxlength="255"
+                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+                      />
+                    <p
+                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                      data-error="street">
+                      O campo precisa ser preenchido corretamente.
+                    </p>
                   </div>
 
                   <!-- Bairro -->
@@ -247,9 +308,14 @@
                       <i class="fa-solid fa-street-view text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
                       Bairro
                     </label>
-                    <input id="neighborhood" placeholder="Bairro" type="text"
-                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
-                      required/>
+                    <input id="neighborhood" placeholder="Bairro" type="text" maxlength="255"
+                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+                      />
+                    <p
+                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                      data-error="neighborhood">
+                      O campo precisa ser preenchido corretamente.
+                    </p>
                   </div>
                   
                 </div>
@@ -259,8 +325,8 @@
           </div>
         </div>
 
-        <!-- Amigos -->
         <div class="flex flex-col">
+          <!-- Amigos -->
           <div class="mx-7 mb-6 p-5 rounded-2xl shadow-lg border border-gray-300 border-t-6 border-t-lime-500 h-auto">
             <p class="text-2xl text-gray-700 pb-5 font-bold">Chamar amigos para participar:</p>
             
@@ -386,19 +452,18 @@
               </label>
             </div>
             </div>
-
           </div>
-        </div>
-      </div>
 
-      <!-- Botão -->
-      <div class="flex basis-full mb-6 mr-7 justify-end">
-        <button type="submit"
-          href=""
-          class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white 
-            m-0 px-4 py-3 rounded-xl flex items-center duration-300 ease-in-out">
-          Criar partida <i class="ml-2 fa-solid fa-arrow-right"></i>
-        </button>
+          <!-- Botão -->
+          <div class="flex mb-6 mr-7 justify-end mt-auto">
+            <button type="submit"
+              class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white 
+                m-0 px-4 py-3 rounded-xl flex items-center duration-300 ease-in-out">
+              Criar partida <i class="ml-2 fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </div>
       </div>
 
     </form>
@@ -486,6 +551,222 @@
       </div>
     </div>
   </footer>
+
+  <script src="/app/resources/assets/js/script.js"></script>
   
+  <script>
+    const arrayCreateMatchForm = [];
+
+    addInputValidations(document.getElementById("sport"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+
+            toggleErrorMsg(input, "O campo Esporte é obrigatório.");
+          }
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    addInputValidations(document.getElementById("name"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+
+            toggleErrorMsg(input, "O campo Nome é obrigatório.");
+          } 
+          else if (e.target.value.length > 255) {
+            
+            toggleErrorMsg(input, "O campo Nome só pode ter 255 caracteres no máximo.");
+          } 
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    addInputValidations(document.getElementById("hour"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+
+            toggleErrorMsg(input, "O campo Hora é obrigatório.");
+          }
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    addInputValidations(document.getElementById("date"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+
+            toggleErrorMsg(input, "O campo Data é obrigatório.");
+          } 
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    addInputValidations(document.getElementById("players"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+
+            toggleErrorMsg(input, "O campo Nº de part. é obrigatório.");
+          } 
+          else if (e.target.value < 2) {
+            
+            toggleErrorMsg(input, "A partida deve ter no mínimo 2 participantes.");
+          } 
+          else if (e.target.value > 30) {
+            
+            toggleErrorMsg(input, "A partida deve ter no máximo 30 participantes.");
+          } 
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    addInputValidations(document.getElementById("age"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+
+            toggleErrorMsg(input, "O campo Idade é obrigatório.");
+          } 
+          else if (e.target.value < 14) {
+            
+            toggleErrorMsg(input, "A idade deve ser de no mínimo 14 anos.");
+          } 
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    addInputValidations(document.getElementById("description"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.length > 255) {
+            
+            toggleErrorMsg(input, "Limite de caracteres atingido.");
+          }
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    addInputValidations(document.getElementById("cep"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+
+            toggleErrorMsg(input, "O campo CEP é obrigatório.");
+          } 
+          else if (e.target.value.length < 8) {
+            
+            toggleErrorMsg(input, "O campo CEP tem que ter no mínimo 8 caracteres.");
+          } 
+          else if (e.target.value.length > 8) {
+            
+            toggleErrorMsg(input, "O campo CEP tem que ter no máximo 8 caracteres.");
+          } 
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    addInputValidations(document.getElementById("number"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+
+            toggleErrorMsg(input, "O campo Número é obrigatório.");
+          } 
+          else if (e.target.value < 0) {
+            
+            toggleErrorMsg(input, "O campo Número não pode ser abaixo de 0.");
+          } 
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    addInputValidations(document.getElementById("city"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+
+            toggleErrorMsg(input, "O campo Cidade é obrigatório.");
+          }
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    addInputValidations(document.getElementById("street"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+
+            toggleErrorMsg(input, "O campo Rua é obrigatório.");
+          } 
+          else if (e.target.value.length > 255) {
+            
+            toggleErrorMsg(input, "Limite de caracteres atingido.");
+          } 
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    addInputValidations(document.getElementById("neighborhood"), (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+
+            toggleErrorMsg(input, "O campo Bairro é obrigatório.");
+          } 
+          else if (e.target.value.length > 255) {
+            
+            toggleErrorMsg(input, "Limite de caracteres atingido.");
+          } 
+          else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayCreateMatchForm
+    );
+
+    formPreventAndValidate(
+      document.getElementById("form-create-match"),
+      arrayCreateMatchForm,
+      "/app/resources/views/match/match.html"
+    );
+  </script>
+
 </body>
 </html>
