@@ -1,535 +1,637 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bora Rachão</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      class="css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        font-family: "Inter", sans-serif;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50">
-    <!-- logged header -->
-    <header class="shadow bg-white py-3">
-      <div
-        class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
-      >
-        <!-- nav mobile -->
-        <nav class="md:hidden">
-          <a class="hover:cursor-pointer">
-            <i
-              class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
-            ></i>
-          </a>
-        </nav>
-        <div>
-          <a href="/app/resources/views/index.html">
-            <img src="https://placehold.co/100" alt="logo" class="w-9 h-9" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil - Bora Rachão</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    class="css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/app/resources/assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+  <!-- logged header -->
+  <header class="shadow bg-white py-3">
+    <div
+      class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
+    >
+      <!-- nav mobile -->
+      <nav class="md:hidden">
+        <a id="btn_open_menu_mobile" class="hover:cursor-pointer">
+          <i
+            class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-xl hover:bg-gray-100 duration-300 ease-in-out"
+          ></i>
+        </a>
+        <div
+          id="menu_mobile"
+          class="absolute p-6 w-screen h-screen bg-white z-50 top-0 left-0 hidden"
+        >
+          <div class="text-end">
+            <a id="btn_close_menu_mobile" class="hover:cursor-pointer">
+              <i
+                class="fa-solid fa-xmark text-lg text-gray-500 py-3 px-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 duration-300 ease-in-out"
+              ></i>
+            </a>
+          </div>
+          <div class="text-gray-700 flex flex-col gap-y-3">
+            <h3 class="text-2xl">Menu</h3>
+            <hr class="text-gray-300" />
+            <a
+              href="/app/resources/views/index.html"
+              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+            >
+              <i
+                class="fa-solid fa-house text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+              ></i>
+              Home
+            </a>
+            <a
+              href="/app/resources/views/general/contact.html"
+              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+            >
+              <i
+                class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+              ></i>
+              Contato
+            </a>
+            <a
+              href="/app/resources/views/match/matches.html"
+              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+            >
+              <i
+                class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+              ></i>
+              Partidas
+            </a>
+            <a
+              href="/app/resources/views/sports/index.html"
+              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+            >
+              <i
+                class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+              ></i>
+              Esportes
+            </a>
+            <a
+              href="/app/resources/views/user/friends.html"
+              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+            >
+              <i
+                class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+              ></i>
+              Amigos
+            </a>
+            <a
+              href="/app/resources/views/match/matches.html"
+              class="mt-3 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-2.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+            >
+              Bora Jogar!
+            </a>
+            <a
+              href="/app/resources/views/auth/login.html"
+              class="mt-2 bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+            >
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              Sair
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <a href="/app/resources/views/index.html">
+          <img src="https://placehold.co/100" alt="logo" class="w-9 h-9" />
+        </a>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a
+          href="/app/resources/views/index.html"
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+          >Home</a
+        >
+        <a
+          href="/app/resources/views/general/contact.html"
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+          >Contato</a
+        >
+        <a
+          href=""
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+          >Partidas</a
+        >
+        <a
+          href="/app/resources/views/sports/index.html"
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+          >Esportes</a
+        >
+        <a
+          href=""
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+          >Amigos</a
+        >
+      </nav>
+      <div class="flex items-center space-x-3">
+        <a href="/app/resources/views/user/profile.html">
+          <img
+            src="/app/resources/assets/images/beaamonteiro.jpg"
+            class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
+            alt="Profile Photo"
+          />
+        </a>
+        <div class="hidden md:block">
+          <a
+            href="/app/resources/views/match/matches.html"
+            class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+          >
+            Bora jogar!
           </a>
         </div>
-        <nav class="hidden md:flex space-x-6">
-          <a
-            href="/app/resources/views/index.html"
-            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-            >Home</a
-          >
-          <a
-            href=""
-            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-            >Contato</a
-          >
-          <a
-            href=""
-            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-            >Partidas</a
-          >
-          <a
-            href=""
-            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-            >Esportes</a
-          >
-          <a
-            href=""
-            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-            >Amigos</a
-          >
-        </nav>
-        <div class="flex items-center space-x-3">
-          <a href="/app/resources/views/user/profile.html">
-            <img
-              src="/app/resources/assets/images/IMG_20250123_105642_002.webp"
-              class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
-              alt=""
-            />
-          </a>
-          <div class="hidden md:block">
+      </div>
+    </div>
+  </header>
+
+  <!-- profile section -->
+  <section class="container mx-auto px-4 mt-6 mb-[150px]">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-y-16 md:gap-x-5">
+      <div
+        class="flex flex-col gap-y-3 justify-center md:justify-start items-center"
+      >
+        <div class="flex flex-col justify-center">
+          <div>
             <a
               href=""
-              class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+              class="bg-linear-to-tr shadow-lg from-lime-500 to-lime-300 hover:shadow-lg hover:shadow-lime-400/50 hover:cursor-pointer duration-300 ease-in-out text-white py-2 px-3 text-2xl rounded-full"
             >
-              Bora jogar!
+              <i class="fa-solid fa-plus"></i>
             </a>
           </div>
-          <a href="">
-            <i
-              class="fa-solid fa-moon text-lg text-orange-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
-            ></i>
+          <img
+            src="/app/resources/assets/images/beaamonteiro.jpg"
+            class="w-full max-w-[250px] h-full rounded-full object-cover border-4 border-gray-300 shadow-lg"
+            alt="Profile Photo"
+          />
+        </div>
+        <div>
+          <h2 class="text-center text-3xl text-cyan-500 font-semibold mb-0.5">
+            @bia_monteiro
+          </h2>
+          <div class="text-center mb-2">
+            <a
+              href=""
+              class="text-gray-500 text-sm hover:text-orange-500 duration-300 ease-in-out"
+            >
+              <i class="fa-solid fa-users text-xs"></i>
+              219 amigos
+            </a>
+          </div>
+          <fieldset
+            class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
+          >
+            <legend class="text-gray-600">Bio</legend>
+            <div class="text-gray-600 text-sm">
+              Beatriz Karoline Monteiro 18y<br />
+              DSM- 1° semestre <br />- Adoro jogar vôlei nas horas vagas;
+              <br />- Estou sempre buscando aprender coisas novas!
+            </div>
+          </fieldset>
+        </div>
+        <div class="w-full text-start mt-2">
+          <h2 class="text-lg text-gray-500 font-semibold">
+            <i class="fa-solid fa-users"></i>
+            Talvez você conheça também
+          </h2>
+        </div>
+        <div class="flex flex-col gap-y-3 w-full">
+          <a href="" class="w-full">
+            <div
+              class="flex items-center bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-1 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
+            >
+              <div
+                class="flex items-center justify-start space-x-2 mt-1 w-full"
+              >
+                <img
+                  src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
+                  class="w-8 h-8 rounded-full border-2 border-gray-300"
+                  alt=""
+                />
+                <div>
+                  <p class="font-bold text-gray-500 text-md mb-[-3px]">
+                    joaocf
+                  </p>
+                  <p class="text-xs text-gray-500">7 amigos em comum</p>
+                </div>
+              </div>
+              <div class="text-end shrink-0">
+                <i
+                  class="fa-solid fa-arrow-right text-lime-500 bg-lime-500/40 p-2 rounded-full"
+                ></i>
+              </div>
+            </div>
+          </a>
+          <a href="" class="w-full">
+            <div
+              class="flex items-center bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-1 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
+            >
+              <div
+                class="flex items-center justify-start space-x-2 mt-1 w-full"
+              >
+                <img
+                  src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
+                  class="w-8 h-8 rounded-full border-2 border-gray-300"
+                  alt=""
+                />
+                <div>
+                  <p class="font-bold text-gray-500 text-md mb-[-3px]">
+                    eullerls
+                  </p>
+                  <p class="text-xs text-gray-500">19 amigos em comum</p>
+                </div>
+              </div>
+              <div class="text-end shrink-0">
+                <i
+                  class="fa-solid fa-arrow-right text-lime-500 bg-lime-500/40 p-2 rounded-full"
+                ></i>
+              </div>
+            </div>
+          </a>
+          <a href="" class="w-full">
+            <div
+              class="flex items-center bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-1 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
+            >
+              <div
+                class="flex items-center justify-start space-x-2 mt-1 w-full"
+              >
+                <img
+                  src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
+                  class="w-8 h-8 rounded-full border-2 border-gray-300"
+                  alt=""
+                />
+                <div>
+                  <p class="font-bold text-gray-500 text-md mb-[-3px]">
+                    lucasbardelli
+                  </p>
+                  <p class="text-xs text-gray-500">25 amigos em comum</p>
+                </div>
+              </div>
+              <div class="text-end shrink-0">
+                <i
+                  class="fa-solid fa-arrow-right text-lime-500 bg-lime-500/40 p-2 rounded-full"
+                ></i>
+              </div>
+            </div>
           </a>
         </div>
       </div>
-    </header>
-
-    <!-- profile section -->
-    <section class="container mx-auto px-4 mt-6 mb-[150px]">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-y-16 md:gap-x-5">
-        <div
-          class="flex flex-col gap-y-3 justify-center md:justify-start items-center"
+      <div class="col-span-3">
+        <div class="md:px-6">
+          <h2 class="text-2xl text-gray-500 font-semibold mb-7">
+            <i class="fa-solid fa-basketball"></i>
+            Partidas que vai participar
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-4">
+            <a href="">
+              <div
+                class="bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
+              >
+                <span
+                  class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2"
+                  >bora futebol</span
+                >
+                <div class="flex items-center justify-start space-x-1 mt-1">
+                  <img
+                    src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
+                    class="w-8 h-8 rounded-full border-2 border-gray-300"
+                    alt=""
+                  />
+                  <p class="font-bold text-cyan-500">joaocf</p>
+                </div>
+                <hr class="text-gray-300 my-1" />
+                <div>
+                  <div class="flex items-center justify-between">
+                    <p class="text-gray-500 font-semibold">
+                      <i class="fa-solid fa-clock me-0.5"></i>13:00
+                    </p>
+                    <p class="text-orange-500 font-bold">
+                      <i class="fa-solid fa-users me-1"></i>7/10
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div
+                class="bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
+              >
+                <span
+                  class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2"
+                  >bora futebol</span
+                >
+                <div class="flex items-center justify-start space-x-1 mt-1">
+                  <img
+                    src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
+                    class="w-8 h-8 rounded-full border-2 border-gray-300"
+                    alt=""
+                  />
+                  <p class="font-bold text-cyan-500">joaocf</p>
+                </div>
+                <hr class="text-gray-300 my-1" />
+                <div>
+                  <div class="flex items-center justify-between">
+                    <p class="text-gray-500 font-semibold">
+                      <i class="fa-solid fa-clock me-0.5"></i>13:00
+                    </p>
+                    <p class="text-orange-500 font-bold">
+                      <i class="fa-solid fa-users me-1"></i>7/10
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div
+                class="bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
+              >
+                <span
+                  class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2"
+                  >bora futebol</span
+                >
+                <div class="flex items-center justify-start space-x-1 mt-1">
+                  <img
+                    src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
+                    class="w-8 h-8 rounded-full border-2 border-gray-300"
+                    alt=""
+                  />
+                  <p class="font-bold text-cyan-500">joaocf</p>
+                </div>
+                <hr class="text-gray-300 my-1" />
+                <div>
+                  <div class="flex items-center justify-between">
+                    <p class="text-gray-500 font-semibold">
+                      <i class="fa-solid fa-clock me-0.5"></i>13:00
+                    </p>
+                    <p class="text-orange-500 font-bold">
+                      <i class="fa-solid fa-users me-1"></i>7/10
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div
+                class="bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
+              >
+                <span
+                  class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2"
+                  >bora futebol</span
+                >
+                <div class="flex items-center justify-start space-x-1 mt-1">
+                  <img
+                    src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
+                    class="w-8 h-8 rounded-full border-2 border-gray-300"
+                    alt=""
+                  />
+                  <p class="font-bold text-cyan-500">joaocf</p>
+                </div>
+                <hr class="text-gray-300 my-1" />
+                <div>
+                  <div class="flex items-center justify-between">
+                    <p class="text-gray-500 font-semibold">
+                      <i class="fa-solid fa-clock me-0.5"></i>13:00
+                    </p>
+                    <p class="text-orange-500 font-bold">
+                      <i class="fa-solid fa-users me-1"></i>7/10
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col my-8 gap-y-7 md:px-6">
+          <h2 class="text-2xl text-gray-500 font-semibold mb-3">
+            <i class="fa-solid fa-clock"></i>
+            Atividade
+          </h2>
+          <fieldset
+            class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
+          >
+            <legend class="text-gray-600">Hoje</legend>
+            <div class="text-gray-600">
+              <i
+                class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
+              ></i>
+              Participou de bora de
+              <span class="font-bold italic">Futebol</span> de
+              <a href="" class="text-cyan-500">@lucasbardelli</a>
+              com mais 8 pessoas
+            </div>
+            <div class="text-gray-600">
+              <i
+                class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
+              ></i>
+              Participou de bora de
+              <span class="font-bold italic">Basquete</span> de
+              <a href="" class="text-cyan-500">@joaocf</a>
+              com mais 6 pessoas
+            </div>
+          </fieldset>
+          <fieldset
+            class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
+          >
+            <legend class="text-gray-600">Ontem</legend>
+            <div class="text-gray-600">
+              <i
+                class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
+              ></i>
+              Participou de um bora de
+              <span class="font-bold italic">Skate</span> de
+              <a href="" class="text-cyan-500">@gabrielribeiro45</a>
+              com mais 3 pessoas
+            </div>
+          </fieldset>
+          <fieldset
+            class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
+          >
+            <legend class="text-gray-600">19/05/2025</legend>
+            <div class="text-gray-600">
+              <i
+                class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
+              ></i>
+              Participou de bora de
+              <span class="font-bold italic">Futebol</span> de
+              <a href="" class="text-cyan-500">@lucasbardelli</a>
+              com mais 8 pessoas
+            </div>
+            <div class="text-gray-600">
+              <i
+                class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
+              ></i>
+              Participou de bora de
+              <span class="font-bold italic">Basquete</span> de
+              <a href="" class="text-cyan-500">@joaocf</a>
+              com mais 6 pessoas
+            </div>
+            <div class="text-gray-600">
+              <i
+                class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
+              ></i>
+              Participou de bora de
+              <span class="font-bold italic">Basquete</span> de
+              <a href="" class="text-cyan-500">@joaocf</a>
+              com mais 6 pessoas
+            </div>
+          </fieldset>
+          <fieldset
+            class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
+          >
+            <legend class="text-gray-600">17/05/2025</legend>
+            <div class="text-gray-600">
+              <i
+                class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
+              ></i>
+              Participou de bora de
+              <span class="font-bold italic">Futebol</span> de
+              <a href="" class="text-cyan-500">@lucasbardelli</a>
+              com mais 8 pessoas
+            </div>
+            <div class="text-gray-600">
+              <i
+                class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
+              ></i>
+              Participou de bora de
+              <span class="font-bold italic">Basquete</span> de
+              <a href="" class="text-cyan-500">@joaocf</a>
+              com mais 6 pessoas
+            </div>
+          </fieldset>
+          <fieldset
+            class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
+          >
+            <legend class="text-gray-600">15/05/2025</legend>
+            <div class="text-gray-600">
+              <i
+                class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
+              ></i>
+              Participou de bora de
+              <span class="font-bold italic">Futebol</span> de
+              <a href="" class="text-cyan-500">@lucasbardelli</a>
+              com mais 8 pessoas
+            </div>
+          </fieldset>
+          <fieldset
+            class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
+          >
+            <legend class="text-gray-600">14/05/2025</legend>
+            <div class="text-gray-600">
+              <i
+                class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
+              ></i>
+              Participou de bora de
+              <span class="font-bold italic">Futebol</span> de
+              <a href="" class="text-cyan-500">@lucasbardelli</a>
+              com mais 8 pessoas
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- footer -->
+  <footer class="py-18 bg-white shadow border-t border-gray-200">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col justify-center items-center gap-y-5">
+        <a href="/app/resources/views/index.html">
+          <img src="https://placehold.co/100" alt="Logo BoraRachão" class="w-12 h-12">
+        </a>
+        <a
+          href="/app/resources/views/index.html"
+          class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
         >
-          <div class="flex flex-col justify-center">
-            <div>
-              <a
-                href=""
-                class="bg-linear-to-tr shadow-lg from-lime-500 to-lime-300 hover:shadow-lg hover:shadow-lime-400/50 hover:cursor-pointer duration-300 ease-in-out text-white py-2 px-3 text-2xl rounded-full"
-              >
-                <i class="fa-solid fa-plus"></i>
-              </a>
-            </div>
-            <img
-              src="/app/resources/assets/images/IMG_20250123_105642_002.webp"
-              class="w-full max-w-[250px] h-full rounded-full object-cover border-4 border-gray-300 shadow-lg"
-              alt="profile photo"
-            />
-          </div>
-          <div>
-            <h2 class="text-center text-3xl text-cyan-500 font-semibold mb-0.5">
-              @bia_monteiro
-            </h2>
-            <div class="text-center mb-2">
-              <a
-                href=""
-                class="text-gray-500 text-sm hover:text-orange-500 duration-300 ease-in-out"
-              >
-                <i class="fa-solid fa-users text-xs"></i>
-                219 amigos
-              </a>
-            </div>
-            <fieldset
-              class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
-            >
-              <legend class="text-gray-600">Bio</legend>
-              <div class="text-gray-600 text-sm">
-                Beatriz Karoline Monteiro 18y<br />
-                DSM- 1° semestre <br />- Adoro jogar vôlei nas horas vagas;
-                <br />- Estou sempre buscando aprender coisas novas!
-              </div>
-            </fieldset>
-          </div>
-          <div class="w-full text-start mt-2">
-            <h2 class="text-lg text-gray-500 font-semibold">
-              <i class="fa-solid fa-users"></i>
-              Talvez você conheça também
-            </h2>
-          </div>
-          <div class="flex flex-col gap-y-3 w-full">
-            <a href="" class="w-full">
-              <div
-                class="flex items-center bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-1 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
-              >
-                <div
-                  class="flex items-center justify-start space-x-2 mt-1 w-full"
-                >
-                  <img
-                    src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
-                    class="w-8 h-8 rounded-full border-2 border-gray-300"
-                    alt=""
-                  />
-                  <div>
-                    <p class="font-bold text-gray-500 text-md mb-[-3px]">
-                      joaocf
-                    </p>
-                    <p class="text-xs text-gray-500">7 amigos em comum</p>
-                  </div>
-                </div>
-                <div class="text-end shrink-0">
-                  <i
-                    class="fa-solid fa-arrow-right text-lime-500 bg-lime-500/40 p-2 rounded-full"
-                  ></i>
-                </div>
-              </div>
-            </a>
-            <a href="" class="w-full">
-              <div
-                class="flex items-center bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-1 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
-              >
-                <div
-                  class="flex items-center justify-start space-x-2 mt-1 w-full"
-                >
-                  <img
-                    src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
-                    class="w-8 h-8 rounded-full border-2 border-gray-300"
-                    alt=""
-                  />
-                  <div>
-                    <p class="font-bold text-gray-500 text-md mb-[-3px]">
-                      eullerls
-                    </p>
-                    <p class="text-xs text-gray-500">19 amigos em comum</p>
-                  </div>
-                </div>
-                <div class="text-end shrink-0">
-                  <i
-                    class="fa-solid fa-arrow-right text-lime-500 bg-lime-500/40 p-2 rounded-full"
-                  ></i>
-                </div>
-              </div>
-            </a>
-            <a href="" class="w-full">
-              <div
-                class="flex items-center bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-1 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
-              >
-                <div
-                  class="flex items-center justify-start space-x-2 mt-1 w-full"
-                >
-                  <img
-                    src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
-                    class="w-8 h-8 rounded-full border-2 border-gray-300"
-                    alt=""
-                  />
-                  <div>
-                    <p class="font-bold text-gray-500 text-md mb-[-3px]">
-                      lucasbardelli
-                    </p>
-                    <p class="text-xs text-gray-500">25 amigos em comum</p>
-                  </div>
-                </div>
-                <div class="text-end shrink-0">
-                  <i
-                    class="fa-solid fa-arrow-right text-lime-500 bg-lime-500/40 p-2 rounded-full"
-                  ></i>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-span-3">
-          <div class="md:px-6">
-            <h2 class="text-2xl text-gray-500 font-semibold mb-7">
-              <i class="fa-solid fa-basketball"></i>
-              Partidas que vai participar
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-4">
-              <a href="">
-                <div
-                  class="bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
-                >
-                  <span
-                    class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2"
-                    >bora futebol</span
-                  >
-                  <div class="flex items-center justify-start space-x-1 mt-1">
-                    <img
-                      src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
-                      class="w-8 h-8 rounded-full border-2 border-gray-300"
-                      alt=""
-                    />
-                    <p class="font-bold text-cyan-500">joaocf</p>
-                  </div>
-                  <hr class="text-gray-300 my-1" />
-                  <div>
-                    <div class="flex items-center justify-between">
-                      <p class="text-gray-500 font-semibold">
-                        <i class="fa-solid fa-clock me-0.5"></i>13:00
-                      </p>
-                      <p class="text-orange-500 font-bold">
-                        <i class="fa-solid fa-users me-1"></i>7/10
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a href="">
-                <div
-                  class="bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
-                >
-                  <span
-                    class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2"
-                    >bora futebol</span
-                  >
-                  <div class="flex items-center justify-start space-x-1 mt-1">
-                    <img
-                      src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
-                      class="w-8 h-8 rounded-full border-2 border-gray-300"
-                      alt=""
-                    />
-                    <p class="font-bold text-cyan-500">joaocf</p>
-                  </div>
-                  <hr class="text-gray-300 my-1" />
-                  <div>
-                    <div class="flex items-center justify-between">
-                      <p class="text-gray-500 font-semibold">
-                        <i class="fa-solid fa-clock me-0.5"></i>13:00
-                      </p>
-                      <p class="text-orange-500 font-bold">
-                        <i class="fa-solid fa-users me-1"></i>7/10
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a href="">
-                <div
-                  class="bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
-                >
-                  <span
-                    class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2"
-                    >bora futebol</span
-                  >
-                  <div class="flex items-center justify-start space-x-1 mt-1">
-                    <img
-                      src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
-                      class="w-8 h-8 rounded-full border-2 border-gray-300"
-                      alt=""
-                    />
-                    <p class="font-bold text-cyan-500">joaocf</p>
-                  </div>
-                  <hr class="text-gray-300 my-1" />
-                  <div>
-                    <div class="flex items-center justify-between">
-                      <p class="text-gray-500 font-semibold">
-                        <i class="fa-solid fa-clock me-0.5"></i>13:00
-                      </p>
-                      <p class="text-orange-500 font-bold">
-                        <i class="fa-solid fa-users me-1"></i>7/10
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a href="">
-                <div
-                  class="bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out"
-                >
-                  <span
-                    class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2"
-                    >bora futebol</span
-                  >
-                  <div class="flex items-center justify-start space-x-1 mt-1">
-                    <img
-                      src="https://st4.depositphotos.com/9998432/25177/v/450/depositphotos_251778046-stock-illustration-person-gray-photo-placeholder-man.jpg"
-                      class="w-8 h-8 rounded-full border-2 border-gray-300"
-                      alt=""
-                    />
-                    <p class="font-bold text-cyan-500">joaocf</p>
-                  </div>
-                  <hr class="text-gray-300 my-1" />
-                  <div>
-                    <div class="flex items-center justify-between">
-                      <p class="text-gray-500 font-semibold">
-                        <i class="fa-solid fa-clock me-0.5"></i>13:00
-                      </p>
-                      <p class="text-orange-500 font-bold">
-                        <i class="fa-solid fa-users me-1"></i>7/10
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="flex flex-col my-8 gap-y-7 md:px-6">
-            <h2 class="text-2xl text-gray-500 font-semibold mb-3">
-              <i class="fa-solid fa-clock"></i>
-              Atividade
-            </h2>
-            <fieldset
-              class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
-            >
-              <legend class="text-gray-600">Hoje</legend>
-              <div class="text-gray-600">
-                <i
-                  class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
-                ></i>
-                Participou de bora de
-                <span class="font-bold italic">Futebol</span> de
-                <a href="" class="text-cyan-500">@lucasbardelli</a>
-                com mais 8 pessoas
-              </div>
-              <div class="text-gray-600">
-                <i
-                  class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
-                ></i>
-                Participou de bora de
-                <span class="font-bold italic">Basquete</span> de
-                <a href="" class="text-cyan-500">@joaocf</a>
-                com mais 6 pessoas
-              </div>
-            </fieldset>
-            <fieldset
-              class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
-            >
-              <legend class="text-gray-600">Ontem</legend>
-              <div class="text-gray-600">
-                <i
-                  class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
-                ></i>
-                Participou de um bora de
-                <span class="font-bold italic">Skate</span> de
-                <a href="" class="text-cyan-500">@gabrielribeiro45</a>
-                com mais 3 pessoas
-              </div>
-            </fieldset>
-            <fieldset
-              class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
-            >
-              <legend class="text-gray-600">19/05/2025</legend>
-              <div class="text-gray-600">
-                <i
-                  class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
-                ></i>
-                Participou de bora de
-                <span class="font-bold italic">Futebol</span> de
-                <a href="" class="text-cyan-500">@lucasbardelli</a>
-                com mais 8 pessoas
-              </div>
-              <div class="text-gray-600">
-                <i
-                  class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
-                ></i>
-                Participou de bora de
-                <span class="font-bold italic">Basquete</span> de
-                <a href="" class="text-cyan-500">@joaocf</a>
-                com mais 6 pessoas
-              </div>
-              <div class="text-gray-600">
-                <i
-                  class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
-                ></i>
-                Participou de bora de
-                <span class="font-bold italic">Basquete</span> de
-                <a href="" class="text-cyan-500">@joaocf</a>
-                com mais 6 pessoas
-              </div>
-            </fieldset>
-            <fieldset
-              class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
-            >
-              <legend class="text-gray-600">17/05/2025</legend>
-              <div class="text-gray-600">
-                <i
-                  class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
-                ></i>
-                Participou de bora de
-                <span class="font-bold italic">Futebol</span> de
-                <a href="" class="text-cyan-500">@lucasbardelli</a>
-                com mais 8 pessoas
-              </div>
-              <div class="text-gray-600">
-                <i
-                  class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
-                ></i>
-                Participou de bora de
-                <span class="font-bold italic">Basquete</span> de
-                <a href="" class="text-cyan-500">@joaocf</a>
-                com mais 6 pessoas
-              </div>
-            </fieldset>
-            <fieldset
-              class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
-            >
-              <legend class="text-gray-600">15/05/2025</legend>
-              <div class="text-gray-600">
-                <i
-                  class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
-                ></i>
-                Participou de bora de
-                <span class="font-bold italic">Futebol</span> de
-                <a href="" class="text-cyan-500">@lucasbardelli</a>
-                com mais 8 pessoas
-              </div>
-            </fieldset>
-            <fieldset
-              class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
-            >
-              <legend class="text-gray-600">14/05/2025</legend>
-              <div class="text-gray-600">
-                <i
-                  class="fa-solid fa-people-group me-1 border border-gray-300 px-2 py-2.5 rounded-full"
-                ></i>
-                Participou de bora de
-                <span class="font-bold italic">Futebol</span> de
-                <a href="" class="text-cyan-500">@lucasbardelli</a>
-                com mais 8 pessoas
-              </div>
-            </fieldset>
-          </div>
-        </div>
+          BoraRachão &copy;
+        </a>
       </div>
-    </section>
-
-    <footer class="py-18 bg-white shadow border-t border-gray-200">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col justify-center items-center gap-y-5">
-          <a href="">
-            <img src="https://placehold.co/100" alt="" class="w-12 h-12" />
-          </a>
-          <a
-            href=""
-            class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
-          >
-            BoraRachão &copy;
-          </a>
-        </div>
-        <nav
-          class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
+      <nav
+        class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
+      >
+        <a
+          href="/app/resources/views/index.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
         >
-          <a
-            href=""
-            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-          >
-            Home
-          </a>
-          <a
-            href=""
-            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-          >
-            Contato
-          </a>
-          <a
-            href=""
-            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-          >
-            Sobre
-          </a>
-          <a
-            href=""
-            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-          >
-            Política de Privacidade
-          </a>
-          <a
-            href=""
-            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-          >
-            Termos de Uso
-          </a>
-        </nav>
+          Home
+        </a>
+        <a
+          href="/app/resources/views/general/contact.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Contato
+        </a>
+        <a
+          href="/app/resources/views/general/about.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Sobre
+        </a>
+        <a
+          href="/app/resources/views/general/privacy-policy.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Política de Privacidade
+        </a>
+        <a
+          href="/app/resources/views/general/terms-of-use.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Termos de Uso
+        </a>
+      </nav>
+      <div class="flex justify-center gap-x-4 mt-9">
+        <a
+          href="https://www.instagram.com/"
+          class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-instagram text-2xl hover:text-white"></i>
+        </a>
+        <a
+          href="https://www.tiktok.com/"
+          class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-tiktok text-2xl"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/"
+          class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-square-facebook text-2xl"></i>
+        </a>
+        <a
+          href="https://x.com/"
+          class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-x-twitter text-2xl"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/"
+          class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-linkedin text-2xl"></i>
+        </a>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+
+  <script src="/app/resources/assets/js/script.js"></script>
+
+</body>
 </html>

@@ -1,461 +1,499 @@
-<html>
-  <head>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      class="css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/app/resources/assets/css/style.css" />
-  </head>
-  <body class="bg-gray-50">
-    <section class="font-md">
-      <div class="grid lg:grid-cols-2 min-h-screen">
-        <div
-          class="flex flex-col justify-center p-4 md:p-12 lg:px-16 bg-white order-last lg:order-first"
-        >
-          <form action="" id="form_register">
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-y-6 gap-x-6">
-              <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-md" for="name">
-                  <i
-                    class="fa-solid fa-pencil text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-                  ></i>
-                  Nome completo
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Digite seu nome completo"
-                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
-                <p
-                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                  data-error="name"
-                >
-                  O campo precisa ser preenchido corretamente.
-                </p>
-              </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-md" for="email">
-                  <i
-                    class="fa-solid fa-envelope text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-                  ></i>
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Digite seu melhor email"
-                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
-                <p
-                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                  data-error="email"
-                >
-                  O campo precisa ser preenchido corretamente.
-                </p>
-              </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-md" for="password">
-                  <i
-                    class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
-                  ></i>
-                  Senha
-                </label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  placeholder="Crie uma senha segura"
-                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
-                <p
-                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                  data-error="password"
-                >
-                  O campo precisa ser preenchido corretamente.
-                </p>
-              </div>
-              <div class="flex flex-col gap-2">
-                <label
-                  class="text-gray-700 text-md"
-                  for="password_confirmation"
-                >
-                  <i
-                    class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
-                  ></i>
-                  Confirme a Senha
-                </label>
-                <input
-                  id="password_confirmation"
-                  name="password_confirmation"
-                  type="password"
-                  placeholder="Repita a sua senha"
-                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
-                <p
-                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                  data-error="password_confirmation"
-                >
-                  O campo precisa ser preenchido corretamente.
-                </p>
-              </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-md" for="cpf">
-                  <i
-                    class="fa-solid fa-id-card text-sm bg-orange-200 p-2 px-1.75 rounded-xl text-orange-500"
-                  ></i>
-                  CPF
-                </label>
-                <input
-                  id="cpf"
-                  name="cpf"
-                  type="text"
-                  placeholder="Digite seu CPF"
-                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
-                <p
-                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                  data-error="cpf"
-                >
-                  O campo precisa ser preenchido corretamente.
-                </p>
-              </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-md" for="birthdate">
-                  <i
-                    class="fa-solid fa-cake-candles text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
-                  ></i>
-                  Aniversário
-                </label>
-                <input
-                  id="birthdate"
-                  name="birthdate"
-                  type="date"
-                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
-                <p
-                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                  data-error="birthdate"
-                >
-                  O campo precisa ser preenchido corretamente.
-                </p>
-              </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-md" for="city">
-                  <i
-                    class="fa-solid fa-location-dot text-sm bg-orange-200 p-2 px-2.5 rounded-xl text-orange-500"
-                  ></i>
-                  Cidade
-                </label>
-                <select
-                  id="city"
-                  name="city"
-                  type="text"
-                  class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                >
-                  <option selected disabled>Selecione uma cidade</option>
-                  <option value="jau">Jaú</option>
-                  <option value="bariri">Bariri</option>
-                  <option value="mineiros_do_tiete">Mineiros do Tietê</option>
-                  <option value="barra_bonita">Barra Bonita</option>
-                  <option value="bauru">Bauru</option>
-                </select>
-                <p
-                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                  data-error="city"
-                >
-                  O campo precisa ser preenchido corretamente.
-                </p>
-              </div>
-
-              <div class="flex flex-col gap-2">
-                <label class="text-gray-700 text-md" for="gender">
-                  <i
-                    class="fa-solid fa-venus-mars text-sm bg-orange-200 p-2 px-1.5 rounded-xl text-orange-500"
-                  ></i>
-                  Gênero
-                </label>
-                <select
-                  id="gender"
-                  name="gender"
-                  type="text"
-                  class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                >
-                  <option selected disabled>Selecione um gênero</option>
-                  <option value="male">Masculino</option>
-                  <option value="female">Feminino</option>
-                  <option value="other">Outro</option>
-                </select>
-                <p
-                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                  data-error="gender"
-                >
-                  O campo precisa ser preenchido corretamente.
-                </p>
-              </div>
-            </div>
-            <div>
-              <button
-                type="submit"
-                class="mt-8 w-full justify-center bg-orange-500 hover:bg-orange-400 hover:shadow-md hover:shadow-orange-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastre-se - BoraRachão</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    class="css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/app/resources/assets/css/style.css" />
+</head>
+<body class="bg-gray-50">
+  <section class="font-md">
+    <div class="grid lg:grid-cols-2 min-h-screen">
+      <div
+        class="flex flex-col justify-center p-4 md:p-12 lg:px-16 bg-white order-last lg:order-first"
+      >
+        <form action="" id="form_register">
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-y-6 gap-x-6">
+            <div class="flex flex-col gap-2">
+              <label class="text-gray-700 text-md" for="name">
+                <i
+                  class="fa-solid fa-pencil text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Nome completo
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Digite seu nome completo"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+              />
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="name"
               >
-                Criar conta
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
+                O campo precisa ser preenchido corretamente.
+              </p>
             </div>
-          </form>
-          <div class="flex justify-between pt-6 text-sm text-gray-600">
-            <a
-              href="/app/resources/views/auth/login.html"
-              class="hover:text-cyan-500 duration-300 ease-in-out"
-            >
-              Já tenho uma conta
-            </a>
+            <div class="flex flex-col gap-2">
+              <label class="text-gray-700 text-md" for="email">
+                <i
+                  class="fa-solid fa-envelope text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Digite seu melhor email"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+              />
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="email"
+              >
+                O campo precisa ser preenchido corretamente.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="text-gray-700 text-md" for="password">
+                <i
+                  class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
+                ></i>
+                Senha
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Crie uma senha segura"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+              />
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="password"
+              >
+                O campo precisa ser preenchido corretamente.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label
+                class="text-gray-700 text-md"
+                for="password_confirmation"
+              >
+                <i
+                  class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
+                ></i>
+                Confirme a Senha
+              </label>
+              <input
+                id="password_confirmation"
+                name="password_confirmation"
+                type="password"
+                placeholder="Repita a sua senha"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+              />
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="password_confirmation"
+              >
+                O campo precisa ser preenchido corretamente.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="text-gray-700 text-md" for="cpf">
+                <i
+                  class="fa-solid fa-id-card text-sm bg-orange-200 p-2 px-1.75 rounded-xl text-orange-500"
+                ></i>
+                CPF
+              </label>
+              <input
+                id="cpf"
+                name="cpf"
+                type="text"
+                placeholder="Digite seu CPF"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+              />
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="cpf"
+              >
+                O campo precisa ser preenchido corretamente.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="text-gray-700 text-md" for="birthdate">
+                <i
+                  class="fa-solid fa-cake-candles text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
+                ></i>
+                Aniversário
+              </label>
+              <input
+                id="birthdate"
+                name="birthdate"
+                type="date"
+                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+              />
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="birthdate"
+              >
+                O campo precisa ser preenchido corretamente.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="text-gray-700 text-md" for="city">
+                <i
+                  class="fa-solid fa-location-dot text-sm bg-orange-200 p-2 px-2.5 rounded-xl text-orange-500"
+                ></i>
+                Cidade
+              </label>
+              <select
+                id="city"
+                name="city"
+                type="text"
+                class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+              >
+                <option selected disabled>Selecione uma cidade</option>
+                <option value="jau">Jaú</option>
+                <option value="bariri">Bariri</option>
+                <option value="mineiros_do_tiete">Mineiros do Tietê</option>
+                <option value="barra_bonita">Barra Bonita</option>
+                <option value="bauru">Bauru</option>
+              </select>
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="city"
+              >
+                O campo precisa ser preenchido corretamente.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label class="text-gray-700 text-md" for="gender">
+                <i
+                  class="fa-solid fa-venus-mars text-sm bg-orange-200 p-2 px-1.5 rounded-xl text-orange-500"
+                ></i>
+                Gênero
+              </label>
+              <select
+                id="gender"
+                name="gender"
+                type="text"
+                class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-300 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+              >
+                <option selected disabled>Selecione um gênero</option>
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+                <option value="other">Outro</option>
+              </select>
+              <p
+                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                data-error="gender"
+              >
+                O campo precisa ser preenchido corretamente.
+              </p>
+            </div>
           </div>
+          <div>
+            <button
+              type="submit"
+              class="mt-8 w-full justify-center bg-orange-500 hover:bg-orange-400 hover:shadow-md hover:shadow-orange-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+            >
+              Criar conta
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+        <div class="flex justify-between pt-6 text-sm text-gray-600">
+          <a
+            href="/app/resources/views/auth/login.html"
+            class="hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Já tenho uma conta
+          </a>
         </div>
+      </div>
+      <div
+        class="relative flex flex-col justify-center p-12 text-white text-center"
+      >
         <div
-          class="relative flex flex-col justify-center p-12 text-white text-center"
-        >
-          <div
-            class="absolute top-0 left-0 h-full w-full animate-auth-bg z-[-1] bg-gradient-to-bl from-red-500 to-orange-600"
-          ></div>
-          <h3 class="text-lg mb-3 uppercase font-light">
-            Vamos te conhecer melhor
-          </h3>
-          <h2 class="font-bold text-3xl md:text-4xl mb-5">
-            <i class="fa-solid fa-user-plus me-3"></i>
-            Crie a sua conta
-          </h2>
-          <p>
-            Cadastre-se agora e descubra partidas perto de você. Não fique de
-            fora do próximo rachão. BoraRachão!
-          </p>
-        </div>
+          class="absolute top-0 left-0 h-full w-full animate-auth-bg z-[-1] bg-gradient-to-bl from-red-500 to-orange-600"
+        ></div>
+        <h3 class="text-lg mb-3 uppercase font-light">
+          Vamos te conhecer melhor
+        </h3>
+        <h2 class="font-bold text-3xl md:text-4xl mb-5">
+          <i class="fa-solid fa-user-plus me-3"></i>
+          Crie a sua conta
+        </h2>
+        <p>
+          Cadastre-se agora e descubra partidas perto de você. Não fique de
+          fora do próximo rachão. BoraRachão!
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="mt-16 py-18 bg-white shadow border-t border-gray-200 bg-blue-500 z-10">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col justify-center items-center gap-y-5">
-          <a href="/app/resources/views/index.html">
-            <img src="https://placehold.co/100" alt="" class="w-12 h-12" />
-          </a>
-          <a
-            href="/app/resources/views/index.html"
-            class="text-gray-600 font-bold hover:text-cyan-500 text-md duration-300 ease-in-out text-center"
-          >
-            BoraRachão &copy;
-          </a>
-        </div>
-        <nav
-          class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
+  <!-- footer -->
+  <footer class="py-18 bg-white shadow border-t border-gray-200">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col justify-center items-center gap-y-5">
+        <a href="/app/resources/views/index.html">
+          <img src="https://placehold.co/100" alt="Logo BoraRachão" class="w-12 h-12">
+        </a>
+        <a
+          href="/app/resources/views/index.html"
+          class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
         >
-          <a
-            href="/app/resources/views/index.html"
-            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-          >
-            Home
-          </a>
-          <a
-            href=""
-            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-          >
-            Contato
-          </a>
-          <a
-            href=""
-            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-          >
-            Sobre
-          </a>
-          <a
-            href=""
-            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-          >
-            Política de Privacidade
-          </a>
-          <a
-            href=""
-            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-          >
-            Termos de Uso
-          </a>
-        </nav>
+          BoraRachão &copy;
+        </a>
       </div>
-    </footer>
+      <nav
+        class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
+      >
+        <a
+          href="/app/resources/views/index.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Home
+        </a>
+        <a
+          href="/app/resources/views/general/contact.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Contato
+        </a>
+        <a
+          href="/app/resources/views/general/about.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Sobre
+        </a>
+        <a
+          href="/app/resources/views/general/privacy-policy.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Política de Privacidade
+        </a>
+        <a
+          href="/app/resources/views/general/terms-of-use.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+        >
+          Termos de Uso
+        </a>
+      </nav>
+      <div class="flex justify-center gap-x-4 mt-9">
+        <a
+          href="https://www.instagram.com/"
+          class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-instagram text-2xl hover:text-white"></i>
+        </a>
+        <a
+          href="https://www.tiktok.com/"
+          class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-tiktok text-2xl"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/"
+          class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-square-facebook text-2xl"></i>
+        </a>
+        <a
+          href="https://x.com/"
+          class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-x-twitter text-2xl"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/"
+          class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 duration-300 ease-in-out hover:text-white"
+        >
+          <i class="fa-brands fa-linkedin text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 
-    <script src="/app/resources/assets/js/script.js"></script>
+  <script src="/app/resources/assets/js/script.js"></script>
 
-    <script>
-      const arrayRegisterForm = [];
+  <script>
+    const arrayRegisterForm = [];
 
-      addInputValidations(
-        document.getElementById("name"),
-        (input, msg) => {
-          input.addEventListener("blur", (e) => {
-            if (e.target.value.trim() === "") {
-              toggleErrorMsg(input, "O campo nome é obrigatório.");
-            } else if (e.target.value.length > 255) {
-              toggleErrorMsg(
-                input,
-                "O campo nome só pode ter 255 caracteres no máximo."
-              );
-            } else {
-              toggleErrorMsg(input);
-            }
-          });
-        },
-        arrayRegisterForm
-      );
+    addInputValidations(
+      document.getElementById("name"),
+      (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+            toggleErrorMsg(input, "O campo nome é obrigatório.");
+          } else if (e.target.value.length > 255) {
+            toggleErrorMsg(
+              input,
+              "O campo nome só pode ter 255 caracteres no máximo."
+            );
+          } else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayRegisterForm
+    );
 
-      addInputValidations(
-        document.getElementById("email"),
-        (input, msg) => {
-          input.addEventListener("blur", (e) => {
-            if (e.target.value.trim() === "") {
-              toggleErrorMsg(input, "O campo email é obrigatório.");
-            } else if (e.target.value.length > 255) {
-              toggleErrorMsg(
-                input,
-                "O campo email só pode ter 255 caracteres no máximo."
-              );
-            } else if (
-              !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value.trim())
-            ) {
-              toggleErrorMsg(input, "O campo precisa ter um email válido.");
-            } else {
-              toggleErrorMsg(input);
-            }
-          });
-        },
-        arrayRegisterForm
-      );
+    addInputValidations(
+      document.getElementById("email"),
+      (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+            toggleErrorMsg(input, "O campo email é obrigatório.");
+          } else if (e.target.value.length > 255) {
+            toggleErrorMsg(
+              input,
+              "O campo email só pode ter 255 caracteres no máximo."
+            );
+          } else if (
+            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value.trim())
+          ) {
+            toggleErrorMsg(input, "O campo precisa ter um email válido.");
+          } else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayRegisterForm
+    );
 
-      addInputValidations(
-        document.getElementById("password"),
-        (input, msg) => {
-          input.addEventListener("blur", (e) => {
-            if (e.target.value.trim() === "") {
-              toggleErrorMsg(input, "O campo senha é obrigatório.");
-            } else if (e.target.value.length > 255) {
-              toggleErrorMsg(
-                input,
-                "O campo senha só pode ter 255 caracteres no máximo."
-              );
-            } else if (e.target.value.length < 8) {
-              toggleErrorMsg(
-                input,
-                "O campo senha deve ter no mínimo 8 caracteres."
-              );
-            } else {
-              toggleErrorMsg(input);
-            }
-            document
-              .getElementById("password_confirmation")
-              .dispatchEvent(new Event("blur"));
-          });
-        },
-        arrayRegisterForm
-      );
+    addInputValidations(
+      document.getElementById("password"),
+      (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+            toggleErrorMsg(input, "O campo senha é obrigatório.");
+          } else if (e.target.value.length > 255) {
+            toggleErrorMsg(
+              input,
+              "O campo senha só pode ter 255 caracteres no máximo."
+            );
+          } else if (e.target.value.length < 8) {
+            toggleErrorMsg(
+              input,
+              "O campo senha deve ter no mínimo 8 caracteres."
+            );
+          } else {
+            toggleErrorMsg(input);
+          }
+          document
+            .getElementById("password_confirmation")
+            .dispatchEvent(new Event("blur"));
+        });
+      },
+      arrayRegisterForm
+    );
 
-      addInputValidations(
-        document.getElementById("password_confirmation"),
-        (input, msg) => {
-          const passwordInput = document.getElementById("password");
-          input.addEventListener("blur", (e) => {
-            if (e.target.value.trim() === "") {
-              toggleErrorMsg(input, "O campo de confirmação é obrigatório.");
-            } else if (e.target.value != passwordInput.value) {
-              toggleErrorMsg(
-                input,
-                "O campo de confirmação e senha devem ser iguais."
-              );
-            } else {
-              toggleErrorMsg(input);
-            }
-          });
-        },
-        arrayRegisterForm
-      );
+    addInputValidations(
+      document.getElementById("password_confirmation"),
+      (input, msg) => {
+        const passwordInput = document.getElementById("password");
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+            toggleErrorMsg(input, "O campo de confirmação é obrigatório.");
+          } else if (e.target.value != passwordInput.value) {
+            toggleErrorMsg(
+              input,
+              "O campo de confirmação e senha devem ser iguais."
+            );
+          } else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayRegisterForm
+    );
 
-      addInputValidations(
-        document.getElementById("cpf"),
-        (input, msg) => {
-          input.addEventListener("blur", (e) => {
-            if (e.target.value.trim() === "") {
-              toggleErrorMsg(input, "O campo de CPF é obrigatório.");
-            } else if (!isValidCPF(e.target.value)) {
-              toggleErrorMsg(
-                input,
-                "O campo de CPF deve ser válido (11155522200)."
-              );
-            } else {
-              toggleErrorMsg(input);
-            }
-          });
-        },
-        arrayRegisterForm
-      );
+    addInputValidations(
+      document.getElementById("cpf"),
+      (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.value.trim() === "") {
+            toggleErrorMsg(input, "O campo de CPF é obrigatório.");
+          } else if (!isValidCPF(e.target.value)) {
+            toggleErrorMsg(
+              input,
+              "O campo de CPF deve ser válido (11155522200)."
+            );
+          } else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayRegisterForm
+    );
 
-      addInputValidations(
-        document.getElementById("birthdate"),
-        (input, msg) => {
-          input.addEventListener("blur", (e) => {
-            if (!isValidBirthDate(e.target.value, 14)) {
-              toggleErrorMsg(input, "O campo aniversário deve ser válido.");
-            } else {
-              toggleErrorMsg(input);
-            }
-          });
-        },
-        arrayRegisterForm
-      );
+    addInputValidations(
+      document.getElementById("birthdate"),
+      (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (!isValidBirthDate(e.target.value, 14)) {
+            toggleErrorMsg(input, "O campo aniversário deve ser válido.");
+          } else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayRegisterForm
+    );
 
-      addInputValidations(
-        document.getElementById("city"),
-        (input, msg) => {
-          input.addEventListener("blur", (e) => {
-            if (e.target.options[e.target.selectedIndex].disabled) {
-              toggleErrorMsg(input, "O campo de cidade é obrigatório.");
-            } else {
-              toggleErrorMsg(input);
-            }
-          });
-        },
-        arrayRegisterForm
-      );
+    addInputValidations(
+      document.getElementById("city"),
+      (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.options[e.target.selectedIndex].disabled) {
+            toggleErrorMsg(input, "O campo de cidade é obrigatório.");
+          } else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayRegisterForm
+    );
 
-      addInputValidations(
-        document.getElementById("gender"),
-        (input, msg) => {
-          input.addEventListener("blur", (e) => {
-            if (e.target.options[e.target.selectedIndex].disabled) {
-              toggleErrorMsg(input, "O campo de gênero é obrigatório.");
-            } else {
-              toggleErrorMsg(input);
-            }
-          });
-        },
-        arrayRegisterForm
-      );
+    addInputValidations(
+      document.getElementById("gender"),
+      (input, msg) => {
+        input.addEventListener("blur", (e) => {
+          if (e.target.options[e.target.selectedIndex].disabled) {
+            toggleErrorMsg(input, "O campo de gênero é obrigatório.");
+          } else {
+            toggleErrorMsg(input);
+          }
+        });
+      },
+      arrayRegisterForm
+    );
 
-      formPreventAndValidate(
-        document.getElementById("form_register"),
-        arrayRegisterForm,
-        '/app/resources/views/'
-      );
-    </script>
-  </body>
+    formPreventAndValidate(
+      document.getElementById("form_register"),
+      arrayRegisterForm,
+      '/app/resources/views/'
+    );
+  </script>
+</body>
 </html>
