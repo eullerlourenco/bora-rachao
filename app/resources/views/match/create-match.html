@@ -357,11 +357,11 @@
                       class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
                     >
                       <option value="" disabled>Selecione uma cidade</option>
-                      <option value="jau">Jaú</option>
-                      <option value="bariri">Bariri</option>
-                      <option value="mineiros-do-tiete">Mineiros do Tietê</option>
-                      <option value="barra-bonita">Barra Bonita</option>
-                      <option value="bauru">Bauru</option>
+                      <option value="Jaú">Jaú</option>
+                      <option value="Bariri">Bariri</option>
+                      <option value="Mineiros do Tietê">Mineiros do Tietê</option>
+                      <option value="Barra Bonita">Barra Bonita</option>
+                      <option value="Bauru">Bauru</option>
                     </select>
                     <p
                       class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
@@ -743,7 +743,7 @@
 
     addInputValidations(document.getElementById("description"), (input, msg) => {
         input.addEventListener("blur", (e) => {
-          if (e.target.value.length > 255) {
+          if (e.target.value.length > 500) {
             
             toggleErrorMsg(input, "Limite de caracteres atingido.");
           }
@@ -757,18 +757,16 @@
 
     addInputValidations(document.getElementById("cep"), (input, msg) => {
         input.addEventListener("blur", (e) => {
+          validateCEP(["cep", "city", "street", "neighborhood"]);
+
           if (e.target.value.trim() === "") {
 
             toggleErrorMsg(input, "O campo CEP é obrigatório.");
           } 
-          else if (e.target.value.length < 8) {
+          else if (e.target.value.length < 8 || e.target.value.length > 8) {
             
-            toggleErrorMsg(input, "O campo CEP tem que ter no mínimo 8 caracteres.");
-          } 
-          else if (e.target.value.length > 8) {
-            
-            toggleErrorMsg(input, "O campo CEP tem que ter no máximo 8 caracteres.");
-          } 
+            toggleErrorMsg(input, "O campo CEP tem que ter 8 dígitos.");
+          }
           else {
             toggleErrorMsg(input);
           }
@@ -850,6 +848,7 @@
       arrayCreateMatchForm,
       "/app/resources/views/match/match.html"
     );
+
   </script>
 
 </body>
