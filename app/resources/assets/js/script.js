@@ -94,23 +94,25 @@ const btnOpenMenuMobile = document.getElementById("btn_open_menu_mobile");
 const btnCloseMenuMobile = document.getElementById("btn_close_menu_mobile");
 const menuMobile = document.getElementById("menu_mobile");
 
-btnOpenMenuMobile.addEventListener("click", (event) => {
-  menuMobile.classList.remove("hidden");
-});
+if (menuMobile) {
+  btnOpenMenuMobile.addEventListener("click", (event) => {
+    menuMobile.classList.remove("hidden");
+  });
 
-btnCloseMenuMobile.addEventListener("click", (event) => {
-  menuMobile.classList.add("hidden");
-});
+  btnCloseMenuMobile.addEventListener("click", (event) => {
+    menuMobile.classList.add("hidden");
+  });
+}
 
 function validateCEP(inputs) {
   const cep = document.getElementById(inputs[0]).value.replace(/\D/g, "");
-  
+
   if (cep.length === 8) {
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
-      .then(response => {
+      .then((response) => {
         return response.json();
       })
-      .then(data => {
+      .then((data) => {
         if (data.erro) {
           throw new Error("CEP não encontrado.");
         }
@@ -128,12 +130,11 @@ function validateCEP(inputs) {
           }
         }
         if (!found) {
-          toggleErrorMsg(city, "A cidade do CEP não está nas opções.")
+          toggleErrorMsg(city, "A cidade do CEP não está nas opções.");
         }
       })
-      .catch(error => alert("Erro: " + error.message));
-  }
-  else {
+      .catch((error) => alert("Erro: " + error.message));
+  } else {
     toggleErrorMsg(cep, "O campo CEP tem que ter 8 dígitos");
   }
 }
