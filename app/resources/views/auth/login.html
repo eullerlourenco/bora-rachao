@@ -1,253 +1,272 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - BoraRachão</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - BoraRachão</title>
 
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    class="css"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="/app/resources/assets/css/style.css" />
-</head>
-<body class="bg-gray-50">
-  <section class="font-md min-h-screen">
-    <div class="grid md:grid-cols-2 min-h-screen">
-      <div
-        class="relative flex flex-col justify-center p-12 text-white text-center"
-      >
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      class="css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/app/resources/assets/css/style.css" />
+  </head>
+  <body class="bg-gray-50">
+    <section class="font-md min-h-screen">
+      <div class="grid md:grid-cols-2 min-h-screen">
         <div
-          class="absolute top-0 left-0 h-full w-full animate-auth-bg z-[-1] bg-gradient-to-br from-cyan-300 via-cyan-500 to-cyan-900"
-        ></div>
-        <h3 class="text-lg mb-3 uppercase font-light">
-          Que bom ter você de volta aqui
-        </h3>
-        <h2 class="font-bold text-3xl md:text-4xl mb-5">
-          <i class="fa-solid fa-door-open me-3"></i>
-          Faça seu login
-        </h2>
-        <p>
-          Sua plataforma de rachões e encontros esportivos. Junte-se a nós e
-          participe de competições incríveis. BoraRachão!
-        </p>
-      </div>
-      <div class="flex flex-col justify-center p-4 md:p-12 lg:px-16 bg-white">
-        <form action="#" id="form_login">
-          <div class="flex flex-col gap-y-6">
-            <div class="flex flex-col gap-2">
-              <label class="text-gray-700 text-md" for="email">
-                <i
-                  class="fa-solid fa-envelope text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-                ></i>
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="Digite seu endereço de email"
-                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-              />
-              <p
-                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                data-error="email"
-              >
-                O campo precisa ser preenchido corretamente.
-              </p>
+          class="relative flex flex-col justify-center p-12 text-white text-center"
+        >
+          <div
+            class="absolute top-0 left-0 h-full w-full animate-auth-bg z-[-1] bg-gradient-to-br from-cyan-300 via-cyan-500 to-cyan-900"
+          ></div>
+          <a
+            class="flex justify-center items-center"
+            href="/app/resources/views/index.html"
+          >
+            <img
+              src="/app/resources/assets/images/logos/logo-white.png"
+              alt="logo"
+              class="max-w-[50px] object-cover"
+            />
+            <h3 class="italic text-4xl font-bold">BoraRachão</h3>
+          </a>
+          <hr class="bg-white opacity-50 my-4" />
+          <h3 class="text-lg mb-3 uppercase font-light">
+            Que bom ter você de volta aqui
+          </h3>
+          <h2 class="font-bold text-3xl md:text-4xl mb-5">
+            <i class="fa-solid fa-door-open me-3"></i>
+            Faça seu login
+          </h2>
+          <p>
+            Sua plataforma de rachões e encontros esportivos. Junte-se a nós e
+            participe de competições incríveis. BoraRachão!
+          </p>
+        </div>
+        <div class="flex flex-col justify-center p-4 md:p-12 lg:px-16 bg-white">
+          <form action="#" id="form_login">
+            <div class="flex flex-col gap-y-6">
+              <div class="flex flex-col gap-2">
+                <label class="text-gray-700 text-md" for="email">
+                  <i
+                    class="fa-solid fa-envelope text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                  ></i>
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Digite seu endereço de email"
+                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="email"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-gray-700 text-md" for="password">
+                  <i
+                    class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
+                  ></i>
+                  Senha
+                </label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  placeholder="Digite sua senha"
+                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="password"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
             </div>
-            <div class="flex flex-col gap-2">
-              <label class="text-gray-700 text-md" for="password">
-                <i
-                  class="fa-solid fa-lock text-sm bg-orange-200 p-2 px-2.25 rounded-xl text-orange-500"
-                ></i>
-                Senha
-              </label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                placeholder="Digite sua senha"
-                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-              />
-              <p
-                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                data-error="password"
+            <div>
+              <button
+                type="submit"
+                class="mt-4 w-full bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
               >
-                O campo precisa ser preenchido corretamente.
-              </p>
+                Entrar
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
-          </div>
-          <div>
-            <button
-              type="submit"
-              class="mt-4 w-full bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+          </form>
+          <div class="flex justify-between pt-6 text-sm text-gray-600">
+            <a
+              href="forgot-password.html"
+              class="hover:text-cyan-500 duration-300 ease-in-out"
             >
-              Entrar
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
+              Esqueci a minha senha
+            </a>
+            <a
+              href="/app/resources/views/auth/register.html"
+              class="hover:text-cyan-500 duration-300 ease-in-out"
+            >
+              Criar uma conta
+            </a>
           </div>
-        </form>
-        <div class="flex justify-between pt-6 text-sm text-gray-600">
-          <a href="forgot-password.html" class="hover:text-cyan-500 duration-300 ease-in-out">
-            Esqueci a minha senha
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-18 bg-white shadow border-t border-gray-200">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col justify-center items-center gap-y-5">
+          <a href="/app/resources/views/index.html">
+            <img
+              src="https://placehold.co/100"
+              alt="Logo BoraRachão"
+              class="w-12 h-12"
+            />
           </a>
           <a
-            href="/app/resources/views/auth/register.html"
-            class="hover:text-cyan-500 duration-300 ease-in-out"
+            href="/app/resources/views/index.html"
+            class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
           >
-            Criar uma conta
+            BoraRachão &copy;
+          </a>
+        </div>
+        <nav
+          class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
+        >
+          <a
+            href="/app/resources/views/index.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Home
+          </a>
+          <a
+            href="/app/resources/views/general/contact.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Contato
+          </a>
+          <a
+            href="/app/resources/views/general/about.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Sobre
+          </a>
+          <a
+            href="/app/resources/views/general/privacy-policy.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Política de Privacidade
+          </a>
+          <a
+            href="/app/resources/views/general/terms-of-use.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Termos de Uso
+          </a>
+        </nav>
+        <div class="flex justify-center gap-x-4 mt-9">
+          <a
+            href="https://www.instagram.com/"
+            class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-instagram text-2xl hover:text-white"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/"
+            class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-tiktok text-2xl"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/"
+            class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-square-facebook text-2xl"></i>
+          </a>
+          <a
+            href="https://x.com/"
+            class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-x-twitter text-2xl"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-linkedin text-2xl"></i>
           </a>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- footer -->
-  <footer class="py-18 bg-white shadow border-t border-gray-200">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col justify-center items-center gap-y-5">
-        <a href="/app/resources/views/index.html">
-          <img src="https://placehold.co/100" alt="Logo BoraRachão" class="w-12 h-12">
-        </a>
-        <a
-          href="/app/resources/views/index.html"
-          class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
-        >
-          BoraRachão &copy;
-        </a>
-      </div>
-      <nav
-        class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
-      >
-        <a
-          href="/app/resources/views/index.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
-          Home
-        </a>
-        <a
-          href="/app/resources/views/general/contact.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
-          Contato
-        </a>
-        <a
-          href="/app/resources/views/general/about.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
-          Sobre
-        </a>
-        <a
-          href="/app/resources/views/general/privacy-policy.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
-          Política de Privacidade
-        </a>
-        <a
-          href="/app/resources/views/general/terms-of-use.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
-          Termos de Uso
-        </a>
-      </nav>
-      <div class="flex justify-center gap-x-4 mt-9">
-        <a
-          href="https://www.instagram.com/"
-          class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 duration-300 ease-in-out hover:text-white"
-        >
-          <i class="fa-brands fa-instagram text-2xl hover:text-white"></i>
-        </a>
-        <a
-          href="https://www.tiktok.com/"
-          class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
-        >
-          <i class="fa-brands fa-tiktok text-2xl"></i>
-        </a>
-        <a
-          href="https://www.facebook.com/"
-          class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 duration-300 ease-in-out hover:text-white"
-        >
-          <i class="fa-brands fa-square-facebook text-2xl"></i>
-        </a>
-        <a
-          href="https://x.com/"
-          class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
-        >
-          <i class="fa-brands fa-x-twitter text-2xl"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/"
-          class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 duration-300 ease-in-out hover:text-white"
-        >
-          <i class="fa-brands fa-linkedin text-2xl"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="/app/resources/assets/js/script.js"></script>
+    <script src="/app/resources/assets/js/script.js"></script>
 
-  <script>
-    const arrayLoginForm = [];
+    <script>
+      const arrayLoginForm = [];
 
-    addInputValidations(
-      document.getElementById("email"),
-      (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-            toggleErrorMsg(input, "O campo email é obrigatório.");
-          } else if (e.target.value.length > 255) {
-            toggleErrorMsg(
-              input,
-              "O campo email só pode ter 255 caracteres no máximo."
-            );
-          } else if (
-            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value.trim())
-          ) {
-            toggleErrorMsg(input, "O campo precisa ter um email válido.");
-          } else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayLoginForm
-    );
+      addInputValidations(
+        document.getElementById("email"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo email é obrigatório.");
+            } else if (e.target.value.length > 255) {
+              toggleErrorMsg(
+                input,
+                "O campo email só pode ter 255 caracteres no máximo."
+              );
+            } else if (
+              !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value.trim())
+            ) {
+              toggleErrorMsg(input, "O campo precisa ter um email válido.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayLoginForm
+      );
 
-    addInputValidations(
-      document.getElementById("password"),
-      (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-            toggleErrorMsg(input, "O campo senha é obrigatório.");
-          } else if (e.target.value.length > 255) {
-            toggleErrorMsg(
-              input,
-              "O campo senha só pode ter 255 caracteres no máximo."
-            );
-          } else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayLoginForm
-    );
+      addInputValidations(
+        document.getElementById("password"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo senha é obrigatório.");
+            } else if (e.target.value.length > 255) {
+              toggleErrorMsg(
+                input,
+                "O campo senha só pode ter 255 caracteres no máximo."
+              );
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayLoginForm
+      );
 
-    formPreventAndValidate(
-      document.getElementById("form_login"),
-      arrayLoginForm,
-      "/app/resources/views/"
-    );
-  </script>
-</body>
+      formPreventAndValidate(
+        document.getElementById("form_login"),
+        arrayLoginForm,
+        "/app/resources/views/"
+      );
+    </script>
+  </body>
 </html>
