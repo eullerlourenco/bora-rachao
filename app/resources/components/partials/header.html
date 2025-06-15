@@ -151,15 +151,85 @@
   >
     <!-- nav mobile -->
     <nav class="md:hidden">
-      <a class="hover:cursor-pointer">
+      <a id="btn_open_menu_mobile" class="hover:cursor-pointer">
         <i
-          class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
+          class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-xl hover:bg-gray-100 duration-300 ease-in-out"
         ></i>
       </a>
+      <div
+        id="menu_mobile"
+        class="absolute p-6 w-screen h-screen bg-white z-50 top-0 left-0 hidden"
+      >
+        <div class="text-end">
+          <a id="btn_close_menu_mobile" class="hover:cursor-pointer">
+            <i
+              class="fa-solid fa-xmark text-lg text-gray-500 py-3 px-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 duration-300 ease-in-out"
+            ></i>
+          </a>
+        </div>
+        <div class="text-gray-700 flex flex-col gap-y-3">
+          <h3 class="text-2xl">Menu</h3>
+          <hr class="text-gray-300" />
+          <a
+            href="/app/resources/views/index.html"
+            class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+          >
+            <i
+              class="fa-solid fa-house text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+            ></i>
+            Home
+          </a>
+          <a
+            href="/app/resources/views/general/contact.html"
+            class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+          >
+            <i
+              class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+            ></i>
+            Contato
+          </a>
+          <a
+            href="/app/resources/views/match/matches.html"
+            class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+          >
+            <i
+              class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+            ></i>
+            Partidas
+          </a>
+          <a
+            href="/app/resources/views/sports/index.html"
+            class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+          >
+            <i
+              class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+            ></i>
+            Esportes
+          </a>
+          <a
+            href="/app/resources/views/auth/login.html"
+            class="mt-2 bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-2.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+          >
+            Acessar
+            <i class="fa-solid fa-arrow-right"></i>
+            <a
+              href="/app/resources/views/auth/register.html"
+              class="mt-3 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+            >
+              <i class="fa-solid fa-plus"></i>
+              Criar uma Conta
+            </a>
+          </a>
+        </div>
+      </div>
     </nav>
     <div>
       <a href="/app/resources/views/index.html">
-        <img src="https://placehold.co/100" alt="logo" class="w-9 h-9" />
+        <img
+          src="/app/resources/assets/images/logos/logo-bora-rachao.png"
+          alt="logo"
+          class="max-w-[175px] object-cover"
+        />
       </a>
     </div>
     <nav class="hidden md:flex space-x-6">
@@ -169,12 +239,12 @@
         >Home</a
       >
       <a
-        href=""
+        href="/app/resources/views/general/contact.html"
         class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
         >Contato</a
       >
       <a
-        href=""
+        href="/app/resources/views/match/matches.html"
         class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
         >Partidas</a
       >
@@ -184,26 +254,25 @@
         >Esportes</a
       >
     </nav>
-    <div class="flex items-center space-x-3">
-      <div class="hidden md:block">
+    <div class="hidden md:flex items-center space-x-3">
+      <div>
         <a
-          href=""
+          href="/app/resources/views/auth/register.html"
           class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
         >
+          <i class="fa-solid fa-plus"></i>
           Criar Conta
         </a>
       </div>
-      <a
-        href=""
-        class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
-      >
-        Acessar
-      </a>
-      <a href="">
-        <i
-          class="fa-solid fa-moon text-lg text-orange-500 py-3 px-3.5 rounded-full hover:bg-gray-100 duration-300 ease-in-out"
-        ></i>
-      </a>
+      <div>
+        <a
+          href="/app/resources/views/auth/login.html"
+          class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+        >
+          Acessar
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
   </div>
 </header>
