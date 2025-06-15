@@ -4,27 +4,24 @@
 
 ### Paginas (To do)
 
-- Contact (página com formulário de contato e sugestões)
-- About (sobre os desenvolvedores)
 - Privacy Policy (políticas de privacidade)
 - Terms of Use (termos de uso)
 - Match (detalhes da partida)
-- All Matches (Lista todas as partidas disponíveis)
-- All Sports (Lista todos os esportes disponíveis)
 - Create Match (Formulário para criar uma partida)
 - User Config (Atualizar e mudar as informações do usuário)
 - Friends (Ver todos amigos)
-- Confirm Email (Páginas para inserir código de confirmação do email)
-- Confirm Telephone (Página para inserir código de confirmação do telefone)
-- Forgot Password (Pagina para solicitar redefinição de senha)
-- Recover Password (Página para inserir nova senha da redefinição)
 
 ### Paginas (Done)
 - Home (página inicial para deslogados)
 - Login
 - Register
-- Complementary Register (dados adicionais)
 - User Profile (Perfil dos usuários)
+- Contact (página com formulário de contato e sugestões)
+- About (sobre os desenvolvedores)
+- All Matches (Lista todas as partidas disponíveis)
+- All Sports (Lista todos os esportes disponíveis)
+- Forgot Password (Pagina para solicitar redefinição de senha)
+- Recover Password (Página para inserir nova senha da redefinição)
 
 ## Precisamos 📌
 
@@ -68,9 +65,9 @@
 ### Funções/Tarefas
 
 > Euller
-- Home (Para deslogados) ✅
+- Home ✅
 - User Profile ✅
-- All Matches
+- All Matches ✅
 
 > Lucas
 - Match Details
@@ -80,13 +77,12 @@
 > João
 - Login ✅
 - Register ✅
-- Complementary Register ✅
-- Contact
+- Contact ✅
 
 > Gabriel
-- About
-- Recover Password
-- All Sports
+- About ✅
+- Recover Password ✅
+- All Sports ✅
 
 > Beatriz
 - Privacy Policy
