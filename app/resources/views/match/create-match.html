@@ -107,7 +107,11 @@
       </nav>
       <div>
         <a href="/app/resources/views/index.html">
-          <img src="https://placehold.co/100" alt="logo" class="w-9 h-9" />
+          <img
+            src="/app/resources/assets/images/logos/logo-bora-rachao.png"
+            alt="logo"
+            class="max-w-[175px] object-cover"
+          />
         </a>
       </div>
       <nav class="hidden md:flex space-x-6">
@@ -122,7 +126,7 @@
           >Contato</a
         >
         <a
-          href=""
+          href="/app/resources/views/match/matches.html"
           class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
           >Partidas</a
         >
@@ -159,7 +163,7 @@
 
   <!-- Criar partida -->
   <section class="container mx-auto my-15">
-    <form id="form-create-match" class="mx-auto rounded-2xl shadow-lg border border-gray-300 border-l-8 border-l-cyan-500">
+    <form id="form-create-match" class="rounded-2xl shadow-lg border border-gray-300 border-l-8 border-l-cyan-500">
       
       <!-- Título -->
       <div class="basis-full my-6 mx-7">
@@ -337,7 +341,7 @@
                       <i class="fa-solid fa-hashtag text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.5"></i>
                       Número
                     </label>
-                    <input id="number" placeholder="Número" type="number" min="0"
+                    <input id="number" placeholder="Número" type="text"
                       class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
                       />
                     <p
@@ -441,7 +445,7 @@
                   class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
                 >
                   <div class="block">
-                    <span class="tex font-medium">@joaofran</span>
+                    <span class="tex font-medium">@joaocf</span>
                   </div>
                 </label>
               </div>
@@ -481,7 +485,7 @@
                   class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
                 >
                   <div class="block">
-                    <span class="tex font-medium">@juninh0bw</span>
+                    <span class="tex font-medium">@altairjuninho</span>
                   </div>
                 </label>
               </div>
@@ -501,7 +505,7 @@
                   class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
                 >
                   <div class="block">
-                    <span class="tex font-medium">@pietrodub</span>
+                    <span class="tex font-medium">@pietror45</span>
                   </div>
                 </label>
               </div>
@@ -515,26 +519,36 @@
                   </div>
                 </label>
               </div>
-            <div>
-              <input type="checkbox" id="checkboxPills11" value="tiagotas" class="hidden peer" autocomplete="off"/>
-              <label for="checkboxPills11"
-                class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-              >
-                <div class="block">
-                  <span class="tex font-medium">@tiagotas</span>
-                </div>
-              </label>
-            </div>
-            <div>
-              <input type="checkbox" id="checkboxPills12" value="betzfer" class="hidden peer" autocomplete="off"/>
-              <label for="checkboxPills12"
-                class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-              >
-                <div class="block">
-                  <span class="tex font-medium">@betzfer</span>
-                </div>
-              </label>
-            </div>
+              <div>
+                <input type="checkbox" id="checkboxPills11" value="tiagotas" class="hidden peer" autocomplete="off"/>
+                <label for="checkboxPills11"
+                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                >
+                  <div class="block">
+                    <span class="tex font-medium">@tiagotas</span>
+                  </div>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkboxPills12" value="betzfer" class="hidden peer" autocomplete="off"/>
+                <label for="checkboxPills12"
+                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                >
+                  <div class="block">
+                    <span class="tex font-medium">@betzfer</span>
+                  </div>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkboxPills12" value="betzfer" class="hidden peer" autocomplete="off"/>
+                <label for="checkboxPills12"
+                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                >
+                  <div class="block">
+                    <span class="tex font-medium">@diegosilva77</span>
+                  </div>
+                </label>
+              </div>
             </div>
           </div>
 
@@ -552,13 +566,17 @@
 
     </form>
   </section>
-
+  
   <!-- footer -->
   <footer class="py-18 bg-white shadow border-t border-gray-200">
     <div class="container mx-auto px-4">
-      <div class="flex flex-col justify-center items-center gap-y-5">
+      <div class="flex flex-col justify-center items-center gap-y-2">
         <a href="/app/resources/views/index.html">
-          <img src="https://placehold.co/100" alt="" class="w-12 h-12">
+          <img
+            src="/app/resources/assets/images/logos/logo-black-colors.png"
+            alt="Logo BoraRachão"
+            class="w-28 h-28 object-cover"
+          />
         </a>
         <a
           href="/app/resources/views/index.html"
@@ -757,18 +775,18 @@
 
     addInputValidations(document.getElementById("cep"), (input, msg) => {
         input.addEventListener("blur", (e) => {
-          validateCEP(["cep", "city", "street", "neighborhood"]);
 
           if (e.target.value.trim() === "") {
 
             toggleErrorMsg(input, "O campo CEP é obrigatório.");
           } 
-          else if (e.target.value.length < 8 || e.target.value.length > 8) {
+          else if (e.target.value.length !== 8) {
             
-            toggleErrorMsg(input, "O campo CEP tem que ter 8 dígitos.");
+            toggleErrorMsg(input, "O campo CEP tem que ter 8 números.");
           }
           else {
             toggleErrorMsg(input);
+            validateCEP(["cep", "city", "street", "neighborhood"]);
           }
         });
       },

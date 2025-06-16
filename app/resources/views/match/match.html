@@ -107,7 +107,11 @@
       </nav>
       <div>
         <a href="/app/resources/views/index.html">
-          <img src="https://placehold.co/100" alt="logo" class="w-9 h-9" />
+          <img
+            src="/app/resources/assets/images/logos/logo-bora-rachao.png"
+            alt="logo"
+            class="max-w-[175px] object-cover"
+          />
         </a>
       </div>
       <nav class="hidden md:flex space-x-6">
@@ -122,7 +126,7 @@
           >Contato</a
         >
         <a
-          href=""
+          href="/app/resources/views/match/matches.html"
           class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
           >Partidas</a
         >
@@ -168,35 +172,34 @@
 
   <!-- Criar partida -->
   <section class="container mx-auto my-15">
-    <form class="mx-auto rounded-2xl shadow-lg border border-gray-300 border-l-8 border-l-cyan-500">
+    <form class="rounded-2xl shadow-lg border border-gray-300 border-l-8 border-l-cyan-500">
 
       <!-- Título -->
-      <div class="flex basis-full justify-between my-6 mx-7 pb-5 text-gray-700 border-b border-b-gray-300">
-        <div class="flex">
+      <div class="flex flex-col lg:flex-row basis-full justify-between my-6 mx-7 pb-5 text-gray-700 border-b border-b-gray-300">
+        <div class="flex flex-col sm:flex-row gap-4 items-center">
           <a href="/app/resources/views/user/profile.html">
             <img
-              src="/app/resources/assets/images/beaamonteiro.jpg"
-              class="w-16 h-16 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
+              src="/app/resources/assets/images/lucasbardeli.jpg"
+              class="w-16 h-16 object-cover rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
               alt="profile image"
             />
           </a>
-          <p class="text-2xl font-bold">
-            Volêi no Kartódromo
-          </p>
+          <p class="text-2xl font-semibold">@lucasbardeli</p>
+          <p class="text-2xl font-semibold text-white bg-lime-500 rounded-lg px-2">Volêi no Kartódromo</p>
         </div>
-        <div class="flex my-auto">
+        <div class="flex flex-col sm:flex-row items-center my-4.5">
           <p class="px-4">
-            Criada dia 09/06/2025
+            Criada dia: <b>09/06/2025</b>
           </p>
           <p class="px-4">
-            Horário: 19:21
+            Horário: <b>19:21</b>
           </p>
         </div>
       </div>
 
-      <div class="grid grid-cols-3">
+      <div class="grid grid-cols-1 lg:grid-cols-3">
         <!-- Inputs do Formulário -->
-        <div class="col-span-2">
+        <div class="lg:col-span-2">
           <div class="grid grid-cols-6">
 
             <!-- Esporte select -->
@@ -251,7 +254,7 @@
                 Descrição
               </label>
               <p class="py-2.5 px-3.5 border-b-2 border-gray-300 text-gray-700">
-                É na areia galera, vão de chinelo, e passem protetor solar, está muito sol...
+                É lá na quadra de areia do kartódromo galera, vão de chinelo, levem água pois está calor! Eu levo a bola para jogar.
               </p>
             </div>
             
@@ -361,7 +364,7 @@
                   class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
                 >
                   <div class="block">
-                    <span class="tex font-medium">@joaofran</span>
+                    <span class="tex font-medium">@joaocf</span>
                   </div>
                 </label>
               </div>
@@ -371,7 +374,7 @@
                   class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
                 >
                   <div class="block">
-                    <span class="tex font-medium">@beaamonteiro</span>
+                    <span class="tex font-medium">@diegosilva77</span>
                   </div>
                 </label>
               </div>
@@ -391,7 +394,7 @@
                   class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
                 >
                   <div class="block">
-                    <span class="tex font-medium">@juninh0bw</span>
+                    <span class="tex font-medium">@altairjuninho</span>
                   </div>
                 </label>
               </div>
@@ -401,7 +404,7 @@
                   class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
                 >
                   <div class="block">
-                    <span class="tex font-medium">@pietrodub</span>
+                    <span class="tex font-medium">@pietror45</span>
                   </div>
                 </label>
               </div>
@@ -427,9 +430,13 @@
   <!-- footer -->
   <footer class="py-18 bg-white shadow border-t border-gray-200">
     <div class="container mx-auto px-4">
-      <div class="flex flex-col justify-center items-center gap-y-5">
+      <div class="flex flex-col justify-center items-center gap-y-2">
         <a href="/app/resources/views/index.html">
-          <img src="https://placehold.co/100" alt="Logo BoraRachão" class="w-12 h-12">
+          <img
+            src="/app/resources/assets/images/logos/logo-black-colors.png"
+            alt="Logo BoraRachão"
+            class="w-28 h-28 object-cover"
+          />
         </a>
         <a
           href="/app/resources/views/index.html"

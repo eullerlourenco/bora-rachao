@@ -105,36 +105,39 @@ if (menuMobile) {
 }
 
 function validateCEP(inputs) {
-  const cep = document.getElementById(inputs[0]).value.replace(/\D/g, "");
+  const cepInput = document.getElementById(inputs[0]);
+  const cep = cepInput.value.replace(/\D/g, "");
 
-  if (cep.length === 8) {
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        if (data.erro) {
-          throw new Error("CEP não encontrado.");
-        }
+  fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Erro ${response.status} na procura do CEP.`);
+      }
 
-        const city = document.getElementById(inputs[1]);
-        document.getElementById(inputs[2]).value = data.logradouro;
-        document.getElementById(inputs[3]).value = data.bairro;
+      return response.json();
+    })
+    .then((data) => {
+      if (data.erro) {
+        throw new Error("CEP não encontrado.");
+      }
 
-        let found = false;
-        for (let i = 0; i < city.options.length; i++) {
-          if (city.options[i].value === data.localidade) {
-            city.selectedIndex = i;
-            found = true;
-            break;
-          }
+      const city = document.getElementById(inputs[1]);
+      document.getElementById(inputs[2]).value = data.logradouro;
+      document.getElementById(inputs[3]).value = data.bairro;
+
+      let found = false;
+      for (let i = 0; i < city.options.length; i++) {
+        if (city.options[i].value === data.localidade) {
+          city.selectedIndex = i;
+          found = true;
+          break;
         }
-        if (!found) {
-          toggleErrorMsg(city, "A cidade do CEP não está nas opções.");
-        }
-      })
-      .catch((error) => alert("Erro: " + error.message));
-  } else {
-    toggleErrorMsg(cep, "O campo CEP tem que ter 8 dígitos");
-  }
+      }
+      if (!found) {
+        toggleErrorMsg(city, "A cidade do CEP não está nas opções.");
+      }
+    })
+    .catch((error) => {
+      toggleErrorMsg(cepInput, error.message);
+    });
 }
