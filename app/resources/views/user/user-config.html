@@ -1,103 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Configuração Usuário - BoraRachão</title>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" class="css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" class="css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet"/>
+    rel="stylesheet" />
   <link rel="stylesheet" href="/app/resources/assets/css/style.css">
 </head>
+
 <body class="bg-gray-50">
+
   <!-- logged header -->
   <header class="shadow bg-white py-3">
-    <div
-      class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
-    >
+    <div class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between">
       <!-- nav mobile -->
       <nav class="md:hidden">
         <a id="btn_open_menu_mobile" class="hover:cursor-pointer">
           <i
-            class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-xl hover:bg-gray-100 duration-300 ease-in-out"
-          ></i>
+            class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-xl hover:bg-gray-100 duration-300 ease-in-out"></i>
         </a>
-        <div
-          id="menu_mobile"
-          class="absolute p-6 w-screen h-screen bg-white z-50 top-0 left-0 hidden"
-        >
+        <div id="menu_mobile" class="absolute p-6 w-screen h-screen bg-white z-50 top-0 left-0 hidden">
           <div class="text-end">
             <a id="btn_close_menu_mobile" class="hover:cursor-pointer">
               <i
-                class="fa-solid fa-xmark text-lg text-gray-500 py-3 px-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 duration-300 ease-in-out"
-              ></i>
+                class="fa-solid fa-xmark text-lg text-gray-500 py-3 px-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 duration-300 ease-in-out"></i>
             </a>
           </div>
           <div class="text-gray-700 flex flex-col gap-y-3">
             <h3 class="text-2xl">Menu</h3>
             <hr class="text-gray-300" />
-            <a
-              href="/app/resources/views/index.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
-            >
-              <i
-                class="fa-solid fa-house text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-              ></i>
+            <a href="/app/resources/views/index.html"
+              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
+              <i class="fa-solid fa-house text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
               Home
             </a>
-            <a
-              href="/app/resources/views/general/contact.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
-            >
-              <i
-                class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-              ></i>
+            <a href="/app/resources/views/general/contact.html"
+              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
+              <i class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
               Contato
             </a>
-            <a
-              href="/app/resources/views/match/matches.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
-            >
-              <i
-                class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-              ></i>
+            <a href="/app/resources/views/match/matches.html"
+              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
+              <i class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
               Partidas
             </a>
-            <a
-              href="/app/resources/views/sports/index.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
-            >
-              <i
-                class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-              ></i>
+            <a href="/app/resources/views/sports/index.html"
+              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
+              <i class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
               Esportes
             </a>
-            <a
-              href="/app/resources/views/user/friends.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
-            >
-              <i
-                class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-              ></i>
+            <a href="/app/resources/views/user/friends.html"
+              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
+              <i class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
               Amigos
             </a>
-            <a
-              href="/app/resources/views/match/matches.html"
-              class="mt-3 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-2.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
-            >
+            <a href="/app/resources/views/match/matches.html"
+              class="mt-3 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-2.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
               Bora Jogar!
             </a>
-            <a
-              href="/app/resources/views/auth/login.html"
-              class="mt-2 bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
-            >
+            <a href="/app/resources/views/auth/login.html"
+              class="mt-2 bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
               <i class="fa-solid fa-arrow-right-from-bracket"></i>
               Sair
             </a>
@@ -106,194 +78,168 @@
       </nav>
       <div>
         <a href="/app/resources/views/index.html">
-          <img src="https://placehold.co/100" alt="logo" class="w-9 h-9" />
+          <img src="/app/resources/assets/images/logos/logo-bora-rachao.png" alt="logo"
+            class="max-w-[175px] object-cover" />
         </a>
       </div>
       <nav class="hidden md:flex space-x-6">
-        <a
-          href="/app/resources/views/index.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Home</a
-        >
-        <a
-          href="/app/resources/views/general/contact.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Contato</a
-        >
-        <a
-          href=""
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Partidas</a
-        >
-        <a
-          href="/app/resources/views/sports/index.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Esportes</a
-        >
-        <a
-          href=""
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Amigos</a
-        >
+        <a href="/app/resources/views/index.html"
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Home</a>
+        <a href="/app/resources/views/general/contact.html"
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Contato</a>
+        <a href="/app/resources/views/match/matches.html"
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Partidas</a>
+        <a href="/app/resources/views/sports/index.html"
+          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Esportes</a>
+        <a href="" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Amigos</a>
       </nav>
       <div class="flex items-center space-x-3">
         <a href="/app/resources/views/user/profile.html">
-          <img
-            src="/app/resources/assets/images/beaamonteiro.jpg"
+          <img src="/app/resources/assets/images/beaamonteiro.jpg"
             class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
-            alt="Profile Photo"
-          />
+            alt="Profile Photo" />
         </a>
         <div class="hidden md:block">
-          <a
-            href="/app/resources/views/match/matches.html"
-            class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
-          >
+          <a href="/app/resources/views/match/matches.html"
+            class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
             Bora jogar!
           </a>
         </div>
       </div>
     </div>
   </header>
-      
-  <!-- profile section -->
-  <section class="container mx-auto px-4 mt-6 mb-[150px]">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-y-16 md:gap-x-5">
-      <div
-        class="flex flex-col gap-y-3 justify-center md:justify-start items-center"
-      >
-        <div class="flex flex-col justify-center">
-          <div>
-            <a
-              href=""
-              class="bg-linear-to-tr shadow-lg from-lime-500 to-lime-300 hover:shadow-lg hover:shadow-lime-400/50 hover:cursor-pointer duration-300 ease-in-out text-white py-2 px-3 text-2xl rounded-full"
-            >
-              <i class="fa-solid fa-plus"></i>
-            </a>
-          </div>
-          <img
-            src="/app/resources/assets/images/IMG_20250123_105642_002.webp"
-            class="w-full max-w-[250px] h-full rounded-full object-cover border-4 border-gray-300 shadow-lg"
-            alt="profile photo"
-          />
-        </div>
-        <div>
-          <h2 class="text-center text-3xl text-cyan-500 font-semibold mb-0.5">
-            @bia_monteiro
-          </h2>
-          <div class="text-center mb-2">
-            <a
-              href=""
-              class="text-gray-500 text-sm hover:text-orange-500 duration-300 ease-in-out"
-            >
-              <i class="fa-solid fa-users text-xs"></i>
-              219 amigos
-            </a>
-          </div>
-          <fieldset
-            class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
-          >
-            <legend class="text-gray-600">Bio</legend>
-            <div class="text-gray-600 text-sm">
-              Beatriz Karoline Monteiro 18y<br />
-              DSM- 1° semestre <br />- Adoro jogar vôlei nas horas vagas;
-              <br />- Estou sempre buscando aprender coisas novas!
-            </div>
-          </fieldset>
-        </div>
 
-        <!-- Lado Direito: Cards com informações --> 
-        <div>
-          <label for="phone" class="block text-sm font-medium mb-1">Telefone</label>
-          <input type="tel" id="phone" class="w-full p-2 border rounded-md" placeholder="Ex: (11) 91234-5678">
-        </div>
+  <!-- Conteúdo principal -->
 
-      </div>
+  <!--Title section-->
+  <section class="container mx-auto px-4 my-8">
+    <div class="lg:p-2 leading-[1.1] border-l-8 border-l-cyan-500">
+      <h2 class="ps-2 text-4xl lg:text-[3rem] text-gray-700 font-semibold capitalize">Configurações do Usuário
+      </h2>
     </div>
   </section>
 
-  <!-- Botão Salvar -->
-  <div class="mt-8 text-center">
-    <button id="save-btn" class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition">Salvar</button>
-  </div>
-  
+  <!-- Foto de perfil -->
+  <main class="max-w-4xl mx-auto bg-white p-8 mt-10 rounded shadow">
+    <div class="flex items-center mb-8">
+      <div class="relative w-24 h-24">
+        <img src="/app/resources/assets/images/beaamonteiro.jpg" alt="Foto de Perfil"
+          class="w-full h-full object-cover rounded-full border border-gray-300" />
+        <button
+          class="absolute bottom-3 right-0 bg-white border border-gray-300 rounded-full p-1 shadow hover:bg-gray-100"
+          title="Editar foto">
+          <i class="fa-solid fa-pencil"></i>
+        </button>
+      </div>
+     <fieldset
+              class="bg-white shadow-lg border-1 border-gray-300 rounded-xl p-5 flex flex-col gap-y-3"
+            >
+              <legend class="text-gray-600">Bio</legend>
+              <div class="text-gray-600 text-sm">
+                Beatriz Karoline Monteiro 18y<br />
+                DSM- 1° semestre <br />- Adoro jogar vôlei nas horas vagas;
+                <br />- Estou sempre buscando aprender coisas novas!
+              </div>
+            </fieldset>
+    </div>
+
+    <!-- Formulário -->
+    <form class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">
+          <i class="fa-solid fa-sheet-plastic text-sm bg-orange-200 p-2 px-2.5 rounded-xl text-orange-500"></i>
+          Nome
+        </label> 
+        <input type="text" value="Beatriz" class="mt-1 w-full border border-gray-300 rounded p-2 text-gray-700" />
+      
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Sobrenome</label>
+        <input type="text" value="Monteiro" class="mt-1 w-full border border-gray-300 rounded p-2" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Email</label>
+        <input type="email" value="beatrizkmonteiro014@gmail.com"
+          class="mt-1 w-full border border-gray-300 rounded p-2" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Celular</label>
+        <input type="celular" value="(14)998521659" class="mt-1 w-full border border-gray-300 rounded p-2" />
+      </div>
+
+      <div class="text-right pt-4">
+        <button type="submit" class="bg-cyan-500 hover:bg-cyan-400 text-white px-6 py-2 rounded">Salvar
+          Alterações</button>
+      </div>
+
+
+      <label class="block text-sm font-medium">Senha Nova</label>
+      <input type="text" value="*******" class="mt-1 w-full border border-gray-300 rounded p-2" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Confirmar Senha</label>
+        <input type="text" value="******" class="mt-1 w-full border border-gray-300 rounded p-2" />
+      </div>
+      <div class="text-right pt-4">
+        <button type="submit" class="bg-cyan-500 hover:bg-cyan-400 text-white px-6 py-2 rounded">Alterar Senha</button>
+      </div>
+
+    </form>
+  </main>
+
   <!-- footer -->
   <footer class="py-18 bg-white shadow border-t border-gray-200">
     <div class="container mx-auto px-4">
-      <div class="flex flex-col justify-center items-center gap-y-5">
+      <div class="flex flex-col justify-center items-center gap-y-2">
         <a href="/app/resources/views/index.html">
-          <img src="https://placehold.co/100" alt="Logo BoraRachão" class="w-12 h-12">
+          <img src="/app/resources/assets/images/logos/logo-black-colors.png" alt="Logo BoraRachão"
+            class="w-28 h-28 object-cover" />
         </a>
-        <a
-          href="/app/resources/views/index.html"
-          class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
-        >
+        <a href="/app/resources/views/index.html"
+          class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center">
           BoraRachão &copy;
         </a>
       </div>
-      <nav
-        class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
-      >
-        <a
-          href="/app/resources/views/index.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
+      <nav class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8">
+        <a href="/app/resources/views/index.html" class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">
           Home
         </a>
-        <a
-          href="/app/resources/views/general/contact.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
+        <a href="/app/resources/views/general/contact.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">
           Contato
         </a>
-        <a
-          href="/app/resources/views/general/about.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
+        <a href="/app/resources/views/general/about.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">
           Sobre
         </a>
-        <a
-          href="/app/resources/views/general/privacy-policy.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
+        <a href="/app/resources/views/general/privacy-policy.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">
           Política de Privacidade
         </a>
-        <a
-          href="/app/resources/views/general/terms-of-use.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
+        <a href="/app/resources/views/general/terms-of-use.html"
+          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">
           Termos de Uso
         </a>
       </nav>
       <div class="flex justify-center gap-x-4 mt-9">
-        <a
-          href="https://www.instagram.com/"
-          class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 duration-300 ease-in-out hover:text-white"
-        >
+        <a href="https://www.instagram.com/"
+          class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 duration-300 ease-in-out hover:text-white">
           <i class="fa-brands fa-instagram text-2xl hover:text-white"></i>
         </a>
-        <a
-          href="https://www.tiktok.com/"
-          class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
-        >
+        <a href="https://www.tiktok.com/"
+          class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 duration-300 ease-in-out hover:text-white">
           <i class="fa-brands fa-tiktok text-2xl"></i>
         </a>
-        <a
-          href="https://www.facebook.com/"
-          class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 duration-300 ease-in-out hover:text-white"
-        >
+        <a href="https://www.facebook.com/"
+          class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 duration-300 ease-in-out hover:text-white">
           <i class="fa-brands fa-square-facebook text-2xl"></i>
         </a>
-        <a
-          href="https://x.com/"
-          class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
-        >
+        <a href="https://x.com/"
+          class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 duration-300 ease-in-out hover:text-white">
           <i class="fa-brands fa-x-twitter text-2xl"></i>
         </a>
-        <a
-          href="https://www.linkedin.com/"
-          class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 duration-300 ease-in-out hover:text-white"
-        >
+        <a href="https://www.linkedin.com/"
+          class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 duration-300 ease-in-out hover:text-white">
           <i class="fa-brands fa-linkedin text-2xl"></i>
         </a>
       </div>
@@ -302,5 +248,16 @@
 
   <script src="/app/resources/assets/js/script.js"></script>
 
+  <script>
+    document.getElementById("btn_open_menu_mobile").addEventListener("click", () => {
+      document.getElementById("menu_mobile").classList.remove("hidden");
+    });
+
+    document.getElementById("btn_close_menu_mobile").addEventListener("click", () => {
+      document.getElementById("menu_mobile").classList.add("hidden");
+    });
+  </script>
+
 </body>
+
 </html>
