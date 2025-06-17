@@ -1,873 +1,1047 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Criar Partida - BoraRachão</title>
-  <link rel="shortcut icon" href="/app/resources/assets/images/logos/logo-white-colors.png" type="image/x-icon">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" class="css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet"/>
-  <link rel="stylesheet" href="/app/resources/assets/css/style.css">
-</head>
-<body class="bg-gray-50">
-
-  <!-- logged header -->
-  <header class="shadow bg-white py-3">
-    <div
-      class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
-    >
-      <!-- nav mobile -->
-      <nav class="md:hidden">
-        <a id="btn_open_menu_mobile" class="hover:cursor-pointer">
-          <i
-            class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-xl hover:bg-gray-100 duration-300 ease-in-out"
-          ></i>
-        </a>
-        <div
-          id="menu_mobile"
-          class="absolute p-6 w-screen h-screen bg-white z-50 top-0 left-0 hidden"
-        >
-          <div class="text-end">
-            <a id="btn_close_menu_mobile" class="hover:cursor-pointer">
-              <i
-                class="fa-solid fa-xmark text-lg text-gray-500 py-3 px-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 duration-300 ease-in-out"
-              ></i>
-            </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar Partida - BoraRachão</title>
+    <link
+      rel="shortcut icon"
+      href="/app/resources/assets/images/logos/logo-white-colors.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      class="css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/app/resources/assets/css/style.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- logged header -->
+    <header class="shadow bg-white py-3">
+      <div
+        class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
+      >
+        <!-- nav mobile -->
+        <nav class="md:hidden">
+          <a id="btn_open_menu_mobile" class="hover:cursor-pointer">
+            <i
+              class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-xl hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
+          </a>
+          <div
+            id="menu_mobile"
+            class="fixed p-6 w-screen h-screen bg-white z-50 top-0 left-0 hidden"
+          >
+            <div class="text-end">
+              <a id="btn_close_menu_mobile" class="hover:cursor-pointer">
+                <i
+                  class="fa-solid fa-xmark text-lg text-gray-500 py-3 px-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 duration-300 ease-in-out"
+                ></i>
+              </a>
+            </div>
+            <div class="text-gray-700 flex flex-col gap-y-3">
+              <h3 class="text-2xl">Menu</h3>
+              <hr class="text-gray-300" />
+              <a
+                href="/app/resources/views/index.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-house text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Home
+              </a>
+              <a
+                href="/app/resources/views/general/contact.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Contato
+              </a>
+              <a
+                href="/app/resources/views/match/matches.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Partidas
+              </a>
+              <a
+                href="/app/resources/views/sports/index.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Esportes
+              </a>
+              <a
+                href="/app/resources/views/general/about.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Sobre
+              </a>
+              <a
+                href="/app/resources/views/match/matches.html"
+                class="mt-3 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-2.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+              >
+                Bora Jogar!
+              </a>
+              <a
+                href="/app/resources/views/auth/login.html"
+                class="mt-2 bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+              >
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Sair
+              </a>
+            </div>
           </div>
-          <div class="text-gray-700 flex flex-col gap-y-3">
-            <h3 class="text-2xl">Menu</h3>
-            <hr class="text-gray-300" />
-            <a
-              href="/app/resources/views/index.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
-            >
-              <i
-                class="fa-solid fa-house text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-              ></i>
-              Home
-            </a>
-            <a
-              href="/app/resources/views/general/contact.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
-            >
-              <i
-                class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-              ></i>
-              Contato
-            </a>
-            <a
-              href="/app/resources/views/match/matches.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
-            >
-              <i
-                class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-              ></i>
-              Partidas
-            </a>
-            <a
-              href="/app/resources/views/sports/index.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
-            >
-              <i
-                class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-              ></i>
-              Esportes
-            </a>
-            <a
-              href="/app/resources/views/user/friends.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
-            >
-              <i
-                class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
-              ></i>
-              Amigos
-            </a>
+        </nav>
+        <div>
+          <a href="/app/resources/views/index.html">
+            <img
+              src="/app/resources/assets/images/logos/logo-bora-rachao.png"
+              alt="logo"
+              class="max-w-[175px] object-cover"
+            />
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a
+            href="/app/resources/views/index.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Home</a
+          >
+          <a
+            href="/app/resources/views/general/contact.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Contato</a
+          >
+          <a
+            href="/app/resources/views/match/matches.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Partidas</a
+          >
+          <a
+            href="/app/resources/views/sports/index.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Esportes</a
+          >
+          <a
+            href="/app/resources/views/general/about.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Sobre</a
+          >
+        </nav>
+        <div class="flex items-center space-x-3">
+          <a href="/app/resources/views/user/profile.html">
+            <img
+              src="/app/resources/assets/images/beaamonteiro.jpg"
+              class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
+              alt="Profile Photo"
+            />
+          </a>
+          <div class="hidden md:block">
             <a
               href="/app/resources/views/match/matches.html"
-              class="mt-3 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-2.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+              class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
             >
-              Bora Jogar!
-            </a>
-            <a
-              href="/app/resources/views/auth/login.html"
-              class="mt-2 bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
-            >
-              <i class="fa-solid fa-arrow-right-from-bracket"></i>
-              Sair
+              Bora jogar!
             </a>
           </div>
         </div>
-      </nav>
-      <div>
-        <a href="/app/resources/views/index.html">
-          <img
-            src="/app/resources/assets/images/logos/logo-bora-rachao.png"
-            alt="logo"
-            class="max-w-[175px] object-cover"
-          />
-        </a>
       </div>
-      <nav class="hidden md:flex space-x-6">
-        <a
-          href="/app/resources/views/index.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Home</a
-        >
-        <a
-          href="/app/resources/views/general/contact.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Contato</a
-        >
-        <a
-          href="/app/resources/views/match/matches.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Partidas</a
-        >
-        <a
-          href="/app/resources/views/sports/index.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Esportes</a
-        >
-        <a
-          href=""
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-          >Amigos</a
-        >
-      </nav>
-      <div class="flex items-center space-x-3">
-        <a href="/app/resources/views/user/profile.html">
-          <img
-            src="/app/resources/assets/images/beaamonteiro.jpg"
-            class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
-            alt="Profile Photo"
-          />
-        </a>
-        <div class="hidden md:block">
-          <a
-            href="/app/resources/views/match/matches.html"
-            class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+    </header>
+
+    <!-- Criar partida -->
+    <section class="container mx-auto my-15">
+      <form
+        id="form-create-match"
+        class="rounded-2xl shadow-lg border border-gray-300 border-l-8 border-l-cyan-500"
+      >
+        <!-- Título -->
+        <div class="basis-full my-6 mx-7">
+          <p
+            class="text-2xl text-gray-700 border-b border-b-gray-300 pb-5 font-bold"
           >
-            Bora jogar!
+            <i class="fa-solid fa-forward mx-2"></i>
+            Criar um novo
+            <span class="text-cyan-500 italic font-[800]">BORA !</span>
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3">
+          <!-- Inputs do Formulário -->
+          <div class="col-span-2">
+            <div class="flex flex-col lg:grid lg:grid-cols-6 gap-x-4 gap-y-6 mx-3 lg:mx-6">
+              <!-- Esporte select -->
+              <div class="flex flex-col col-span-2 gap-1.5">
+                <label class="text-gray-700 text-md" for="select">
+                  <i
+                    class="fa-solid fa-trophy text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"
+                  ></i>
+                  Esporte
+                </label>
+                <select
+                  id="sport"
+                  placeholder="Escolha a opção..."
+                  type="text"
+                  class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                >
+                  <option value="" disabled>Selecione um esporte</option>
+                  <option value="value1">Futebol</option>
+                  <option value="value2">Vôlei</option>
+                  <option value="value3">Basquete</option>
+                  <option value="value4">Beach Tennis</option>
+                  <option value="value5">Futevôlei</option>
+                  <option value="value6">Ciclismo</option>
+                  <option value="value7">Corrida</option>
+                  <option value="value8">Skate</option>
+                  <option value="value9">Boxe</option>
+                  <option value="value10">Jiu-Jitsu</option>
+                  <option value="value11">Parkour</option>
+                  <option value="value12">Sinuca</option>
+                  <option value="value13">Tênis de Mesa</option>
+                  <option value="value14">Handeball</option>
+                  <option value="value15">Calistenia</option>
+                </select>
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="name"
+                >
+                  O campo precisa ser preenchido.
+                </p>
+              </div>
+
+              <!-- Nome do Bora -->
+              <div class="flex flex-col col-span-4 gap-1.5">
+                <label class="text-gray-700 text-md" for="name">
+                  <i
+                    class="fa-solid fa-pen-clip text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"
+                  ></i>
+                  Nome do Bora
+                </label>
+                <input
+                  id="name"
+                  placeholder="Ex: Volêi no Kartódromo"
+                  type="text"
+                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="name"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
+
+              <!-- Hora -->
+              <div class="flex flex-col col-span-2 gap-1.5">
+                <label class="text-gray-700 text-md" for="hour">
+                  <i
+                    class="fa-solid fa-clock text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"
+                  ></i>
+                  Hora
+                </label>
+                <input
+                  id="hour"
+                  type="time"
+                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="hour"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
+
+              <!-- Data -->
+              <div class="flex flex-col col-span-2 gap-1.5">
+                <label class="text-gray-700 text-md" for="date">
+                  <i
+                    class="fa-solid fa-calendar-days text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.5"
+                  ></i>
+                  Data
+                </label>
+                <input
+                  id="date"
+                  type="date"
+                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="date"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
+
+              <!-- Número de participantes -->
+              <div class="flex flex-col col-span-2 gap-1.5">
+                <label class="text-gray-700 text-md" for="players">
+                  <i
+                    class="fa-solid fa-user-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"
+                  ></i>
+                  Nº de Participantes
+                </label>
+                <input
+                  id="players"
+                  placeholder="12"
+                  type="number"
+                  min="2"
+                  max="30"
+                  class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="players"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
+
+              <!-- Idade mínima -->
+              <div class="flex flex-col col-span-2 gap-1.5">
+                <label class="text-gray-700 text-md" for="age">
+                  <i
+                    class="fa-solid fa-triangle-exclamation text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"
+                  ></i>
+                  Idade mínima
+                </label>
+                <input
+                  id="age"
+                  placeholder="18"
+                  type="number"
+                  min="14"
+                  class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                />
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="age"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
+
+              <!-- Descrição -->
+              <div class="flex flex-col col-span-4 gap-1.5">
+                <label class="text-gray-700 text-md" for="description">
+                  <i
+                    class="fa-solid fa-pen-clip text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"
+                  ></i>
+                  Descrição
+                </label>
+                <textarea
+                  id="description"
+                  placeholder="Ex: É na areia galera, vão de chinelo, e passem protetor solar, está muito sol..."
+                  type="text"
+                  name="description"
+                  rows="4"
+                  maxlength="500"
+                  class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                ></textarea>
+                <p
+                  class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                  data-error="description"
+                >
+                  O campo precisa ser preenchido corretamente.
+                </p>
+              </div>
+
+              <!-- Fieldset -->
+              <div class="flex flex-col col-span-6 mb-6">
+                <fieldset
+                  class="shadow-lg border border-gray-300 p-5 rounded-2xl"
+                >
+                  <legend class="text-gray-700 text-md">
+                    <i
+                      class="fa-solid fa-map-location-dot text-sm bg-orange-200 p-2.25 rounded-xl text-orange-500 mr-1"
+                    ></i>
+                    Endereço
+                  </legend>
+
+                  <div class="flex flex-col lg:grid lg:grid-cols-6 gap-3">
+                    <!-- CEP -->
+                    <div class="flex flex-col gap-1.5 col-span-2">
+                      <label class="text-gray-700 text-md" for="cep">
+                        <i
+                          class="fa-solid fa-map-pin text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-3"
+                        ></i>
+                        CEP
+                      </label>
+                      <input
+                        id="cep"
+                        placeholder="Digite o cep..."
+                        type="text"
+                        class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                      />
+                      <p
+                        class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                        data-error="cep"
+                      >
+                        O campo precisa ser preenchido corretamente.
+                      </p>
+                    </div>
+
+                    <!-- Número -->
+                    <div class="flex flex-col gap-1.5 col-span-2">
+                      <label class="text-gray-700 text-md" for="number">
+                        <i
+                          class="fa-solid fa-hashtag text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.5"
+                        ></i>
+                        Número
+                      </label>
+                      <input
+                        id="number"
+                        placeholder="Número"
+                        type="text"
+                        class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+                      />
+                      <p
+                        class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                        data-error="number"
+                      >
+                        O campo precisa ser preenchido corretamente.
+                      </p>
+                    </div>
+
+                    <!-- Cidade -->
+                    <div class="flex flex-col gap-1.5 col-span-2">
+                      <label class="text-gray-700 text-md" for="city">
+                        <i
+                          class="fa-solid fa-city text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2"
+                        ></i>
+                        Cidade
+                      </label>
+                      <select
+                        id="city"
+                        type="text"
+                        class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
+                      >
+                        <option value="" disabled>Selecione uma cidade</option>
+                        <option value="Jaú">Jaú</option>
+                        <option value="Bariri">Bariri</option>
+                        <option value="Mineiros do Tietê">
+                          Mineiros do Tietê
+                        </option>
+                        <option value="Barra Bonita">Barra Bonita</option>
+                        <option value="Bauru">Bauru</option>
+                      </select>
+                      <p
+                        class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                        data-error="city"
+                      >
+                        O campo precisa ser preenchido corretamente.
+                      </p>
+                    </div>
+
+                    <!-- Rua -->
+                    <div class="flex flex-col gap-1.5 col-span-3">
+                      <label class="text-gray-700 text-md" for="street">
+                        <i
+                          class="fa-solid fa-road text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"
+                        ></i>
+                        Rua
+                      </label>
+                      <input
+                        id="street"
+                        placeholder="Rua do lugar"
+                        type="text"
+                        maxlength="255"
+                        class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+                      />
+                      <p
+                        class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                        data-error="street"
+                      >
+                        O campo precisa ser preenchido corretamente.
+                      </p>
+                    </div>
+
+                    <!-- Bairro -->
+                    <div class="flex flex-col gap-1.5 col-span-3">
+                      <label class="text-gray-700 text-md" for="neighborhood">
+                        <i
+                          class="fa-solid fa-street-view text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"
+                        ></i>
+                        Bairro
+                      </label>
+                      <input
+                        id="neighborhood"
+                        placeholder="Bairro"
+                        type="text"
+                        maxlength="255"
+                        class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
+                      />
+                      <p
+                        class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
+                        data-error="neighborhood"
+                      >
+                        O campo precisa ser preenchido corretamente.
+                      </p>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-2 lg:col-span-1 w-full flex flex-col">
+            <!-- Amigos -->
+            <div
+              class="mx-4 lg:mx-6 mb-6 p-5 rounded-2xl shadow-lg border border-gray-300 border-t-6 border-t-lime-500 h-auto"
+            >
+              <p class="text-2xl text-gray-700 pb-5 font-bold">
+                Chamar amigos para participar:
+              </p>
+
+              <div class="flex gap-2 flex-wrap">
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills"
+                    value="eullerls"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@eullerls</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills2"
+                    value="lucasbardeli"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills2"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@lucasbardeli</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills3"
+                    value="joaofran"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills3"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@joaocf</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills4"
+                    value="gabiribeiro"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills4"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@gabribeiro</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills5"
+                    value="beaamonteiro"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills5"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@beaamonteiro</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills6"
+                    value="n4rdelli"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills6"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@n4rdelli</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills7"
+                    value="juninh0bw"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills7"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@altairjuninho</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills8"
+                    value="elton"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills8"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@elton</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills9"
+                    value="pietrodub"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills9"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@pietror45</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills10"
+                    value="ronan"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills10"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@ronan</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills11"
+                    value="tiagotas"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills11"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@tiagotas</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills12"
+                    value="betzfer"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills12"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@betzfer</span>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="checkboxPills13"
+                    value="betzfer"
+                    class="hidden peer"
+                    autocomplete="off"
+                  />
+                  <label
+                    for="checkboxPills13"
+                    class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
+                  >
+                    <div class="block">
+                      <span class="tex font-medium">@diegosilva77</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botão -->
+            <div class="flex mb-6 mr-7 justify-end mt-auto">
+              <button
+                type="submit"
+                class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white m-0 px-4 py-3 rounded-xl flex items-center duration-300 ease-in-out"
+              >
+                Criar partida <i class="ml-2 fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-18 bg-white shadow border-t border-gray-200">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col justify-center items-center gap-y-2">
+          <a href="/app/resources/views/index.html">
+            <img
+              src="/app/resources/assets/images/logos/logo-black-colors.png"
+              alt="Logo BoraRachão"
+              class="w-28 h-28 object-cover"
+            />
+          </a>
+          <a
+            href="/app/resources/views/index.html"
+            class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
+          >
+            BoraRachão &copy;
+          </a>
+        </div>
+        <nav
+          class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
+        >
+          <a
+            href="/app/resources/views/index.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Home
+          </a>
+          <a
+            href="/app/resources/views/general/contact.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Contato
+          </a>
+          <a
+            href="/app/resources/views/general/about.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Sobre
+          </a>
+          <a
+            href="/app/resources/views/general/privacy-policy.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Política de Privacidade
+          </a>
+          <a
+            href="/app/resources/views/general/terms-of-use.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+          >
+            Termos de Uso
+          </a>
+        </nav>
+        <div class="flex justify-center gap-x-4 mt-9">
+          <a
+            href="https://www.instagram.com/"
+            class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-instagram text-2xl hover:text-white"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/"
+            class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-tiktok text-2xl"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/"
+            class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-square-facebook text-2xl"></i>
+          </a>
+          <a
+            href="https://x.com/"
+            class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-x-twitter text-2xl"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa-brands fa-linkedin text-2xl"></i>
           </a>
         </div>
       </div>
-    </div>
-  </header>
+    </footer>
 
-  <!-- Criar partida -->
-  <section class="container mx-auto my-15">
-    <form id="form-create-match" class="rounded-2xl shadow-lg border border-gray-300 border-l-8 border-l-cyan-500">
-      
-      <!-- Título -->
-      <div class="basis-full my-6 mx-7">
-        <p class="text-2xl text-gray-700 border-b border-b-gray-300 pb-5 font-bold">
-          <i class="fa-solid fa-forward mx-2"></i>
-          Criar um novo <span class="text-cyan-500 italic font-[800]">BORA !</span>
-        </p>
-      </div>
+    <script src="/app/resources/assets/js/script.js"></script>
 
-      <div class="grid grid-cols-3">
-        <!-- Inputs do Formulário -->
-        <div class="col-span-2">
-          <div class="grid grid-cols-6">
+    <script>
+      const arrayCreateMatchForm = [];
 
-            <!-- Esporte select -->
-            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-7">
-              <label class="text-gray-700 text-md" for="select">
-                <i class="fa-solid fa-trophy text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
-                Esporte
-              </label>
-              <select id="sport" placeholder="Escolha a opção..." type="text"
-                class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-              >
-                <option value="" disabled>Selecione um esporte</option>
-                <option value="value1">Futebol</option>
-                <option value="value2">Vôlei</option>
-                <option value="value3">Basquete</option>
-                <option value="value4">Beach Tennis</option>
-                <option value="value5">Futevôlei</option>
-                <option value="value6">Ciclismo</option>
-                <option value="value7">Corrida</option>
-                <option value="value8">Skate</option>
-                <option value="value9">Boxe</option>
-                <option value="value10">Jiu-Jitsu</option>
-                <option value="value11">Parkour</option>
-                <option value="value12">Sinuca</option>
-                <option value="value13">Tênis de Mesa</option>
-                <option value="value14">Handeball</option>
-                <option value="value15">Calistenia</option>
-              </select>
-              <p
-                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                data-error="name">
-                O campo precisa ser preenchido.
-              </p>
-            </div>
+      addInputValidations(
+        document.getElementById("sport"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo Esporte é obrigatório.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-            <!-- Nome do Bora -->
-            <div class="flex flex-col col-span-4 gap-1.5 mb-6 mx-7">
-              <label class="text-gray-700 text-md" for="name">
-                <i class="fa-solid fa-pen-clip text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
-                Nome do Bora
-              </label>
-              <input id="name" placeholder="Ex: Volêi no Kartódromo" type="text"
-                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
-              <p
-                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                data-error="name">
-                O campo precisa ser preenchido corretamente.
-              </p>
-            </div>
+      addInputValidations(
+        document.getElementById("name"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo Nome é obrigatório.");
+            } else if (e.target.value.length > 255) {
+              toggleErrorMsg(
+                input,
+                "O campo Nome só pode ter 255 caracteres no máximo."
+              );
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-            <!-- Hora -->
-            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-7">
-              <label class="text-gray-700 text-md" for="hour">
-                <i class="fa-solid fa-clock text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
-                Hora
-              </label>
-              <input id="hour" type="time"
-                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
-              <p
-                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                data-error="hour">
-                O campo precisa ser preenchido corretamente.
-              </p>
-            </div> 
+      addInputValidations(
+        document.getElementById("hour"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo Hora é obrigatório.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-            <!-- Data -->
-            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-7">
-              <label class="text-gray-700 text-md" for="date">
-                <i
-                class="fa-solid fa-calendar-days text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.5"></i>
-                Data
-              </label>
-              <input id="date" type="date"
-                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
-              <p
-                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                data-error="date">
-                O campo precisa ser preenchido corretamente.
-              </p>
-            </div>
-            
-            <!-- Número de participantes -->
-            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-7">
-              <label class="text-gray-700 text-md" for="players">
-                <i class="fa-solid fa-user-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
-                Nº de Participantes
-              </label>
-              <input id="players" placeholder="12" type="number" min="2" max="30"
-                class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
-              <p
-                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                data-error="players">
-                O campo precisa ser preenchido corretamente.
-              </p>
-            </div>
-            
-            <!-- Idade mínima -->
-            <div class="flex flex-col col-span-2 gap-1.5 mb-6 mx-7">
-              <label class="text-gray-700 text-md" for="age">
-                <i class="fa-solid fa-triangle-exclamation text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
-                Idade mínima
-              </label>
-              <input id="age" placeholder="18" type="number" min="14"
-                class="text-center shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                />
-              <p
-                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                data-error="age">
-                O campo precisa ser preenchido corretamente.
-              </p>
-            </div>
-              
-            <!-- Descrição -->
-            <div class="flex flex-col col-span-4 gap-1.5 mb-6 mx-7">
-              <label class="text-gray-700 text-md" for="description">
-                <i class="fa-solid fa-pen-clip text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1"></i>
-                Descrição
-              </label>
-              <textarea id="description" 
-                placeholder="Ex: É na areia galera, vão de chinelo, e passem protetor solar, está muito sol..." 
-                type="text" name="description" rows="4" maxlength="500"
-                class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-              ></textarea>
-              <p
-                class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                data-error="description">
-                O campo precisa ser preenchido corretamente.
-              </p>
-            </div>
-            
-            <!-- Fieldset -->
-            <div class="flex flex-col col-span-6 mb-6 mx-7">
-              <fieldset class="shadow-lg border border-gray-300 p-5 rounded-2xl">
-                <legend class="text-gray-700 text-md">
-                  <i class="fa-solid fa-map-location-dot text-sm bg-orange-200 p-2.25 rounded-xl text-orange-500 mr-1"></i>
-                  Endereço
-                </legend>
-                
-                <div class="grid grid-cols-6 gap-3">
-                  <!-- CEP -->
-                  <div class="flex flex-col gap-1.5 col-span-2">
-                    <label class="text-gray-700 text-md" for="cep">
-                      <i class="fa-solid fa-map-pin text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-3"></i>
-                      CEP
-                    </label>
-                    <input id="cep" placeholder="Digite o cep..." type="text"
-                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                      />
-                    <p
-                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                      data-error="cep">
-                      O campo precisa ser preenchido corretamente.
-                    </p>
-                  </div>
+      addInputValidations(
+        document.getElementById("date"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo Data é obrigatório.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-                  <!-- Número -->
-                  <div class="flex flex-col gap-1.5 col-span-2">
-                    <label class="text-gray-700 text-md" for="number">
-                      <i class="fa-solid fa-hashtag text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.5"></i>
-                      Número
-                    </label>
-                    <input id="number" placeholder="Número" type="text"
-                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
-                      />
-                    <p
-                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                      data-error="number">
-                      O campo precisa ser preenchido corretamente.
-                    </p>
-                  </div>
+      addInputValidations(
+        document.getElementById("players"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo Nº de part. é obrigatório.");
+            } else if (e.target.value < 2) {
+              toggleErrorMsg(
+                input,
+                "A partida deve ter no mínimo 2 participantes."
+              );
+            } else if (e.target.value > 30) {
+              toggleErrorMsg(
+                input,
+                "A partida deve ter no máximo 30 participantes."
+              );
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-                  <!-- Cidade -->
-                  <div class="flex flex-col gap-1.5 col-span-2">
-                    <label class="text-gray-700 text-md" for="city">
-                      <i class="fa-solid fa-city text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2"></i>
-                      Cidade
-                    </label>
-                    <select id="city" type="text"
-                      class="shadow-sm py-2.5 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out"
-                    >
-                      <option value="" disabled>Selecione uma cidade</option>
-                      <option value="Jaú">Jaú</option>
-                      <option value="Bariri">Bariri</option>
-                      <option value="Mineiros do Tietê">Mineiros do Tietê</option>
-                      <option value="Barra Bonita">Barra Bonita</option>
-                      <option value="Bauru">Bauru</option>
-                    </select>
-                    <p
-                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                      data-error="city">
-                      O campo precisa ser preenchido corretamente.
-                    </p>
-                  </div>
+      addInputValidations(
+        document.getElementById("age"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo Idade é obrigatório.");
+            } else if (e.target.value < 14) {
+              toggleErrorMsg(input, "A idade deve ser de no mínimo 14 anos.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-                  <!-- Rua -->
-                  <div class="flex flex-col gap-1.5 col-span-3">
-                    <label class="text-gray-700 text-md" for="street">
-                      <i class="fa-solid fa-road text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
-                      Rua
-                    </label>
-                    <input id="street" placeholder="Rua do lugar" type="text" maxlength="255"
-                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
-                      />
-                    <p
-                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                      data-error="street">
-                      O campo precisa ser preenchido corretamente.
-                    </p>
-                  </div>
+      addInputValidations(
+        document.getElementById("description"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.length > 500) {
+              toggleErrorMsg(input, "Limite de caracteres atingido.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-                  <!-- Bairro -->
-                  <div class="flex flex-col gap-1.5 col-span-3">
-                    <label class="text-gray-700 text-md" for="neighborhood">
-                      <i class="fa-solid fa-street-view text-sm bg-orange-200 p-2 rounded-xl text-orange-500 mr-1 px-2.25"></i>
-                      Bairro
-                    </label>
-                    <input id="neighborhood" placeholder="Bairro" type="text" maxlength="255"
-                      class="shadow-sm py-2 px-3.5 border-2 border-gray-300 rounded-xl hover:border-gray-400 text-gray-700 focus:border-cyan-500 focus:outline-none duration-300 ease-in-out w-full"
-                      />
-                    <p
-                      class="text-xs leading-4 text-red-500 mt-[-4px] hidden"
-                      data-error="neighborhood">
-                      O campo precisa ser preenchido corretamente.
-                    </p>
-                  </div>
-                  
-                </div>
-              </fieldset>
-            </div>
+      addInputValidations(
+        document.getElementById("cep"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo CEP é obrigatório.");
+            } else if (e.target.value.length !== 8) {
+              toggleErrorMsg(input, "O campo CEP tem que ter 8 números.");
+            } else {
+              toggleErrorMsg(input);
+              validateCEP(["cep", "city", "street", "neighborhood"]);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-          </div>
-        </div>
+      addInputValidations(
+        document.getElementById("number"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo Número é obrigatório.");
+            } else if (e.target.value < 0) {
+              toggleErrorMsg(input, "O campo Número não pode ser abaixo de 0.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-        <div class="flex flex-col">
-          <!-- Amigos -->
-          <div class="mx-7 mb-6 p-5 rounded-2xl shadow-lg border border-gray-300 border-t-6 border-t-lime-500 h-auto">
-            <p class="text-2xl text-gray-700 pb-5 font-bold">Chamar amigos para participar:</p>
-            
-            <div class="flex gap-2 flex-wrap">
-              <div>
-                <input type="checkbox" id="checkboxPills" value="eullerls" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@eullerls</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills2" value="lucasbardeli" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills2"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@lucasbardeli</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills3" value="joaofran" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills3"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@joaocf</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills4" value="gabiribeiro" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills4"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@gabribeiro</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills5" value="beaamonteiro" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills5"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@beaamonteiro</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills6" value="n4rdelli" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills6"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@n4rdelli</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills7" value="juninh0bw" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills7"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@altairjuninho</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills8" value="elton" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills8"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@elton</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills9" value="pietrodub" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills9"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@pietror45</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills10" value="ronan" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills10"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@ronan</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills11" value="tiagotas" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills11"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@tiagotas</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills12" value="betzfer" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills12"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@betzfer</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkboxPills13" value="betzfer" class="hidden peer" autocomplete="off"/>
-                <label for="checkboxPills13"
-                  class="inline-flex items-center justify-between px-2 text-neutral-600 border-1 border-transparent bg-neutral-700/30 rounded-full cursor-pointer hover:text-cyan-500 peer-checked:text-cyan-500 peer-checked:bg-cyan-400/30 hover:bg-cyan-400/40 duration-200 ease-in"
-                >
-                  <div class="block">
-                    <span class="tex font-medium">@diegosilva77</span>
-                  </div>
-                </label>
-              </div>
-            </div>
-          </div>
+      addInputValidations(
+        document.getElementById("city"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo Cidade é obrigatório.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-          <!-- Botão -->
-          <div class="flex mb-6 mr-7 justify-end mt-auto">
-            <button type="submit"
-              class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white 
-                m-0 px-4 py-3 rounded-xl flex items-center duration-300 ease-in-out">
-              Criar partida <i class="ml-2 fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
+      addInputValidations(
+        document.getElementById("street"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo Rua é obrigatório.");
+            } else if (e.target.value.length > 255) {
+              toggleErrorMsg(input, "Limite de caracteres atingido.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-        </div>
-      </div>
+      addInputValidations(
+        document.getElementById("neighborhood"),
+        (input, msg) => {
+          input.addEventListener("blur", (e) => {
+            if (e.target.value.trim() === "") {
+              toggleErrorMsg(input, "O campo Bairro é obrigatório.");
+            } else if (e.target.value.length > 255) {
+              toggleErrorMsg(input, "Limite de caracteres atingido.");
+            } else {
+              toggleErrorMsg(input);
+            }
+          });
+        },
+        arrayCreateMatchForm
+      );
 
-    </form>
-  </section>
-  
-  <!-- footer -->
-  <footer class="py-18 bg-white shadow border-t border-gray-200">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col justify-center items-center gap-y-2">
-        <a href="/app/resources/views/index.html">
-          <img
-            src="/app/resources/assets/images/logos/logo-black-colors.png"
-            alt="Logo BoraRachão"
-            class="w-28 h-28 object-cover"
-          />
-        </a>
-        <a
-          href="/app/resources/views/index.html"
-          class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
-        >
-          BoraRachão &copy;
-        </a>
-      </div>
-      <nav
-        class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
-      >
-        <a
-          href="/app/resources/views/index.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
-          Home
-        </a>
-        <a
-          href="/app/resources/views/general/contact.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
-          Contato
-        </a>
-        <a
-          href="/app/resources/views/general/about.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
-          Sobre
-        </a>
-        <a
-          href="/app/resources/views/general/privacy-policy.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
-          Política de Privacidade
-        </a>
-        <a
-          href="/app/resources/views/general/terms-of-use.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
-        >
-          Termos de Uso
-        </a>
-      </nav>
-      <div class="flex justify-center gap-x-4 mt-9">
-        <a
-          href="https://www.instagram.com/"
-          class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 duration-300 ease-in-out hover:text-white"
-        >
-          <i class="fa-brands fa-instagram text-2xl hover:text-white"></i>
-        </a>
-        <a
-          href="https://www.tiktok.com/"
-          class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
-        >
-          <i class="fa-brands fa-tiktok text-2xl"></i>
-        </a>
-        <a
-          href="https://www.facebook.com/"
-          class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 duration-300 ease-in-out hover:text-white"
-        >
-          <i class="fa-brands fa-square-facebook text-2xl"></i>
-        </a>
-        <a
-          href="https://x.com/"
-          class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 duration-300 ease-in-out hover:text-white"
-        >
-          <i class="fa-brands fa-x-twitter text-2xl"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/"
-          class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 duration-300 ease-in-out hover:text-white"
-        >
-          <i class="fa-brands fa-linkedin text-2xl"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/app/resources/assets/js/script.js"></script>
-  
-  <script>
-    const arrayCreateMatchForm = [];
-
-    addInputValidations(document.getElementById("sport"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-
-            toggleErrorMsg(input, "O campo Esporte é obrigatório.");
-          }
-          else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    addInputValidations(document.getElementById("name"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-
-            toggleErrorMsg(input, "O campo Nome é obrigatório.");
-          } 
-          else if (e.target.value.length > 255) {
-            
-            toggleErrorMsg(input, "O campo Nome só pode ter 255 caracteres no máximo.");
-          } 
-          else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    addInputValidations(document.getElementById("hour"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-
-            toggleErrorMsg(input, "O campo Hora é obrigatório.");
-          }
-          else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    addInputValidations(document.getElementById("date"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-
-            toggleErrorMsg(input, "O campo Data é obrigatório.");
-          } 
-          else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    addInputValidations(document.getElementById("players"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-
-            toggleErrorMsg(input, "O campo Nº de part. é obrigatório.");
-          } 
-          else if (e.target.value < 2) {
-            
-            toggleErrorMsg(input, "A partida deve ter no mínimo 2 participantes.");
-          } 
-          else if (e.target.value > 30) {
-            
-            toggleErrorMsg(input, "A partida deve ter no máximo 30 participantes.");
-          } 
-          else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    addInputValidations(document.getElementById("age"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-
-            toggleErrorMsg(input, "O campo Idade é obrigatório.");
-          } 
-          else if (e.target.value < 14) {
-            
-            toggleErrorMsg(input, "A idade deve ser de no mínimo 14 anos.");
-          } 
-          else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    addInputValidations(document.getElementById("description"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.length > 500) {
-            
-            toggleErrorMsg(input, "Limite de caracteres atingido.");
-          }
-          else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    addInputValidations(document.getElementById("cep"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-
-          if (e.target.value.trim() === "") {
-
-            toggleErrorMsg(input, "O campo CEP é obrigatório.");
-          } 
-          else if (e.target.value.length !== 8) {
-            
-            toggleErrorMsg(input, "O campo CEP tem que ter 8 números.");
-          }
-          else {
-            toggleErrorMsg(input);
-            validateCEP(["cep", "city", "street", "neighborhood"]);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    addInputValidations(document.getElementById("number"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-
-            toggleErrorMsg(input, "O campo Número é obrigatório.");
-          } 
-          else if (e.target.value < 0) {
-            
-            toggleErrorMsg(input, "O campo Número não pode ser abaixo de 0.");
-          } 
-          else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    addInputValidations(document.getElementById("city"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-
-            toggleErrorMsg(input, "O campo Cidade é obrigatório.");
-          }
-          else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    addInputValidations(document.getElementById("street"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-
-            toggleErrorMsg(input, "O campo Rua é obrigatório.");
-          } 
-          else if (e.target.value.length > 255) {
-            
-            toggleErrorMsg(input, "Limite de caracteres atingido.");
-          } 
-          else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    addInputValidations(document.getElementById("neighborhood"), (input, msg) => {
-        input.addEventListener("blur", (e) => {
-          if (e.target.value.trim() === "") {
-
-            toggleErrorMsg(input, "O campo Bairro é obrigatório.");
-          } 
-          else if (e.target.value.length > 255) {
-            
-            toggleErrorMsg(input, "Limite de caracteres atingido.");
-          } 
-          else {
-            toggleErrorMsg(input);
-          }
-        });
-      },
-      arrayCreateMatchForm
-    );
-
-    formPreventAndValidate(
-      document.getElementById("form-create-match"),
-      arrayCreateMatchForm,
-      "/app/resources/views/match/match.html"
-    );
-
-  </script>
-
-</body>
+      formPreventAndValidate(
+        document.getElementById("form-create-match"),
+        arrayCreateMatchForm,
+        "/app/resources/views/match/match.html"
+      );
+    </script>
+  </body>
 </html>

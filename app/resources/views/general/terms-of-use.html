@@ -1,219 +1,354 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Configuração Usuário - BoraRachão</title>
-  <link rel="shortcut icon" href="/app/resources/assets/images/logos/logo-white-colors.png" type="image/x-icon">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" class="css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="/app/resources/assets/css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termos de Uso - BoraRachão</title>
+    <link
+      rel="shortcut icon"
+      href="/app/resources/assets/images/logos/logo-white-colors.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      class="css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/app/resources/assets/css/style.css" />
+  </head>
 
-<body class="bg-gray-50">
-
-  <!-- logged header -->
-  <header class="shadow bg-white py-3">
-    <div class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between">
-      <!-- nav mobile -->
-      <nav class="md:hidden">
-        <a id="btn_open_menu_mobile" class="hover:cursor-pointer">
-          <i
-            class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-xl hover:bg-gray-100 duration-300 ease-in-out"></i>
-        </a>
-        <div id="menu_mobile" class="absolute p-6 w-screen h-screen bg-white z-50 top-0 left-0 hidden">
-          <div class="text-end">
-            <a id="btn_close_menu_mobile" class="hover:cursor-pointer">
-              <i
-                class="fa-solid fa-xmark text-lg text-gray-500 py-3 px-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 duration-300 ease-in-out"></i>
-            </a>
+  <body class="bg-gray-50">
+    <!-- guest header -->
+    <header class="shadow bg-white py-3">
+      <div
+        class="container mx-auto px-2 flex flex-row flex-wrap items-center justify-between"
+      >
+        <!-- nav mobile -->
+        <nav class="md:hidden">
+          <a id="btn_open_menu_mobile" class="hover:cursor-pointer">
+            <i
+              class="fa-solid fa-bars text-lg text-gray-500 py-3 px-3.5 rounded-xl hover:bg-gray-100 duration-300 ease-in-out"
+            ></i>
+          </a>
+          <div
+            id="menu_mobile"
+            class="fixed p-6 w-screen h-screen bg-white z-50 top-0 left-0 hidden"
+          >
+            <div class="text-end">
+              <a id="btn_close_menu_mobile" class="hover:cursor-pointer">
+                <i
+                  class="fa-solid fa-xmark text-lg text-gray-500 py-3 px-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 duration-300 ease-in-out"
+                ></i>
+              </a>
+            </div>
+            <div class="text-gray-700 flex flex-col gap-y-3">
+              <h3 class="text-2xl">Menu</h3>
+              <hr class="text-gray-300" />
+              <a
+                href="/app/resources/views/index.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-house text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Home
+              </a>
+              <a
+                href="/app/resources/views/general/contact.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Contato
+              </a>
+              <a
+                href="/app/resources/views/match/matches.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Partidas
+              </a>
+              <a
+                href="/app/resources/views/sports/index.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Esportes
+              </a>
+              <a
+                href="/app/resources/views/general/about.html"
+                class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
+              >
+                <i
+                  class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
+                ></i>
+                Sobre
+              </a>
+              <a
+                href="/app/resources/views/auth/login.html"
+                class="mt-2 bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-2.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+              >
+                Acessar
+                <i class="fa-solid fa-arrow-right"></i>
+                <a
+                  href="/app/resources/views/auth/register.html"
+                  class="mt-3 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5"
+                >
+                  <i class="fa-solid fa-plus"></i>
+                  Criar uma Conta
+                </a>
+              </a>
+            </div>
           </div>
-          <div class="text-gray-700 flex flex-col gap-y-3">
-            <h3 class="text-2xl">Menu</h3>
-            <hr class="text-gray-300" />
-            <a href="/app/resources/views/index.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
-              <i class="fa-solid fa-house text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
-              Home
-            </a>
-            <a href="/app/resources/views/general/contact.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
-              <i class="fa-solid fa-message text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
-              Contato
-            </a>
-            <a href="/app/resources/views/match/matches.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
-              <i class="fa-solid fa-futbol text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
-              Partidas
-            </a>
-            <a href="/app/resources/views/sports/index.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
-              <i class="fa-solid fa-volleyball text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
-              Esportes
-            </a>
-            <a href="/app/resources/views/user/friends.html"
-              class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out">
-              <i class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"></i>
-              Amigos
-            </a>
-            <a href="/app/resources/views/match/matches.html"
-              class="mt-3 text-lg bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-2.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
-              Bora Jogar!
-            </a>
-            <a href="/app/resources/views/auth/login.html"
-              class="mt-2 bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center justify-center duration-300 ease-in-out gap-x-1.5">
-              <i class="fa-solid fa-arrow-right-from-bracket"></i>
-              Sair
-            </a>
-          </div>
-        </div>
-      </nav>
-      <div>
-        <a href="/app/resources/views/index.html">
-          <img src="/app/resources/assets/images/logos/logo-bora-rachao.png" alt="logo"
-            class="max-w-[175px] object-cover" />
-        </a>
-      </div>
-      <nav class="hidden md:flex space-x-6">
-        <a href="/app/resources/views/index.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Home</a>
-        <a href="/app/resources/views/general/contact.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Contato</a>
-        <a href="/app/resources/views/match/matches.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Partidas</a>
-        <a href="/app/resources/views/sports/index.html"
-          class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Esportes</a>
-        <a href="" class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out">Amigos</a>
-      </nav>
-      <div class="flex items-center space-x-3">
-        <a href="/app/resources/views/user/profile.html">
-          <img src="/app/resources/assets/images/beaamonteiro.jpg"
-            class="w-9 h-9 rounded-full border-2 border-gray-300 hover:border-cyan-500 duration-300 ease-in-out"
-            alt="Profile Photo" />
-        </a>
-        <div class="hidden md:block">
-          <a href="/app/resources/views/match/matches.html"
-            class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5">
-            Bora jogar!
+        </nav>
+        <div>
+          <a href="/app/resources/views/index.html">
+            <img
+              src="/app/resources/assets/images/logos/logo-bora-rachao.png"
+              alt="logo"
+              class="max-w-[175px] object-cover"
+            />
           </a>
         </div>
+        <nav class="hidden md:flex space-x-6">
+          <a
+            href="/app/resources/views/index.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Home</a
+          >
+          <a
+            href="/app/resources/views/general/contact.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Contato</a
+          >
+          <a
+            href="/app/resources/views/match/matches.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Partidas</a
+          >
+          <a
+            href="/app/resources/views/sports/index.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Esportes</a
+          >
+          <a
+            href="/app/resources/views/general/about.html"
+            class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
+            >Sobre</a
+          >
+        </nav>
+        <div class="hidden md:flex items-center space-x-3">
+          <div>
+            <a
+              href="/app/resources/views/auth/register.html"
+              class="bg-cyan-500 hover:bg-cyan-400 hover:shadow-md hover:shadow-cyan-400/35 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+            >
+              <i class="fa-solid fa-plus"></i>
+              Criar Conta
+            </a>
+          </div>
+          <div>
+            <a
+              href="/app/resources/views/auth/login.html"
+              class="bg-lime-500 hover:bg-lime-400 hover:shadow-md hover:shadow-lime-400/50 hover:cursor-pointer text-white px-4 py-1.5 rounded-xl flex items-center duration-300 ease-in-out gap-x-1.5"
+            >
+              Acessar
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </header>
-
+    </header>
 
     <!--Title section-->
     <section class="container mx-auto px-4 my-8">
       <div class="lg:p-2 leading-[1.1] border-l-8 border-l-cyan-500">
-        <h2 class="ps-2 text-4xl lg:text-[3rem] text-gray-700 font-semibold capitalize">Política de Privacidade</h2>
+        <h2 class="ps-2 text-4xl lg:text-[3rem] text-gray-700 font-semibold">
+          Termos de Uso
+        </h2>
       </div>
     </section>
 
     <!-- Conteúdo principal -->
-  <div class="max-w-4xl mx-auto bg-white p-8 mt-10 rounded shadow rounded-xl">
+    <section
+      class="max-w-4xl mx-auto mb-18 bg-white p-8 mt-10 rounded shadow rounded-xl"
+    >
+      <div class="text-gray-600">
+        <h2 class="text-2xl font-semibold text-gray-700 py-3">
+          Nossos Termos de Uso
+        </h2>
+        <p>
+          Bem-vindo ao <strong>BoraRachão</strong>! Ao acessar ou usar nossa
+          plataforma, você concorda com os seguintes termos e condições. Leia
+          atentamente antes de continuar.
+        </p>
 
-    <div>
-      <p>
-        O BoraRachão valoriza a sua privacidade. Esta Política de Privacidade descreve como coletamos, usamos e
-        protegemos
-        as informações pessoais que você fornece ao utilizar nosso site para agendamento de partidas esportivas.
-      </p>
-      <h2 class="text-2xl font-semibold text-gray-700 py-3">1. Coleta de Informações</h2>
-      <p>
-        Coletamos informações como nome, e-mail, localização e preferências esportivas quando você cria uma conta ou
-        marca
-        uma partida. Essas informações são necessárias para oferecer a melhor experiência no agendamento de jogos.
-      </p>
-      <h2 class="text-2xl font-semibold text-gray-700 py-3">2. Uso das Informações</h2>
-      <p>
-        Utilizamos suas informações para organizar partidas, sugerir jogadores próximos e enviar notificações. Não
-        compartilhamos seus dados com terceiros sem seu consentimento.
-      </p>
-      <h2 class="text-2xl font-semibold text-gray-700 py-3">3. Segurança</h2>
-      <p>
-        Seus dados são armazenados de forma segura com medidas de proteção técnicas e administrativas contra acessos não
-        autorizados.
-      </p>
-      <h2 class="text-2xl font-semibold text-gray-700 py-3">4. Seus Direitos</h2>
-      <p>
-        Você pode acessar, corrigir ou excluir suas informações a qualquer momento. Entre em contato conosco para
-        exercer
-        seus direitos de privacidade.
-      </p>
-      <h2 class="text-2xl font-semibold text-gray-700 py-3">5. Alterações</h2>
-      <p>
-        Esta política pode ser atualizada conforme necessário. Recomendamos que você revise periodicamente.
-      </p>
-      <p class="mt-6 text-sm text-gray-500">Última atualização: Junho de 2025</p>
-    </div>
-  </div>
-  </div>
+        <h3 class="text-2xl font-semibold text-gray-700 py-3">
+          1. Objetivo da Plataforma
+        </h3>
+        <p>
+          O site tem como finalidade conectar jogadores interessados em marcar
+          partidas esportivas de forma prática e organizada. A responsabilidade
+          pela criação, confirmação e comparecimento às partidas é
+          exclusivamente dos usuários.
+        </p>
 
-  <!-- footer -->
-  <footer class="py-18 bg-white shadow border-t border-gray-200">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col justify-center items-center gap-y-2">
-        <a href="/app/resources/views/index.html">
-          <img src="/app/resources/assets/images/logos/logo-black-colors.png" alt="Logo BoraRachão"
-            class="w-28 h-28 object-cover" />
-        </a>
-        <a href="/app/resources/views/index.html"
-          class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center">
-          BoraRachão &copy;
-        </a>
+        <h3 class="text-2xl font-semibold text-gray-700 py-3">
+          2. Cadastro e Responsabilidades
+        </h3>
+        <p>
+          Para utilizar a plataforma, é necessário realizar um cadastro com
+          informações verídicas. O usuário é responsável por manter seus dados
+          atualizados e respeitar os demais participantes das partidas.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-700 py-3">
+          3. Conduta do Usuário
+        </h3>
+        <p>
+          É proibido o uso da plataforma para fins ilícitos, ofensivos ou que
+          promovam qualquer tipo de discriminação. Usuários que descumprirem
+          essas regras poderão ser banidos sem aviso prévio.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-700 py-3">
+          4. Cancelamentos e Pontualidade
+        </h3>
+        <p>
+          Ao confirmar presença em uma partida, o usuário se compromete a
+          comparecer. Cancelamentos frequentes ou atrasos podem afetar sua
+          reputação na comunidade.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-700 py-3">
+          5. Isenção de Responsabilidade
+        </h3>
+        <p>
+          O <strong>BoraRachão</strong> é apenas um facilitador de encontros
+          esportivos entre usuários. Não nos responsabilizamos por quaisquer
+          danos, acidentes ou conflitos que ocorram durante ou após os jogos.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-700 py-3">
+          6. Modificações nos Termos
+        </h3>
+        <p>
+          Reservamo-nos o direito de alterar estes Termos de Uso a qualquer
+          momento. Recomendamos que os usuários revisitem esta página
+          periodicamente.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-700 py-3">7. Contato</h3>
+        <p>
+          Em caso de dúvidas ou denúncias, entre em
+          <a
+            href="/app/resources/views/general/contact.html"
+            class="text-cyan-500 hover:underline"
+            >contato conosco</a
+          >.
+        </p>
+        <p class="mt-6 text-sm text-gray-500">
+          Última atualização: Junho de 2025
+        </p>
       </div>
-      <nav class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8">
-        <a href="/app/resources/views/index.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">Home</a>
-        <a href="/app/resources/views/general/contact.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">Contato</a>
-        <a href="/app/resources/views/general/about.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">Sobre</a>
-        <a href="/app/resources/views/general/privacy-policy.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">Política de Privacidade</a>
-        <a href="/app/resources/views/general/terms-of-use.html"
-          class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out">Termos de Uso</a>
-      </nav>
-      <div class="flex justify-center gap-x-4 mt-9">
-        <a href="https://www.instagram.com/"
-          class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 hover:text-white">
-          <i class="fa-brands fa-instagram text-2xl"></i>
-        </a>
-        <a href="https://www.tiktok.com/"
-          class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 hover:text-white">
-          <i class="fa-brands fa-tiktok text-2xl"></i>
-        </a>
-        <a href="https://www.facebook.com/"
-          class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 hover:text-white">
-          <i class="fa-brands fa-square-facebook text-2xl"></i>
-        </a>
-        <a href="https://x.com/"
-          class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 hover:text-white">
-          <i class="fa-brands fa-x-twitter text-2xl"></i>
-        </a>
-        <a href="https://www.linkedin.com/"
-          class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 hover:text-white">
-          <i class="fa-brands fa-linkedin text-2xl"></i>
-        </a>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-18 bg-white shadow border-t border-gray-200">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col justify-center items-center gap-y-2">
+          <a href="/app/resources/views/index.html">
+            <img
+              src="/app/resources/assets/images/logos/logo-black-colors.png"
+              alt="Logo BoraRachão"
+              class="w-28 h-28 object-cover"
+            />
+          </a>
+          <a
+            href="/app/resources/views/index.html"
+            class="text-gray-600 font-bold hover:text-cyan-500 text-lg duration-300 ease-in-out text-center"
+          >
+            BoraRachão &copy;
+          </a>
+        </div>
+        <nav
+          class="flex flex-col md:flex-row items-center justify-center mt-12 gap-5 gap-x-8"
+        >
+          <a
+            href="/app/resources/views/index.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+            >Home</a
+          >
+          <a
+            href="/app/resources/views/general/contact.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+            >Contato</a
+          >
+          <a
+            href="/app/resources/views/general/about.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+            >Sobre</a
+          >
+          <a
+            href="/app/resources/views/general/privacy-policy.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+            >Política de Privacidade</a
+          >
+          <a
+            href="/app/resources/views/general/terms-of-use.html"
+            class="text-gray-500 hover:text-cyan-500 duration-300 ease-in-out"
+            >Termos de Uso</a
+          >
+        </nav>
+        <div class="flex justify-center gap-x-4 mt-9">
+          <a
+            href="https://www.instagram.com/"
+            class="bg-pink-500/40 py-1 px-2 rounded-xl text-pink-500 hover:bg-pink-500 hover:text-white"
+          >
+            <i class="fa-brands fa-instagram text-2xl"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/"
+            class="bg-stone-500/40 py-1 px-2 rounded-xl text-stone-500 hover:bg-stone-950 hover:text-white"
+          >
+            <i class="fa-brands fa-tiktok text-2xl"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/"
+            class="bg-blue-500/40 py-1 px-2 rounded-xl text-blue-500 hover:bg-blue-500 hover:text-white"
+          >
+            <i class="fa-brands fa-square-facebook text-2xl"></i>
+          </a>
+          <a
+            href="https://x.com/"
+            class="bg-stone-600/40 py-1 px-1.5 rounded-xl text-stone-600 hover:bg-stone-950 hover:text-white"
+          >
+            <i class="fa-brands fa-x-twitter text-2xl"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="bg-sky-500/40 py-1 px-2 rounded-xl text-sky-500 hover:bg-sky-500 hover:text-white"
+          >
+            <i class="fa-brands fa-linkedin text-2xl"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script>
-    // Menu mobile toggle
-    document.getElementById("btn_open_menu_mobile").onclick = () =>
-      document.getElementById("menu_mobile").classList.remove("hidden");
-
-    document.getElementById("btn_close_menu_mobile").onclick = () =>
-      document.getElementById("menu_mobile").classList.add("hidden");
-  </script>
-</body>
-
+    <script src="/app/resources/assets/js/script.js"></script>
+  </body>
 </html>

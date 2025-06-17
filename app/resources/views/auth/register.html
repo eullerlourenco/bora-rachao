@@ -470,7 +470,7 @@
         (input, msg) => {
           input.addEventListener("blur", (e) => {
             if (!isValidBirthDate(e.target.value, 14)) {
-              toggleErrorMsg(input, "O campo aniversário deve ser válido.");
+              toggleErrorMsg(input, "O campo aniversário deve ser válido e a idade deve ser maior que 14 anos.");
             } else {
               toggleErrorMsg(input);
             }

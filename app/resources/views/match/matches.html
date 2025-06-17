@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Partidas - BoraRachão</title>
-    <link rel="shortcut icon" href="/app/resources/assets/images/logos/logo-white-colors.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="/app/resources/assets/images/logos/logo-white-colors.png"
+      type="image/x-icon"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
       rel="stylesheet"
@@ -36,7 +40,7 @@
           </a>
           <div
             id="menu_mobile"
-            class="absolute p-6 w-screen h-screen bg-white z-50 top-0 left-0 hidden"
+            class="fixed p-6 w-screen h-screen bg-white z-50 top-0 left-0 hidden"
           >
             <div class="text-end">
               <a id="btn_close_menu_mobile" class="hover:cursor-pointer">
@@ -85,13 +89,13 @@
                 Esportes
               </a>
               <a
-                href="/app/resources/views/user/friends.html"
+                href="/app/resources/views/general/about.html"
                 class="text-xl hover:bg-gray-100 p-3 rounded-2xl flex items-center gap-x-1.5 duration-300 ease-in-out"
               >
                 <i
                   class="fa-solid fa-people-group text-sm bg-orange-200 p-2 rounded-xl text-orange-500"
                 ></i>
-                Amigos
+                Sobre
               </a>
               <a
                 href="/app/resources/views/match/matches.html"
@@ -140,9 +144,9 @@
             >Esportes</a
           >
           <a
-            href=""
+            href="/app/resources/views/general/about.html"
             class="text-gray-800 hover:text-cyan-500 duration-300 ease-in-out"
-            >Amigos</a
+            >Sobre</a
           >
         </nav>
         <div class="flex items-center space-x-3">
@@ -639,7 +643,7 @@
           avatar: "/app/resources/assets/images/joaofran.jpg",
           hour: "09:00",
           date: "17/06",
-          needPlayers:4,
+          needPlayers: 4,
           players: 1,
           city: "Jaú",
         },
@@ -808,7 +812,7 @@
         let newContent = "";
         array.forEach((element) => {
           newContent += `
-              <a href="">
+              <a href="/app/resources/views/match/match.html">
                   <div class="bg-white text-gray-700 shadow-lg border-1 border-gray-300 px-3 py-2 rounded-2xl hover:scale-[1.02] duration-300 ease-in-out">
                       <span
                           class="font-semibold capitalize text-start text-white bg-lime-500 rounded-lg px-2"
