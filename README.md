@@ -70,9 +70,9 @@
 - All Matches ✅
 
 > Lucas
-- Match Details
-- Create Match
-- Friends
+- Match Details ✅
+- Create Match ✅
+- Friends ✅
 
 > João
 - Login ✅
@@ -85,6 +85,6 @@
 - All Sports ✅
 
 > Beatriz
-- Privacy Policy
-- Terms of Use
-- User Config
+- Privacy Policy ✅
+- Terms of Use ✅
+- User Config ✅
